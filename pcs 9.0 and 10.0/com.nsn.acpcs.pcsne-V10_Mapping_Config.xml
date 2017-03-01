@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Mapping xmlns="http:///com/nsn/oss/mapping" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+<Adaptation Id="com.nsn.acpcs.pcsne">
+<Release>
+<Vendor>Nokia Solutions and Networks</Vendor>
+<Element>Policy Control Server</Element>
+<Version>V10</Version>
+</Release>
+<Topology>
+<ManagedObjects>
+<ManagedObject isTransient="false">
+<OMeSName>ACPCS</OMeSName>
+<RawName>ACPCS</RawName>
+</ManagedObject>
+<ManagedObject isTransient="false">
+<OMeSName>PCSNE</OMeSName>
+<RawName>SymbolicNEName</RawName>
+</ManagedObject>
+<ManagedObject isTransient="false">
+<OMeSName>PCSNODE</OMeSName>
+<RawName>SymbolicNodeName</RawName>
+</ManagedObject>
+<ManagedObject isTransient="true">
+<OMeSName>PATH</OMeSName>
+<RawName>IndexLabel</RawName>
+</ManagedObject>
+<ManagedObject isTransient="true">
+<OMeSName>PROCESS</OMeSName>
+<RawName>IndexLabel</RawName>
+</ManagedObject>
+<ManagedObject isTransient="true">
+<OMeSName>PROCESSID</OMeSName>
+<RawName>ArrayIdWithIndex</RawName>
+</ManagedObject>
+<ManagedObject isTransient="true">
+<OMeSName>INTERFACE</OMeSName>
+<RawName>IndexLabel</RawName>
+</ManagedObject>
+</ManagedObjects>
+</Topology>
+
+<Measurements>
+      <Measurement oMeSName="PCSAPP" rawName="PCS Application Measurement">
+        <TopologyRef id="ROOT">
+          <RawLevelRef>ACPCS.PCSNE</RawLevelRef>
+        </TopologyRef>
+        <Counters>
+          <Counter>
+            <RawName>validspdfrqmessagesreceived-288.0.0</RawName>
+            <OMeSName>C288.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validspdfrqmessagesreceivedinlastperiod-288.0.1</RawName>
+            <OMeSName>C288.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidspdfrqmessagesreceived-288.0.2</RawName>
+            <OMeSName>C288.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidspdfrqmessagesreceivedinlastperiod-288.0.3</RawName>
+            <OMeSName>C288.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>spdfrqmessagessent-288.0.4</RawName>
+            <OMeSName>C288.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>spdfrqmessagessentinlastperiod-288.0.5</RawName>
+            <OMeSName>C288.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>spdfrqsessionscurrentlyexisting-288.1.0</RawName>
+            <OMeSName>C288.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>spdfrqsessionscreated-288.1.1</RawName>
+            <OMeSName>C288.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>spdfrqsessionscreatedinlastperiod-288.1.2</RawName>
+            <OMeSName>C288.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadgymessagessentinlastperiod-293.0.9</RawName>
+            <OMeSName>C293.0.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadgymessagessentinlastperiod-293.0.8</RawName>
+            <OMeSName>C293.0.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofgymessagesdroppedatloadlevelvery_critical-293.0.10</RawName>
+            <OMeSName>C293.0.10</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gymessagessent-293.0.3</RawName>
+            <OMeSName>C293.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validgymessagesreceived-293.0.2</RawName>
+            <OMeSName>C293.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadgyMessagessent-293.0.1</RawName>
+            <OMeSName>C293.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidgymessagesreceived-293.0.0</RawName>
+            <OMeSName>C293.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadgymessagessent-293.0.7</RawName>
+            <OMeSName>C293.0.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validgymessagesreceivedinlastperiod-293.0.6</RawName>
+            <OMeSName>C293.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidgymessagesreceivedinlastperiod-293.0.5</RawName>
+            <OMeSName>C293.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gymessagessentinlastperiod-293.0.4</RawName>
+            <OMeSName>C293.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gysessionscurrentlyexisting-293.1.0</RawName>
+            <OMeSName>C293.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofhanginggxcontextsdeletedbypcs-293.1.1</RawName>
+            <OMeSName>C293.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadramessagessentinlastperiod-292.0.11</RawName>
+            <OMeSName>C292.0.11</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadramessagessent-292.0.10</RawName>
+            <OMeSName>C292.0.10</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadramessagessentinlastperiod-292.0.9</RawName>
+            <OMeSName>C292.0.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validradiusmessagesreceived-292.0.0</RawName>
+            <OMeSName>C292.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidradiusmessagesreceivedinlastperiod-292.0.3</RawName>
+            <OMeSName>C292.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>radiusmessagessent-292.0.4</RawName>
+            <OMeSName>C292.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validradiusmessagesreceivedinlastperiod-292.0.1</RawName>
+            <OMeSName>C292.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidradiusmessagesreceived-292.0.2</RawName>
+            <OMeSName>C292.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>radiusmessagesrejectedduetooverloadinlastperiod-292.0.7</RawName>
+            <OMeSName>C292.0.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadramessagessent-292.0.8</RawName>
+            <OMeSName>C292.0.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>radiusmessagessentinlastperiod-292.0.5</RawName>
+            <OMeSName>C292.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>radiusmessagesrejectedduetooverload-292.0.6</RawName>
+            <OMeSName>C292.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>radiussessionscreatedinlastperiod-292.1.2</RawName>
+            <OMeSName>C292.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>radiussessionscurrentlyexisting-292.1.0</RawName>
+            <OMeSName>C292.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>radiussessionscreated-292.1.1</RawName>
+            <OMeSName>C292.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>e4sessionscurrentlyexisting</RawName>
+            <OMeSName>C290.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>e4sessionscreated</RawName>
+            <OMeSName>C290.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>e4sessionscreatedinlastperiod</RawName>
+            <OMeSName>C290.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>iamessagesdroppedinlastperiod-287.0.7</RawName>
+            <OMeSName>C287.0.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>iamessagesdropped-287.0.6</RawName>
+            <OMeSName>C287.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>iamessagessentinlastperiod-287.0.5</RawName>
+            <OMeSName>C287.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>iamessagessent-287.0.4</RawName>
+            <OMeSName>C287.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidiamessagesreceivedinlastperiod-287.0.3</RawName>
+            <OMeSName>C287.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidiamessagesreceived-287.0.2</RawName>
+            <OMeSName>C287.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validiamessagesreceivedinlastperiod-287.0.1</RawName>
+            <OMeSName>C287.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validiamessagesreceived-287.0.0</RawName>
+            <OMeSName>C287.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofunsuccessfulraareceivedinlastperiod-286.0.21</RawName>
+            <OMeSName>C286.0.21</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofunsuccessfulraareceived-286.0.20</RawName>
+            <OMeSName>C286.0.20</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofraatimedout-286.0.22</RawName>
+            <OMeSName>C286.0.22</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofccr-treceivedinlastperiod-286.0.25</RawName>
+            <OMeSName>C286.0.25</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofccr-treceived-286.0.24</RawName>
+            <OMeSName>C286.0.24</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidgxmessagesreceivedinlastperiod-286.0.3</RawName>
+            <OMeSName>C286.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidgxmessagesreceived-286.0.2</RawName>
+            <OMeSName>C286.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofccr-ureceivedinlastperiod-286.0.15</RawName>
+            <OMeSName>C286.0.15</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofraatimedoutinlastperiod-286.0.23</RawName>
+            <OMeSName>C286.0.23</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulcca-usent-286.0.16</RawName>
+            <OMeSName>C286.0.16</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validgxmessagesreceivedinlastperiod-286.0.1</RawName>
+            <OMeSName>C286.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulcca-usentinlastperiod-286.0.17</RawName>
+            <OMeSName>C286.0.17</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validgxmessagesreceived-286.0.0</RawName>
+            <OMeSName>C286.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulraareceived-286.0.18</RawName>
+            <OMeSName>C286.0.18</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulraareceivedinlastperiod-286.0.19</RawName>
+            <OMeSName>C286.0.19</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadgxmessagessentinlastperiod-286.0.9</RawName>
+            <OMeSName>C286.0.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadgxmessagessent-286.0.8</RawName>
+            <OMeSName>C286.0.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadgxmessagessentinlastperiod-286.0.7</RawName>
+            <OMeSName>C286.0.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadgxmessagessent-286.0.6</RawName>
+            <OMeSName>C286.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxmessagessentinlastperiod-286.0.5</RawName>
+            <OMeSName>C286.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxmessagessent-286.0.4</RawName>
+            <OMeSName>C286.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>pdpactivationsinlastperiod-286.0.10</RawName>
+            <OMeSName>C286.0.10</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofgxmessagesdroppedatloadlevelvery_critical-286.0.34</RawName>
+            <OMeSName>C286.0.34</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>usagelimitexceeded-286.0.33</RawName>
+            <OMeSName>C286.0.33</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>usagelimitexceededinlastperiod-286.0.32</RawName>
+            <OMeSName>C286.0.32</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofccr-ureceived-286.0.14</RawName>
+            <OMeSName>C286.0.14</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxinitialmessagerejected-286.0.31</RawName>
+            <OMeSName>C286.0.31</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulcca-isentinlastperiod-286.0.13</RawName>
+            <OMeSName>C286.0.13</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxinitialmessagerejectedinlastperiod-286.0.30</RawName>
+            <OMeSName>C286.0.30</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulcca-isent-286.0.12</RawName>
+            <OMeSName>C286.0.12</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>pdpactivations-286.0.11</RawName>
+            <OMeSName>C286.0.11</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofgxrarmessagessent-286.0.28</RawName>
+            <OMeSName>C286.0.28</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofgxrarmessagessentinlastperiod-286.0.29</RawName>
+            <OMeSName>C286.0.29</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulcca-tsent-286.0.26</RawName>
+            <OMeSName>C286.0.26</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofsuccessfulcca-tsentinlastperiod-286.0.27</RawName>
+            <OMeSName>C286.0.27</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessioncurrentlyexist-286.3.1</RawName>
+            <OMeSName>C286.3.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionsprcreated-286.2.9</RawName>
+            <OMeSName>C286.2.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionsprdroppedinlastperiod-286.2.8</RawName>
+            <OMeSName>C286.2.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionsprcreatedinlastperiod-286.2.7</RawName>
+            <OMeSName>C286.2.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionbsddropped-286.2.6</RawName>
+            <OMeSName>C286.2.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionbsdcreated-286.2.5</RawName>
+            <OMeSName>C286.2.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxsessionscreatedinlastperiod-286.1.2</RawName>
+            <OMeSName>C286.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionbsddroppedinlastperiod-286.2.4</RawName>
+            <OMeSName>C286.2.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxsessionscreated-286.1.1</RawName>
+            <OMeSName>C286.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionbsdcreatedinlastperiod-286.2.3</RawName>
+            <OMeSName>C286.2.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxsessionscurrentlyexisting-286.1.0</RawName>
+            <OMeSName>C286.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxemergencysessiondropped-286.2.2</RawName>
+            <OMeSName>C286.2.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofhanginggxcontextsdeletedbypcs-286.1.6</RawName>
+            <OMeSName>C286.1.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxemergencysessioncreated-286.2.1</RawName>
+            <OMeSName>C286.2.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxbearerscreatedinlastperiod-286.1.5</RawName>
+            <OMeSName>C286.1.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxemergencysessiondroppedinlastperiod-286.2.0</RawName>
+            <OMeSName>C286.2.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxbearerscreated-286.1.4</RawName>
+            <OMeSName>C286.1.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxbearerscurrentlyexisting-286.1.3</RawName>
+            <OMeSName>C286.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxemergencysessioncurrentlyexist-286.1.9</RawName>
+            <OMeSName>C286.1.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxemergencysessioncreatedinlastperiod-286.1.8</RawName>
+            <OMeSName>C286.1.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxprioritysessionsprdropped-286.3.0</RawName>
+            <OMeSName>C286.3.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gxsessionsreleased-286.1.7</RawName>
+            <OMeSName>C286.1.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectedoverloadsoapmessagessent-294.3.5</RawName>
+            <OMeSName>C294.3.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectedoverloadsoapmessagessentinlastperiod-294.3.4</RawName>
+            <OMeSName>C294.3.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validsubscribertriggerreceivedinlastperiod-294.3.3</RawName>
+            <OMeSName>C294.3.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validsubscribertriggerreceived-294.3.2</RawName>
+            <OMeSName>C294.3.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidsubscribertriggerreceivedinlastperiod-294.3.1</RawName>
+            <OMeSName>C294.3.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidsubscribertriggermessagesreceived-294.3.0</RawName>
+            <OMeSName>C294.3.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>pluginmessagesreceived-294.5.0</RawName>
+            <OMeSName>C294.5.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>pluginmessagessent-294.5.1</RawName>
+            <OMeSName>C294.5.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validldapmessagesreceivedinlastperiod-294.0.6</RawName>
+            <OMeSName>C294.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validldapmessagesreceived-294.0.5</RawName>
+            <OMeSName>C294.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ldapmessagessentinlastperiod-294.0.4</RawName>
+            <OMeSName>C294.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ldapmessagessent-294.0.3</RawName>
+            <OMeSName>C294.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidldapmessagesreceivedinlastperiod-294.0.2</RawName>
+            <OMeSName>C294.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidldapmessagesreceived-294.0.1</RawName>
+            <OMeSName>C294.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>smppmessagesreceivedinlastperiod-294.4.3</RawName>
+            <OMeSName>C294.4.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>smppmessagessentinlastperiod-294.4.1</RawName>
+            <OMeSName>C294.4.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>smppmessagesreceived-294.4.2</RawName>
+            <OMeSName>C294.4.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>smppmessagessent-294.4.0</RawName>
+            <OMeSName>C294.4.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>currentcpuload-294.1.1</RawName>
+            <OMeSName>C294.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>maximumcpuloadinlast15minutes-294.1.3</RawName>
+            <OMeSName>C294.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>avaragecpuloadinlast15minutes-294.1.2</RawName>
+            <OMeSName>C294.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>terminalsmaxcreatedperperiod-280.1.3</RawName>
+            <OMeSName>C280.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>terminalsmaxinlastperiod-280.1.2</RawName>
+            <OMeSName>C280.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>terminalscreated-280.1.1</RawName>
+            <OMeSName>C280.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>terminalscurrentlyexisting-280.1.0</RawName>
+            <OMeSName>C280.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>groupcontextscurrentlyexisting-280.0.1</RawName>
+            <OMeSName>C280.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>messagesdeniedbypolicyruleengineinlastperiod-280.3.3</RawName>
+            <OMeSName>C280.3.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>messagespermittedbypolicyruleengine-280.3.0</RawName>
+            <OMeSName>C280.3.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>messagespermittedbypolicyruleengineinlastperiod-280.3.1</RawName>
+            <OMeSName>C280.3.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>messagesdeniedbypolicyruleengine-280.3.2</RawName>
+            <OMeSName>C280.3.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>subscriberscreatedinlastperiod-280.2.2</RawName>
+            <OMeSName>C280.2.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>subscriberscreated-280.2.1</RawName>
+            <OMeSName>C280.2.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>subscriberscurrentlyexisting-280.2.0</RawName>
+            <OMeSName>C280.2.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxprioritysessiondropped-285.2.4</RawName>
+            <OMeSName>C285.2.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxsessionscreated-285.1.1</RawName>
+            <OMeSName>C285.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxprioritysessioncreated-285.2.3</RawName>
+            <OMeSName>C285.2.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxsessionscurrentlyexisting-285.1.0</RawName>
+            <OMeSName>C285.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxsessionsreleased-285.1.3</RawName>
+            <OMeSName>C285.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxsessionscreatedinlastperiod-285.1.2</RawName>
+            <OMeSName>C285.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxemergencysessiondropped-285.1.9</RawName>
+            <OMeSName>C285.1.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxemergencysessioncreated-285.1.8</RawName>
+            <OMeSName>C285.1.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxemergencysessioncreatedinlastperiod-285.1.5</RawName>
+            <OMeSName>C285.1.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxprioritysessioncreatedinlastperiod-285.2.0</RawName>
+            <OMeSName>C285.2.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofhangingrxcontextsdeletedbypcs-285.1.4</RawName>
+            <OMeSName>C285.1.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxemergencysessiondroppedinlastperiod-285.1.7</RawName>
+            <OMeSName>C285.1.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxprioritysessiondroppedinlastperiod-285.2.2</RawName>
+            <OMeSName>C285.2.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxemergencysessioncurrentlyexist-285.1.6</RawName>
+            <OMeSName>C285.1.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxprioritysessioncurrentlyexist-285.2.1</RawName>
+            <OMeSName>C285.2.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidgqmessagesreceivedinlastperiod-285.0.3</RawName>
+            <OMeSName>C285.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gqmessagessent-285.0.4</RawName>
+            <OMeSName>C285.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validgqmessagesreceivedinlastperiod-285.0.1</RawName>
+            <OMeSName>C285.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidgqmessagesreceived-285.0.2</RawName>
+            <OMeSName>C285.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validgqmessagesreceived-285.0.0</RawName>
+            <OMeSName>C285.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadgqmessagessentinlastperiod-285.0.9</RawName>
+            <OMeSName>C285.0.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadgqmessagessentinlastperiod-285.0.7</RawName>
+            <OMeSName>C285.0.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadgqmessagessent-285.0.8</RawName>
+            <OMeSName>C285.0.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>gqmessagessentinlastperiod-285.0.5</RawName>
+            <OMeSName>C285.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadgqmessagessent-285.0.6</RawName>
+            <OMeSName>C285.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofraa/asatimedoutinlastperiod-285.2.13</RawName>
+            <OMeSName>C285.2.13</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadrxmessagessent-285.2.6</RawName>
+            <OMeSName>C285.2.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>numberofraa/asatimedout-285.2.12</RawName>
+            <OMeSName>C285.2.12</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rxmessagessentinlastperiod-285.2.5</RawName>
+            <OMeSName>C285.2.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadrxmessagesdroppedinlastperiod-285.2.11</RawName>
+            <OMeSName>C285.2.11</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadrxmessagessent-285.2.8</RawName>
+            <OMeSName>C285.2.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadrxmessageswhicharedropped-285.2.10</RawName>
+            <OMeSName>C285.2.10</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingnonoverloadrxmessagessentinlastperiod-285.2.7</RawName>
+            <OMeSName>C285.2.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>rejectingoverloadrxmessagessentinlastperiod-285.2.9</RawName>
+            <OMeSName>C285.2.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validShmessagesreceivedinlastperiod-291.0.1</RawName>
+            <OMeSName>C291.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>validShmessagesreceived-291.0.0</RawName>
+            <OMeSName>C291.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>shmessagesmaxsentperperiod-291.0.6</RawName>
+            <OMeSName>C291.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>shmessagessent-291.0.4</RawName>
+            <OMeSName>C291.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>shmessagessentinlastperiod-291.0.5</RawName>
+            <OMeSName>C291.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidshmessagesreceived-291.0.2</RawName>
+            <OMeSName>C291.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalidshmessagesreceivedinlastperiod-291.0.3</RawName>
+            <OMeSName>C291.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>e4messagessent</RawName>
+            <OMeSName>C290.0.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ainvalide4messagesreceivedin1</RawName>
+            <OMeSName>C290.0.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>arejectingoverloade4messages2</RawName>
+            <OMeSName>C290.0.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>e4messagessentinlastperiod</RawName>
+            <OMeSName>C290.0.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>arejectingoverloade4messages3</RawName>
+            <OMeSName>C290.0.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>valide4messagesreceived</RawName>
+            <OMeSName>C290.0.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>avalide4messagesreceivedinla4</RawName>
+            <OMeSName>C290.0.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>invalide4messagesreceived</RawName>
+            <OMeSName>C290.0.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SendlocalcontextreplicationrequestsSuccess-280.4.0</RawName>
+            <OMeSName>C280.4.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SendlocalcontextreplicationrequestsErrors-280.4.1</RawName>
+            <OMeSName>C280.4.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ReceivedlocalcontextreplicationrequestsSuccess-280.4.2</RawName>
+            <OMeSName>C280.4.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SendcontextreplicationrequeststowardremotefarmSuccess-280.5.0</RawName>
+            <OMeSName>C280.5.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SendcontextreplicationrequeststowardremotefarmError-280.5.1</RawName>
+            <OMeSName>C280.5.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ReceivedcontextreplicationrequestfromremotefarmSuccess-280.5.2</RawName>
+            <OMeSName>C280.5.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ForwardRemotecontextreplicationtoContextManagerSuccess-280.5.3</RawName>
+            <OMeSName>C280.5.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ForwardRemotecontextreplicationtoContextManagerError-280.5.4</RawName>
+            <OMeSName>C280.5.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ReceivedremotereplicationrequestfromForwardprocessSuccess-280.5.5</RawName>
+            <OMeSName>C280.5.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Onremotefarm,SendcontextreplicationtoremotefarmSuccess-280.6.0</RawName>
+            <OMeSName>C280.6.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>OnRemotefarm,SendcontextreplicationtoremotefarmError-280.6.1</RawName>
+            <OMeSName>C280.6.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>OnRemotefarm,ReceivedContextfromremotefarmSuccess-280.6.2</RawName>
+            <OMeSName>C280.6.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>OnRemotefarm,ForwardCtxreplicationtoCtxManagerSuccess-280.6.3</RawName>
+            <OMeSName>C280.6.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Onremotefarm,ForwardRemoteCtxtoCtxManagerError-280.6.4</RawName>
+            <OMeSName>C280.6.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Onremotefarm,RcvdRemotectxfromForwardprocessSuccess-280.6.5</RawName>
+            <OMeSName>C280.6.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>PushContextsoperationrequestsSuccessonlocalfarm-280.7.0</RawName>
+            <OMeSName>C280.7.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>PushContextsoperationrequestsonlocalfarmError-280.7.1</RawName>
+            <OMeSName>C280.7.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Estimatedcontextstobepushedtowardsremotefarm-280.8.0</RawName>
+            <OMeSName>C280.8.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>PushContextsoperationrequeststowardsremotefarmSuccess-280.8.1</RawName>
+            <OMeSName>C280.8.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>PushContextsoperationrequeststowardsremotefarmError-280.8.2</RawName>
+            <OMeSName>C280.8.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Begin-402.3.1.1</RawName>
+            <OMeSName>C402.3.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Continue-402.3.1.2</RawName>
+            <OMeSName>C402.3.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>End-402.3.1.3</RawName>
+            <OMeSName>C402.3.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Abort-402.3.1.4</RawName>
+            <OMeSName>C402.3.1.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Begin-402.3.2.1</RawName>
+            <OMeSName>C402.3.2.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Continue-402.3.2.2</RawName>
+            <OMeSName>C402.3.2.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>End-402.3.2.3</RawName>
+            <OMeSName>C402.3.2.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Abort-402.3.2.4</RawName>
+            <OMeSName>C402.3.2.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>OnRemoteFarm-EstimatedcontexttoPushtowardsremotefarm-280.9.1</RawName>
+            <OMeSName>C280.9.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>OnRemoteFarm-PushRemotecontexttowardsremotefarmError-280.9.3</RawName>
+            <OMeSName>C280.9.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>OnRemoteFarm-PushRemotecontexttowardsremotefarmSuccess-280.9.2</RawName>
+            <OMeSName>C280.9.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ReceivedRequests-405.1.1.1</RawName>
+            <OMeSName>C405.1.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureRate-405.1.1.3</RawName>
+            <OMeSName>C405.1.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SentRequests-405.4.1.1</RawName>
+            <OMeSName>C405.4.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ReceivedResponses-405.4.1.2</RawName>
+            <OMeSName>C405.4.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureRate-405.4.1.3</RawName>
+            <OMeSName>C405.4.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ReceivedRequests-405.4.2.1</RawName>
+            <OMeSName>C405.4.2.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SentResponses-405.4.2.2</RawName>
+            <OMeSName>C405.4.2.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureRate-405.4.2.3</RawName>
+            <OMeSName>C405.4.2.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>RejectingoverloadRqmessagessentinlastperiod-289.0.7</RawName>
+            <OMeSName>C289.0.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Rqsessionscurrentlyexisting-289.1.0</RawName>
+            <OMeSName>C289.1.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Rqsessionscreated-289.1.1</RawName>
+            <OMeSName>C289.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ValidRxmessagesreceived-285.2.0</RawName>
+            <OMeSName>C285.2.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ValidRxmessagesreceivedinlastperiod-285.2.1</RawName>
+            <OMeSName>C285.2.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>InvalidRxmessagesreceived-285.2.2</RawName>
+            <OMeSName>C285.2.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>InvalidRxmessagesreceivedinlastperiod-285.2.3</RawName>
+            <OMeSName>C285.2.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Rxmessagessent-285.2.4</RawName>
+            <OMeSName>C285.2.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Sysessionscurrentlyexisting-306.1.1</RawName>
+            <OMeSName>C306.1.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Sysessionscreated-306.1.2</RawName>
+            <OMeSName>C306.1.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>Sysessionscreatedinlastperiod-306.1.3</RawName>
+            <OMeSName>C306.1.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SLRsent-306.2.1</RawName>
+            <OMeSName>C306.2.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SLRsentinlastperiod-306.2.2</RawName>
+            <OMeSName>C306.2.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessSLAreceived-306.2.3</RawName>
+            <OMeSName>C306.2.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessSLAreceivedinlastperiod-306.2.4</RawName>
+            <OMeSName>C306.2.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureSLAreceived-306.2.5</RawName>
+            <OMeSName>C306.2.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureSLAreceivedinlastperiod-306.2.6</RawName>
+            <OMeSName>C306.2.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SLAtimedout-306.2.7</RawName>
+            <OMeSName>C306.2.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SLAtimedoutinlastperiod-306.2.8</RawName>
+            <OMeSName>C306.2.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SNRreceived-306.2.9</RawName>
+            <OMeSName>C306.2.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SNRreceivedinlastperiod-306.3.0</RawName>
+            <OMeSName>C306.3.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessSNAsent-306.3.1</RawName>
+            <OMeSName>C306.3.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessSNAsentinlastperiod-306.3.2</RawName>
+            <OMeSName>C306.3.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureSNAsent-306.3.3</RawName>
+            <OMeSName>C306.3.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureSNAsentinlastperiod-306.3.4</RawName>
+            <OMeSName>C306.3.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>STRsent-306.3.5</RawName>
+            <OMeSName>C306.3.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>STRsentinlastperiod-306.3.6</RawName>
+            <OMeSName>C306.3.6</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessSTAreceived-306.3.7</RawName>
+            <OMeSName>C306.3.7</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessSTAreceivedinlastperiod-306.3.8</RawName>
+            <OMeSName>C306.3.8</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureSTAreceived-306.3.9</RawName>
+            <OMeSName>C306.3.9</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureSTAreceivedinlastperiod-306.4.0</RawName>
+            <OMeSName>C306.4.0</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ASRreceived-306.4.1</RawName>
+            <OMeSName>C306.4.1</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>ASRreceivedinlastperiod-306.4.2</RawName>
+            <OMeSName>C306.4.2</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessASAsent-306.4.3</RawName>
+            <OMeSName>C306.4.3</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>SuccessASAsentinlastperiod-306.4.4</RawName>
+            <OMeSName>C306.4.4</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureASAsent-306.4.5</RawName>
+            <OMeSName>C306.4.5</OMeSName>
+          </Counter>
+          <Counter>
+            <RawName>FailureASAsentinlastperiod-306.4.6</RawName>
+            <OMeSName>C306.4.6</OMeSName>
+          </Counter>
+        </Counters>
+      </Measurement>
+
+<Measurement oMeSName="JH" rawName="JAVA_HEAP">
+<TopologyRef id="ROOT">
+<RawLevelRef>ACPCS.PCSNE.PROCESS</RawLevelRef>
+</TopologyRef>
+<Counters>
+<Counter>
+<RawName>JavaHeapUsage-20.1.1</RawName>
+<OMeSName>C20.1.1</OMeSName>
+</Counter>
+</Counters>
+</Measurement>
+
+<Measurement oMeSName="MMR" rawName="Memory">
+<TopologyRef id="ROOT">
+<RawLevelRef>ACPCS.PCSNE.PCSNODE</RawLevelRef>
+</TopologyRef>
+<Counters>
+<Counter>
+<RawName>PhysicalMemory-4.2.0</RawName>
+<OMeSName>C4.2.0</OMeSName>
+</Counter>
+<Counter>
+<RawName>FreeMemory-4.2.1</RawName>
+<OMeSName>C4.2.1</OMeSName>
+</Counter>
+<Counter>
+<RawName>PageOutRequests-4.2.3</RawName>
+<OMeSName>C4.2.3</OMeSName>
+</Counter>
+<Counter>
+<RawName>PageInRequests-4.2.2</RawName>
+<OMeSName>C4.2.2</OMeSName>
+</Counter>
+</Counters>
+</Measurement>
+
+<Measurement oMeSName="FS" rawName="File_Space">
+<TopologyRef id="ROOT">
+<RawLevelRef>ACPCS.PCSNE.PCSNODE.PATH</RawLevelRef>
+</TopologyRef>
+<Counters>
+<Counter>
+<RawName>Available-4.0.3</RawName>
+<OMeSName>C4.0.3</OMeSName>
+</Counter>
+<Counter>
+<RawName>Used-4.0.2</RawName>
+<OMeSName>C4.0.2</OMeSName>
+</Counter>
+</Counters>
+</Measurement>
+
+<Measurement oMeSName="SP" rawName="SWAP_SPACE">
+<TopologyRef id="ROOT">
+<RawLevelRef>ACPCS.PCSNE.PCSNODE.PATH</RawLevelRef>
+</TopologyRef>
+<Counters>
+<Counter>
+<RawName>Available-4.1.3</RawName>
+<OMeSName>C4.1.3</OMeSName>
+</Counter>
+<Counter>
+<RawName>Used-4.1.2</RawName>
+<OMeSName>C4.1.2</OMeSName>
+</Counter>
+</Counters>
+</Measurement>
+
+<Measurement oMeSName="CPU" rawName="CPU">
+<TopologyRef id="ROOT">
+<RawLevelRef>ACPCS.PCSNE.PCSNODE</RawLevelRef>
+</TopologyRef>
+<Counters>
+<Counter>
+<RawName>User-1.1.1</RawName>
+<OMeSName>C1.1.1</OMeSName>
+</Counter>
+<Counter>
+<RawName>System-1.1.2</RawName>
+<OMeSName>C1.1.2</OMeSName>
+</Counter>
+<Counter>
+<RawName>I/Owaiting-1.1.3</RawName>
+<OMeSName>C1.1.3</OMeSName>
+</Counter>
+<Counter>
+<RawName>Idle-1.1.4</RawName>
+<OMeSName>C1.1.4</OMeSName>
+</Counter>
+<Counter>
+<RawName>Interrupts-1.1.5</RawName>
+<OMeSName>C1.1.5</OMeSName>
+</Counter>
+</Counters>
+</Measurement>
+
+<Measurement oMeSName="CU" rawName="CPU_PROCESS_USAGE">
+<TopologyRef id="ROOT">
+<RawLevelRef>ACPCS.PCSNE.PCSNODE.PROCESSID</RawLevelRef>
+</TopologyRef>
+<Counters>
+<Counter>
+<RawName>Time-1.0.7</RawName>
+<OMeSName>C1.0.7</OMeSName>
+</Counter>
+<Counter>
+<RawName>Usage-1.0.8</RawName>
+<OMeSName>C1.0.8</OMeSName>
+</Counter>
+<Counter>
+<RawName>ResidentSetSize(RSS)-1.0.5</RawName>
+<OMeSName>C1.0.5</OMeSName>
+</Counter>
+<Counter>
+<RawName>Size-1.0.6</RawName>
+<OMeSName>C1.0.6</OMeSName>
+</Counter>
+<Counter>
+<RawName>State-1.0.4</RawName>
+<OMeSName>C1.0.4</OMeSName>
+</Counter>
+<Counter>
+<RawName>ProcessId-1.0.2</RawName>
+<OMeSName>C1.0.2</OMeSName>
+</Counter>
+</Counters>
+</Measurement>
+
+<Measurement oMeSName="PSR" rawName="Package_Send_Receive">
+<TopologyRef id="ROOT">
+<RawLevelRef>ACPCS.PCSNE.PCSNODE.INTERFACE</RawLevelRef>
+</TopologyRef>
+<Counters>
+<Counter>
+<RawName>OutputOctets-1.2.10</RawName>
+<OMeSName>C1.2.10</OMeSName>
+</Counter>
+<Counter>
+<RawName>OutgoingPacketswithErrors-1.2.7</RawName>
+<OMeSName>C1.2.7</OMeSName>
+</Counter>
+<Counter>
+<RawName>Collisions-1.2.8</RawName>
+<OMeSName>C1.2.8</OMeSName>
+</Counter>
+<Counter>
+<RawName>IncomingPacketswithErrors-1.2.5</RawName>
+<OMeSName>C1.2.5</OMeSName>
+</Counter>
+<Counter>
+<RawName>OutputPackets-1.2.6</RawName>
+<OMeSName>C1.2.6</OMeSName>
+</Counter>
+<Counter>
+<RawName>MaximumTransmissionUnitvalues(MTU)-1.2.1</RawName>
+<OMeSName>C1.2.1</OMeSName>
+</Counter>
+<Counter>
+<RawName>InputPackets-1.2.4</RawName>
+<OMeSName>C1.2.4</OMeSName>
+</Counter>
+<Counter>
+<RawName>InputOctets-1.2.9</RawName>
+<OMeSName>C1.2.9</OMeSName>
+</Counter>
+</Counters>
+</Measurement>
+</Measurements>
+
+<Hierarchy Id="ROOT">
+    <Level Aggregation="false" ExtraHierarchies="MR;WS" HasServicesSupport="true" ID="ACPCS" IsTransient="false" OMeSName="ACPCS" ObjectNumber="10" RBName="Advantage Commander PCS">
+      <ObjectClassDefinition IntClassID="1" IsNE="true" Name="ACPCS_OBJECT_CLASS"/>
+      <Key ID="acpcs_id" MaxLength="255">
+<RawName>ACPCS</RawName>
+</Key>
+      <Level Aggregation="true" HasServicesSupport="false" ID="PCSNE" IsTransient="true" OMeSName="PCSNE" ObjectNumber="10" RBName="FIXME_4 Policy Control Server Network Element">
+        <ObjectClassDefinition IntClassID="100001" IsNE="false" Name="PCSNE_OBJECT_CLASS"/>
+        <Key ID="pcsne_id" MaxLength="255">
+                  <RawName>SymbolicNEName</RawName>
+				  </Key>
+        <Level Aggregation="false" HasServicesSupport="false" ID="PCSNODE" IsTransient="true" OMeSName="PCSNode" ObjectNumber="10" RBName="Policy Control Server Node">
+          <ObjectClassDefinition IntClassID="100002" IsNE="false" Name="PCSNODE_OBJECT_CLASS"/>
+			<Key ID="pcsnode_id" MaxLength="255">
+			<RawName>SymbolicNodeName</RawName>
+			</Key>
+          <Level Aggregation="false" HasServicesSupport="false" ID="PATH" IsTransient="true" OMeSName="PATH" ObjectNumber="10" RBName="FOLDER PATH">
+            <ObjectClassDefinition IntClassID="100003" IsNE="false" Name="PATH_OBJECT_CLASS"/>
+            <Key ID="path_id" MaxLength="255">
+					<RawName>IndexLabel</RawName>
+			</Key>
+          </Level>
+          <Level Aggregation="false" HasServicesSupport="false" ID="INTERFACE" IsTransient="true" OMeSName="INTERFACE" ObjectNumber="10" RBName="INTERFACE">
+            <ObjectClassDefinition IntClassID="100004" IsNE="false" Name="INTERFACE_OBJECT_CLASS"/>
+            <Key ID="interface_id" MaxLength="255">
+					<RawName>IndexLabel</RawName>
+			</Key>
+          </Level>
+	      <Level Aggregation="false" HasServicesSupport="false" ID="PROCESSID" IsTransient="true" OMeSName="PROCESSID" ObjectNumber="10" RBName="PROCESS ID">
+	          <ObjectClassDefinition IntClassID="100005" IsNE="false" Name="PROCESSID_OBJECT_CLASS"/>
+	          <Key ID="processid_id" MaxLength="255">
+						<RawName>ArrayIdWithIndex</RawName>
+			  </Key>
+	      </Level>
+        </Level>
+		<Level Aggregation="false" HasServicesSupport="false" ID="PROCESS" IsTransient="true" OMeSName="PROCESS" ObjectNumber="10" RBName="PROCESS">
+          <ObjectClassDefinition IntClassID="100006" IsNE="false" Name="PROCESS_OBJECT_CLASS"/>
+          <Key ID="process_id" MaxLength="255">
+					<RawName>IndexLabel</RawName>
+			</Key>
+        </Level>
+      
+      </Level>
+    </Level>
+</Hierarchy>
+</Adaptation>
+
+
+<Rules>
+		<ObjectClassSeparator>
+			<in>=</in>
+			<out>-</out>
+		</ObjectClassSeparator>
+		<MOSeparator>
+			<in>,</in>
+			<out>/</out>
+		</MOSeparator>	
+		<Rule id="INLB">
+			<omesName>PATH</omesName>
+			<rawName>IndexLabel</rawName>
+			<instanceIdSearchPattern>/</instanceIdSearchPattern>
+			<instanceIdReplacePattern>\\</instanceIdReplacePattern>
+		</Rule>	
+		<Rule id="PROCESS">
+			<omesName>PROCESS</omesName>
+			<rawName>IndexLabel</rawName>
+			<instanceIdSearchPattern>/</instanceIdSearchPattern>
+			<instanceIdReplacePattern>\\</instanceIdReplacePattern>
+		</Rule>	
+		<Rule id="PROCESS1">
+			<omesName>PROCESS</omesName>
+			<rawName>IndexLabel</rawName>
+			<instanceIdSearchPattern>PROCESS:</instanceIdSearchPattern>
+			<instanceIdReplacePattern></instanceIdReplacePattern>
+		</Rule>	
+		<Rule id="PROCESSID">
+			<omesName>PROCESSID</omesName>
+			<rawName>ArrayIdWithIndex</rawName>
+			<instanceIdMatchPattern>Processes.*</instanceIdMatchPattern>
+		</Rule>	
+		<Rule id="INTERFACE">
+			<omesName>INTERFACE</omesName>
+			<rawName>IndexLabel</rawName>
+			<instanceIdSearchPattern>/</instanceIdSearchPattern>
+			<instanceIdReplacePattern>\\</instanceIdReplacePattern>
+		</Rule>	
+</Rules>
+	
+</Mapping>

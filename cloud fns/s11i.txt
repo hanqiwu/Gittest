@@ -1,0 +1,17 @@
+
+Name  EPS S11 Interface Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- IP address of the external node (IP)
+
+"The EPS S11 Interface measurement provides information on failed default bearer connectivity\
+  \ procedures due to GTP cause codes received on the S11 interface. \nThe counters\
+  \ are collected on the IP level."
+
++---------+------------------------------------------------------------------------+-------+
+| PID     | NAME                                                                   | GROUP |
++---------+------------------------------------------------------------------------+-------+
+| m77c000 | S11 CREATE SESSION RESPONSE FAILED DUE MISSING OR UNKNOWN APN CAUSE 78 | s11i  |
+| m77c001 | S11 CREATE SESSION RESPONSE FAILED DUE USER AUTHENTICATION CAUSE 92    | s11i  |
+| m77c002 | S11 CREATE SESSION RESPONSE FAILED DUE APN ACCESS DENIED NO            | s11i  |
+|         | SUBSCRIPTION CAUSE 93                                                  |       |
++---------+------------------------------------------------------------------------+-------+

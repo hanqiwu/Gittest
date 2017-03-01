@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.nokia.oss.fm.fmbasic:AlarmDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.nokia.oss.fm.fmbasic="http:///com/nokia/oss/fm/fmbasic.ecore" patchLevel="01.011" specificProblem="15663111" alarmText="FAULT IN PCS5000 ( 239-7 )" probableCause="308" alarmType="qualityOfService" meaning="PCS process was stopped by via process management.This alarm is cleared automatically by a clearing event(#50) on PCS startup." instructions="Nothing to be done" cancelling="Warnings can't be cleared">
+  <Adaptation href="../com.nsn.pcsne.common#/"/>
+</com.nokia.oss.fm.fmbasic:AlarmDescription>

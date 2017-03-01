@@ -1,0 +1,16 @@
+
+Name  EPS DNS Measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS DNS measurement provides information on the MME initiated DNS queries. The
+  provided data includes the number of MME initiated DNS queries and the number of
+  successful DNS queries.
+
+  The counters are collected on the MME level.
+
++---------+------------------------------+-------+
+| PID     | NAME                         | GROUP |
++---------+------------------------------+-------+
+| m63c000 | EPS DNS MME QUERY ATTEMPTS   | dnsm  |
+| m63c001 | EPS DNS MME QUERY SUCCESSFUL | dnsm  |
++---------+------------------------------+-------+

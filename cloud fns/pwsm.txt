@@ -1,0 +1,21 @@
+
+Name  EPS Public Warning System measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS Public Warning System measurement provides information on the sending and
+  receiving of warning messages between the MME and CBC as well as MME and eNB.
+
+  The counters are collected on the MME level.
+
++---------+-----------------------------------------------------+-------+
+| PID     | NAME                                                | GROUP |
++---------+-----------------------------------------------------+-------+
+| m62c000 | S1 WRITE REPLACE WARNING REQUEST SENT TO ENB        | pwsm  |
+| m62c001 | S1 WRITE REPLACE WARNING RESPONSE RECEIVED FROM ENB | pwsm  |
+| m62c002 | SBC WRITE REPLACE WARNING REQUEST RECEIVED FROM CBC | pwsm  |
+| m62c003 | SBC WRITE REPLACE WARNING CONFIRM SENT TO CBC       | pwsm  |
+| m62c004 | S1 KILL REQUEST SENT TO ENB                         | pwsm  |
+| m62c005 | S1 KILL RESPONSE RECEIVED FROM ENB                  | pwsm  |
+| m62c006 | SBC STOP WARNING REQUEST RECEIVED FROM CBC          | pwsm  |
+| m62c007 | SBC STOP WARNING CONFIRM SENT TO CBC                | pwsm  |
++---------+-----------------------------------------------------+-------+

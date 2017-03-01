@@ -1,0 +1,20 @@
+
+Name  EPS S102 Interface Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- IWS IP-address
+
+The EPS S102 Interface measurement provides information on the S102 related uplink
+  and downlink procedures, and the sending and receiving of messages on the S102 interface.
+
+  The counters are collected on the IWS level.
+
++---------+---------------------------------+-------+
+| PID     | NAME                            | GROUP |
++---------+---------------------------------+-------+
+| m75c000 | A21 EVENT NOTIFICATION SUCCESS  | s102  |
+| m75c001 | A21 EVENT NOTIFICATION FAIL     | s102  |
+| m75c002 | S102 UPLINK TUNNELING SUCCESS   | s102  |
+| m75c003 | S102 UPLINK TUNNELING FAIL      | s102  |
+| m75c004 | S102 DOWNLINK TUNNELING SUCCESS | s102  |
+| m75c005 | S102 DOWNLINK TUNNELING FAIL    | s102  |
++---------+---------------------------------+-------+

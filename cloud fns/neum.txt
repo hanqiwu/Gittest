@@ -1,0 +1,24 @@
+
+Name  Network Element User measurement
+Entity  - Flexi NS - SGSN/MME ID (c-number)
+
+The Network Element User measurement provides information on the number of users
+  in the SGSN/MME, for example, the average and peak numbers of attached users and
+  attached roaming users.
+
+  The counters are collected on the network element level.
+
++---------+-------------------------------+-------+
+| PID     | NAME                          | GROUP |
++---------+-------------------------------+-------+
+| m67c000 | NS ATTACHED USERS MAX         | neum  |
+| m67c001 | NS ATTACHED USERS SUM         | neum  |
+| m67c002 | NS ATTACHED USERS DEN         | neum  |
+| m67c003 | NS ROAMING ATTACHED USERS MAX | neum  |
+| m67c004 | NS ROAMING ATTACHED USERS SUM | neum  |
+| m67c005 | NS ROAMING ATTACHED USERS DEN | neum  |
+| m67c006 | NS DETACHED USERS MAX         | neum  |
+| m67c007 | NS DETACHED USERS SUM         | neum  |
+| m67c008 | NS DETACHED USERS DEN         | neum  |
+| m67c009 | NS PURGE ATTEMPT              | neum  |
++---------+-------------------------------+-------+

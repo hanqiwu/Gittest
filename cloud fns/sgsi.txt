@@ -1,0 +1,34 @@
+
+Name  EPS SGS Interface Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- VLR ID
+
+The EPS SGs Interface measurement provides information on message-base processing
+  via the SGs interface.
+
+  The counters are collected on the MSC level.
+
++---------+-------------------------------------------------------+-------+
+| PID     | NAME                                                  | GROUP |
++---------+-------------------------------------------------------+-------+
+| m72c014 | SGSAP UPLINK UNITDATA FAIL                            | sgsi  |
+| m72c015 | SGSAP DOWNLINK UNITDATA FAIL                          | sgsi  |
+| m72c016 | SGSAP LOCATION UPDATE REQUEST                         | sgsi  |
+| m72c017 | SGSAP LOCATION UPDATE ACCEPT                          | sgsi  |
+| m72c018 | SGSAP LOCATION UPDATE REJECT                          | sgsi  |
+| m72c019 | SGSAP PAGING REQUEST WITH PRIORITY                    | sgsi  |
+| m72c002 | SGSAP PAGING REQUEST SMS                              | sgsi  |
+| m72c013 | SGSAP DOWNLINK UNITDATA                               | sgsi  |
+| m72c000 | SGSAP PAGING REQUEST CS FALLBACK                      | sgsi  |
+| m72c010 | SGSAP SERVICE REQUEST CS FALLBACK                     | sgsi  |
+| m72c011 | SGSAP SERVICE REQUEST SMS                             | sgsi  |
+| m72c007 | SGSAP UE UNREACHABLE                                  | sgsi  |
+| m72c012 | SGSAP UPLINK UNITDATA                                 | sgsi  |
+| m72c004 | SGSAP PAGING REJECT IMSI DETACHED EPS                 | sgsi  |
+| m72c005 | SGSAP PAGING REJECT IMSI UNKNOWN                      | sgsi  |
+| m72c006 | SGSAP PAGING REJECT IMSI DETACHED NON-EPS             | sgsi  |
+| m72c008 | SGSAP PAGING REJECT UNSPECIFIED                       | sgsi  |
+| m72c009 | SGSAP PAGING REJECT CS FALLBACK CALL REJECTED BY USER | sgsi  |
+| m72c001 | SGSAP PAGING REJECT CS FALLBACK                       | sgsi  |
+| m72c003 | SGSAP PAGING REJECT SMS                               | sgsi  |
++---------+-------------------------------------------------------+-------+

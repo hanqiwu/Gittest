@@ -1,0 +1,24 @@
+
+Name  EPS Diameter SCTP Management Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- Destination index
+- Connection index
+
+The EPS Diameter SCTP Management measurement provides information on each SCTP protocol
+  association on the Diameter (S6A, S6d, S13, SLG) interface. The provided data includes,
+  for example, the SCTP congestion duration and the number of sent/received SCTP data
+  chunks.
+
+  The counters are collected on an SCTP association level.
+
++---------+------------------------------------+-------+
+| PID     | NAME                               | GROUP |
++---------+------------------------------------+-------+
+| m74c000 | DIAMETER SCTP DATA CHUNK SENT      | dias  |
+| m74c001 | DIAMETER SCTP DATA CHUNK RECEIVED  | dias  |
+| m74c002 | DIAMETER SCTP DATA CHUNK RESENT    | dias  |
+| m74c003 | DIAMETER SCTP CONGESTION DURATION  | dias  |
+| m74c004 | DIAMETER SCTP CONGESTION           | dias  |
+| m74c005 | DIAMETER SCTP UNAVAILABLE DURATION | dias  |
+| m74c006 | DIAMETER SCTP UNAVAILABLE          | dias  |
++---------+------------------------------------+-------+

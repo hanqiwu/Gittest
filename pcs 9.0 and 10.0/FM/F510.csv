@@ -1,0 +1,2345 @@
+Applied Filter Selection
+
+NE Name,NE Type,Msg Set,Msg ID,Detailed output,Severity Level,Including Ascending Severity Levels,Only events with annotation,Total Number
+"F5","F5_BIG-IP","all","all","true","cleared","true","false","226"
+
+
+Resulting Event Definition(s)
+
+NE Name,NE Type,Event ID,Severity,Event Type,Description,Long Text,Repair Text,Annotation
+"F5","F5_BIG-IP","1-455","Critical","equipment alarm","The sending bridge agent has become the new root of the Spanning Tree","Long Descr.: 'The newRoot trap indicates that the sending 
+agent has become the new root of the Spanning Tree; the 
+trap is sent by a bridge soon after its election as the new 
+root, e.g., upon expiration of the Topology Change Timer 
+immediately subsequent to its election. Implementation of 
+this trap is optional.'","Possible Cause 1: 
+Short: Sending agent has become the new root of the Spanning Tree. 
+ Old root may not be reachable from new root.  Interface 
+too old, root down. Interface errors. 
+Long: Sending agent has become the new root of the Spanning Tree. 
+ Old root may not be reachable from new root.  Interface 
+too old, root down. Interface errors.","-- not available --",
+"F5","F5_BIG-IP","1-467","Critical","equipment alarm","State transition of any of the bridge ports occurred","Long Descr.: 'A topologyChange trap is sent by a bridge 
+when any of its configured ports transitions from the 
+Learning state to the Forwarding state, or from the 
+Forwarding state to the Blocking state. The trap is not 
+sent if a newRoot trap is sent for the same transition. 
+Implementation of this trap is optional.'","Possible Cause 1: 
+Short: Interface up.  Physical topology change.  Interface errors. 
+Long: Interface up.  Physical topology change.  Interface errors.","-- not available --",
+"F5","F5_BIG-IP","1-1005","Critical","equipment alarm","%s has crossed its falling threshold (value: %s)","Long Descr.: The SNMP trap that is generated when an alarm 
+entry crosses its falling threshold and generates an event 
+that is configured for sending SNMP traps.
+Variables:
+01: alarmIndex
+    Syntax = 'INTEGER'
+    Descr = 'An index that uniquely identifies an entry in 
+    the alarm table. Each such entry defines a diagnostic 
+    sample at a particular interval for an object on the 
+    device.'
+02: alarmVariable
+    Syntax = 'OBJECT IDENTIFIER'
+    Descr = 'The object identifier of the particular 
+    variable to be sampled. Only variables that resolve to an 
+    ASN.1 primitive type of INTEGER (INTEGER, Integer32, 
+    Counter32, Counter64, Gauge, or TimeTicks) may be sampled. 
+    Because SNMP access control is articulated entirely in 
+    terms of the contents of MIB views, no access control 
+    mechanism exists that can restrict the value of this object 
+    to identify only those objects that exist in a particular 
+    MIB view. Because there is thus no acceptable means of 
+    restricting the read access that could be obtained through 
+    the alarm mechanism, the probe must only grant write access 
+    to this object in those views that have read access to all 
+    objects on the probe. During a set operation, if the 
+    supplied variable name is not available in the selected MIB 
+    view, a badValue error must be returned. If at any time the 
+    variable name of an established alarmEntry is no longer 
+    available in the selected MIB view, the probe must change 
+    the status of this alarmEntry to invalid(4). This object 
+    may not be modified if the associated alarmStatus object is 
+    equal to valid(1).'
+03: alarmSampleType
+    Syntax = 'INTEGER'
+      1=absoluteValue
+      2=deltaValue
+    Descr = 'The method of sampling the selected variable 
+    and calculating the value to be compared against the 
+    thresholds. If the value of this object is 
+    absoluteValue(1), the value of the selected variable will 
+    be compared directly with the thresholds at the end of the 
+    sampling interval. If the value of this object is 
+    deltaValue(2), the value of the selected variable at the 
+    last sample will be subtracted from the current value, and 
+    the difference compared with the thresholds. This object 
+    may not be modified if the associated alarmStatus object is 
+    equal to valid(1).'
+04: alarmValue
+    Syntax = 'INTEGER'
+    Descr = 'The value of the statistic during the last 
+    sampling period. For example, if the sample type is 
+    deltaValue, this value will be the difference between the 
+    samples at the beginning and end of the period. If the 
+    sample type is absoluteValue, this value will be the 
+    sampled value at the end of the period. This is the value 
+    that is compared with the rising and falling thresholds. 
+    The value during the current sampling period is not made 
+    available until the period is completed and will remain 
+    available until the next period completes.'
+05: alarmFallingThreshold
+    Syntax = 'INTEGER'
+    Descr = 'A threshold for the sampled statistic. When 
+    the current sampled value is less than or equal to this 
+    threshold, and the value at the last sampling interval was 
+    greater than this threshold, a single event will be 
+    generated. A single event will also be generated if the 
+    first sample after this entry becomes valid is less than or 
+    equal to this threshold and the associated 
+    alarmStartupAlarm is equal to fallingAlarm(2) or 
+    risingOrFallingAlarm(3). After a falling event is 
+    generated, another such event will not be generated until 
+    the sampled value rises above this threshold and reaches 
+    the alarmRisingThreshold. This object may not be modified 
+    if the associated alarmStatus object is equal to valid(1).'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-1011","Critical","equipment alarm","%s has crossed its rising threshold (value: %s)","Long Descr.: The SNMP trap that is generated when an alarm 
+entry crosses its rising threshold and generates an event 
+that is configured for sending SNMP traps.
+Variables:
+01: alarmIndex
+    Syntax = 'INTEGER'
+    Descr = 'An index that uniquely identifies an entry in 
+    the alarm table. Each such entry defines a diagnostic 
+    sample at a particular interval for an object on the 
+    device.'
+02: alarmVariable
+    Syntax = 'OBJECT IDENTIFIER'
+    Descr = 'The object identifier of the particular 
+    variable to be sampled. Only variables that resolve to an 
+    ASN.1 primitive type of INTEGER (INTEGER, Integer32, 
+    Counter32, Counter64, Gauge, or TimeTicks) may be sampled. 
+    Because SNMP access control is articulated entirely in 
+    terms of the contents of MIB views, no access control 
+    mechanism exists that can restrict the value of this object 
+    to identify only those objects that exist in a particular 
+    MIB view. Because there is thus no acceptable means of 
+    restricting the read access that could be obtained through 
+    the alarm mechanism, the probe must only grant write access 
+    to this object in those views that have read access to all 
+    objects on the probe. During a set operation, if the 
+    supplied variable name is not available in the selected MIB 
+    view, a badValue error must be returned. If at any time the 
+    variable name of an established alarmEntry is no longer 
+    available in the selected MIB view, the probe must change 
+    the status of this alarmEntry to invalid(4). This object 
+    may not be modified if the associated alarmStatus object is 
+    equal to valid(1).'
+03: alarmSampleType
+    Syntax = 'INTEGER'
+      1=absoluteValue
+      2=deltaValue
+    Descr = 'The method of sampling the selected variable 
+    and calculating the value to be compared against the 
+    thresholds. If the value of this object is 
+    absoluteValue(1), the value of the selected variable will 
+    be compared directly with the thresholds at the end of the 
+    sampling interval. If the value of this object is 
+    deltaValue(2), the value of the selected variable at the 
+    last sample will be subtracted from the current value, and 
+    the difference compared with the thresholds. This object 
+    may not be modified if the associated alarmStatus object is 
+    equal to valid(1).'
+04: alarmValue
+    Syntax = 'INTEGER'
+    Descr = 'The value of the statistic during the last 
+    sampling period. For example, if the sample type is 
+    deltaValue, this value will be the difference between the 
+    samples at the beginning and end of the period. If the 
+    sample type is absoluteValue, this value will be the 
+    sampled value at the end of the period. This is the value 
+    that is compared with the rising and falling thresholds. 
+    The value during the current sampling period is not made 
+    available until the period is completed and will remain 
+    available until the next period completes.'
+05: alarmRisingThreshold
+    Syntax = 'INTEGER'
+    Descr = 'A threshold for the sampled statistic. When 
+    the current sampled value is greater than or equal to this 
+    threshold, and the value at the last sampling interval was 
+    less than this threshold, a single event will be generated. 
+    A single event will also be generated if the first sample 
+    after this entry becomes valid is greater than or equal to 
+    this threshold and the associated alarmStartupAlarm is 
+    equal to risingAlarm(1) or risingOrFallingAlarm(3). After a 
+    rising event is generated, another such event will not be 
+    generated until the sampled value falls below this 
+    threshold and reaches the alarmFallingThreshold. This 
+    object may not be modified if the associated alarmStatus 
+    object is equal to valid(1).'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2871","Major","equipment alarm","F5 Loadbalancer: Adding unit: %s","'Adding unit. This BIG-IP has taken responsibility for a 
+new unit id.'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the loadBalTrap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2873","Warning","equipment alarm","F5 Loadbalancer: Request denial: %s","'REQUEST DENIAL'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the loadBalTrap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2875","Major","equipment alarm","F5 Loadbalancer: Root Login: %s","'Root Login.'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the loadBalTrap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2877","Major","equipment alarm","F5 Loadbalancer: %s","'Uncategorized trap.'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the loadBalTrap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2879","Major","equipment alarm","F5 Loadbalancer: Removing unit: %s","'Removing unit. Potential failover of this BIG-IP.'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the loadBalTrap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2881","Major","equipment alarm","F5 Loadbalancer: System reset: %s","'System Reset.'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the loadBalTrap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2883","Critical","equipment alarm","F5 Loadbalancer: Service came down, addr=%s, port=%s","'Service Came Down.'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes addtional 
+    information for a load balance trap.'
+02: loadBalTrapIPString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes an IP address.'
+03: loadBalTrapPortString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes a port.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2884","Cleared","equipment alarm","F5 Loadbalancer: Service came up, addr=%s, port=%s","'Service Came Up.'
+Variables:
+01: loadBalTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes addtional 
+    information for a load balance trap.'
+02: loadBalTrapIPString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes an IP address.'
+03: loadBalTrapPortString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes a port.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2949","Warning","indeterminate","Authentication failure.","An authenticationFailure trap signifies that the sending 
+protocol entity is the addressee of a protocol message that 
+is not properly authenticated.While implementations of the 
+SNMP must be capable of generating this trap, they must 
+also be capable of suppressing the emission of such traps 
+via an implementation-specific mechanism.","Possible Cause 1: 
+Short: Cisco device: unauthorized SNMP access attempt. 
+Long: Unauthorized SNMP access attempt.","-- not available --",
+"F5","F5_BIG-IP","1-2951","Critical","equipment alarm","ColdStart.","A coldStart trap signifies that the sending protocol entity 
+is reinitializing itself such that the agent's 
+configuration or the protocol entity implementation may be 
+altered.","Possible Cause 1: 
+Short: Cisco device: System restart after power down or loss. 
+Long: System restart after power down or loss.","-- not available --",
+"F5","F5_BIG-IP","1-2953","Critical","equipment alarm","EGP neighbor relationship lost ( %s ).","An egpNeighborLoss trap signifies that an EGP neighbor for 
+whom the sending protocol entity was an EGP peer has been 
+marked down and the peer relationship no longer obtains.
+Variables:
+01: egpNeighAddr
+    Syntax = 'IpAddress'
+    Descr = 'The IP address of this entry's EGP neighbor.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2955","Critical","communication alarm","Link Down on interface ifIndex: %s .","A linkDown trap signifies that the sending protocol entity 
+recognizes a failure in one of the communication links 
+represented in the agent's configuration.
+Variables:
+01: ifIndex
+    Syntax = 'INTEGER'
+    Descr = 'A unique value for each interface. Its value 
+    ranges between 1 and the value of ifNumber. The value for 
+    each interface must remain constant at least from one 
+    re-initialization of the entity's network management system 
+    to the next re- initialization.'","Possible Cause 1: 
+Short: Cisco device: link down. 
+Long: Link down.","-- not available --",
+"F5","F5_BIG-IP","1-2956","Cleared","communication alarm","Link Up on interface ifIndex: %s .","A linkUp trap signifies that the sending protocol entity 
+recognizes that one of the communication links represented 
+in the agent's configuration has come up.
+Variables:
+01: ifIndex
+    Syntax = 'INTEGER'
+    Descr = 'A unique value for each interface. Its value 
+    ranges between 1 and the value of ifNumber. The value for 
+    each interface must remain constant at least from one 
+    re-initialization of the entity's network management system 
+    to the next re- initialization.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2957","Normal","environment alarm","WarmStart: configuration unaltered.","A warmStart trap signifies that the sending protocol entity 
+is reinitializing itself such that neither the agent 
+configuration nor the protocol entity implementation is 
+altered.","Possible Cause 1: 
+Short: Cisco device: system restart after shutdown. 
+Long: system restart after shutdown.","-- not available --",
+"F5","F5_BIG-IP","1-2963","Critical","communication alarm","Link Down on interface ifIndex: %s .","A linkDown trap signifies that the SNMPv2 entity, acting in 
+an agent role, has detected that the ifOperStatus object 
+for one of its communication links is about to transition 
+into the down state.
+Variables:
+01: ifIndex
+    Syntax = 'INTEGER'
+    Descr = 'A unique value for each interface. Its value 
+    ranges between 1 and the value of ifNumber. The value for 
+    each interface must remain constant at least from one 
+    re-initialization of the entity's network management system 
+    to the next re- initialization.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2964","Cleared","communication alarm","Link Up on interface ifIndex: %s .","A linkUp trap signifies that the SNMPv2 entity, acting in 
+an agent role, has detected that the ifOperStatus object 
+for one of its communication links has transitioned out of 
+the down state.
+Variables:
+01: ifIndex
+    Syntax = 'INTEGER'
+    Descr = 'A unique value for each interface. Its value 
+    ranges between 1 and the value of ifNumber. The value for 
+    each interface must remain constant at least from one 
+    re-initialization of the entity's network management system 
+    to the next re- initialization.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2965","Major","communication alarm","SNMPAgent %s %s - port =%s, comm =%s","Long Descr.: This event is generated when an snmp agent 
+goes up / down. The agent is considered to be down when a 
+response to a getnext request is not received in time 
+(timeout = 5 sec).
+Variables:
+01: proxyPollingStatus
+    Syntax = 'OCTET STRING'
+    Descr = 'Status of the polled agent. For Notification 
+    use only.'
+02: proxyPollingHost
+    Syntax = 'OCTET STRING'
+    Descr = 'Host name of the polled agent. For 
+    Notification use only.'
+03: proxyPollingPort
+    Syntax = 'INTEGER'
+    Descr = 'SNMP port of the polled agent. For 
+    Notification use only.'
+04: proxyPollingName
+    Syntax = 'OCTET STRING'
+    Descr = 'Module name of the polled agent. For 
+    Notification use only.'
+05: proxyPollingTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community string of the polled agent. For 
+    Notification use only.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2966","Cleared","communication alarm","SNMPAgent %s %s - port =%s, comm =%s","Long Descr.: This event is generated when an snmp agent 
+goes up / down. The agent is considered to be down when a 
+response to a getnext request is not received in time 
+(timeout = 5 sec).
+Variables:
+01: proxyPollingStatus
+    Syntax = 'OCTET STRING'
+    Descr = 'Status of the polled agent. For Notification 
+    use only.'
+02: proxyPollingHost
+    Syntax = 'OCTET STRING'
+    Descr = 'Host name of the polled agent. For 
+    Notification use only.'
+03: proxyPollingPort
+    Syntax = 'INTEGER'
+    Descr = 'SNMP port of the polled agent. For 
+    Notification use only.'
+04: proxyPollingName
+    Syntax = 'OCTET STRING'
+    Descr = 'Module name of the polled agent. For 
+    Notification use only.'
+05: proxyPollingTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community string of the polled agent. For 
+    Notification use only.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2971","Minor","indeterminate","Authentication failed.","An authenticationFailure trap signifies that the SNMPv2 
+entity, acting in an agent role, has received a protocol 
+message that is not properly authenticated. While all 
+implementations of the SNMPv2 must be capable of generating 
+this trap, the snmpEnableAuthenTraps object indicates 
+whether this trap will be generated.","Possible Cause 1: 
+Short: Cisco device: unauthorized SNMP access attempt. 
+Long: Unauthorized SNMP access attempt.","-- not available --",
+"F5","F5_BIG-IP","1-2973","Normal","equipment alarm","Coldstart","A coldStart trap signifies that the SNMPv2 entity, acting 
+in an agent role, is reinitializing itself and that its 
+configuration may have been altered.","Possible Cause 1: 
+Short: Cisco device: System restart after power down or loss. 
+Long: System restart after power down or loss.","-- not available --",
+"F5","F5_BIG-IP","1-2975","Normal","communication alarm","EGP neighbor %s has been marked down and the EGP peer relationship no longer obtains.","An egpNeighborLoss trap signifies that an EGP neighbor has 
+been marked down and the EGP peer relationship no longer 
+obtains.'
+Variables:
+01: egpNeighAddr
+    Syntax = 'IpAddress'
+    Descr = 'The IP address of this entry's EGP neighbor.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2977","Critical","communication alarm","Link Down on interface ifIndex: %s ; ifAdminStatus: %s ; ifOperStatus: %s ;","Long Descr.: 'A linkDown trap signifies that the SNMPv2 
+entity, acting in an agent role, has detected that the 
+ifOperStatus object for one of its communication links is 
+about to transition into the down state.'
+Variables:
+01: ifIndex
+    Syntax = 'Integer32'
+    Descr = 'A unique value, greater than zero, for each 
+    interface. It is recommended that values are assigned 
+    contiguously starting from 1. The value for each interface 
+    sub-layer must remain constant at least from one 
+    re-initialization of the entity's network management system 
+    to the next re- initialization.'
+02: ifAdminStatus
+    Syntax = 'INTEGER'
+      1=up
+      2=down
+      3=testing
+    Descr = 'The desired state of the interface. The 
+    testing(3) state indicates that no operational packets can 
+    be passed. When a managed system initializes, all 
+    interfaces start with ifAdminStatus in the down(2) state. 
+    As a result of either explicit management action or per 
+    configuration information retained by the managed system, 
+    ifAdminStatus is then changed to either the up(1) or 
+    testing(3) states (or remains in the down(2) state).'
+03: ifOperStatus
+    Syntax = 'INTEGER'
+      1=up
+      2=down
+      3=testing
+      4=unknown
+      5=dormant
+      6=notPresent
+      7=lowerLayerDown
+    Descr = 'The current operational state of the 
+    interface. The testing(3) state indicates that no 
+    operational packets can be passed. If ifAdminStatus is 
+    down(2) then ifOperStatus should be down(2). If 
+    ifAdminStatus is changed to up(1) then ifOperStatus should 
+    change to up(1) if the interface is ready to transmit and 
+    receive network traffic; it should change to dormant(5) if 
+    the interface is waiting for external actions (such as a 
+    serial line waiting for an incoming connection); it should 
+    remain in the down(2) state if and only if there is a fault 
+    that prevents it from going to the up(1) state; it should 
+    remain in the notPresent(6) state if the interface has 
+    missing (typically, hardware) components.'","Possible Cause 1: 
+Short: Cisco device: link down. 
+Long: Link down.","-- not available --",
+"F5","F5_BIG-IP","1-2978","Cleared","communication alarm","Link Up on interface ifIndex: %s ; ifAdminStatus: %s ; ifOperStatus: %s ;","Long Descr.: 'A linkUp trap signifies that the SNMPv2 
+entity, acting in an agent role, has detected that the 
+ifOperStatus object for one of its communication links has 
+transitioned out of the down state.'
+Variables:
+01: ifIndex
+    Syntax = 'Integer32'
+    Descr = 'A unique value, greater than zero, for each 
+    interface. It is recommended that values are assigned 
+    contiguously starting from 1. The value for each interface 
+    sub-layer must remain constant at least from one 
+    re-initialization of the entity's network management system 
+    to the next re- initialization.'
+02: ifAdminStatus
+    Syntax = 'INTEGER'
+      1=up
+      2=down
+      3=testing
+    Descr = 'The desired state of the interface. The 
+    testing(3) state indicates that no operational packets can 
+    be passed. When a managed system initializes, all 
+    interfaces start with ifAdminStatus in the down(2) state. 
+    As a result of either explicit management action or per 
+    configuration information retained by the managed system, 
+    ifAdminStatus is then changed to either the up(1) or 
+    testing(3) states (or remains in the down(2) state).'
+03: ifOperStatus
+    Syntax = 'INTEGER'
+      1=up
+      2=down
+      3=testing
+      4=unknown
+      5=dormant
+      6=notPresent
+      7=lowerLayerDown
+    Descr = 'The current operational state of the 
+    interface. The testing(3) state indicates that no 
+    operational packets can be passed. If ifAdminStatus is 
+    down(2) then ifOperStatus should be down(2). If 
+    ifAdminStatus is changed to up(1) then ifOperStatus should 
+    change to up(1) if the interface is ready to transmit and 
+    receive network traffic; it should change to dormant(5) if 
+    the interface is waiting for external actions (such as a 
+    serial line waiting for an incoming connection); it should 
+    remain in the down(2) state if and only if there is a fault 
+    that prevents it from going to the up(1) state; it should 
+    remain in the notPresent(6) state if the interface has 
+    missing (typically, hardware) components.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-2979","Normal","environment alarm","Warm Start: the SNMP entity (agent) is reinitializing itself such that its configuration is unaltered.","A warmStart trap signifies that the SNMPv2 entity, acting 
+in an agent role, is reinitializing itself such that its 
+configuration is unaltered.","Possible Cause 1: 
+Short: Cisco device: system restart after shutdown. 
+Long: system restart after shutdown.","-- not available --",
+"F5","F5_BIG-IP","1-5783","Warning","equipment alarm","loadBalTrapStandby","Long Descr.: The unit is set to standby mode.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5784","Cleared","equipment alarm","loadBalTrapActive","Long Descr.: The unit is set to active mode.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5785","Major","equipment alarm","loadBalTrapAuthFail","Long Descr.: Authorization is not successful.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5787","Minor","equipment alarm","loadBalTrapBadSu","Long Descr.: Unauthorized attempt to switch user.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5789","Normal","equipment alarm","loadBalTrapBigdFail","Long Descr.: Bigd is failure because of no memory.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5791","Normal","equipment alarm","loadBalTrapBigdServiceFail","Long Descr.: Bigd service checking is failure.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5793","Major","equipment alarm","loadBalTrapBigpipeLoadConfig","Long Descr.: The configuration files are loaded.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5795","Warning","equipment alarm","loadBalTrapDupIP","Long Descr.: There are duplication IP addresses on the 
+system.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5797","Warning","equipment alarm","loadBalTrapIntermitTraffic","Long Descr.: Intermittent traffic is detected. Check 
+network.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5799","Warning","equipment alarm","loadBalTrapInternalErr","Long Descr.: There are some internal errors.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5801","Minor","equipment alarm","loadBalTrapLicFail","Long Descr.: License authorization is failed.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5803","Normal","equipment alarm","loadBalTrapLicFile","Long Descr.: License file may be corrupted on the system.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5805","Major","equipment alarm","loadBalTrapLoginFail","Long Descr.: Login is failed.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5807","Major","equipment alarm","loadBalTrapLoginFrom","Long Descr.: Where the login is made from.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5809","Warning","equipment alarm","loadBalTrapMemLow","Long Descr.: Memory is low on the system.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5811","Major","equipment alarm","loadBalTrapNATDefine","Long Descr.: NAT is defined.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5813","Major","equipment alarm","loadBalTrapNeedUpgrade","Long Descr.: Upgrade is needed.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5815","Normal","equipment alarm","loadBalTrapNoMem","Long Descr.: The system can not allocate memory.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5817","Normal","equipment alarm","loadBalTrapNoNATTranslate","Long Descr.: Can not tranalte NAT.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5819","Normal","equipment alarm","loadBalTrapNoNAT","Long Descr.: No NAT is defined.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5821","Normal","equipment alarm","loadBalTrapNoNode","Long Descr.: There is no node available for vip.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5823","Normal","equipment alarm","loadBalTrapNoPort","Long Descr.: No ports are avaiable on the system for TCP 
+connection.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5825","Normal","equipment alarm","loadBalTrapNoRouteToHost","Long Descr.: There is no route to the host.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5827","Normal","equipment alarm","loadBalTrapNoRouteToNode","Long Descr.: There is no route to the node.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5829","Critical","equipment alarm","loadBalTrapNodeDown:loadBalTrapIPString=%s loadBalTrapPortString=%s","Long Descr.: A node is detected down.
+Variables:
+01: loadBalTrapIPString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes an IP address.'
+02: loadBalTrapPortString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes a port.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5830","Cleared","equipment alarm","loadBalTrapNodeUp:loadBalTrapIPString=%s loadBalTrapPortString=%s","Long Descr.: A node is detected up.
+Variables:
+01: loadBalTrapIPString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes an IP address.'
+02: loadBalTrapPortString
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes a port.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5831","Warning","equipment alarm","loadBalTrapProxydRestart","Long Descr.: Proxyd is restarted.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5833","Warning","equipment alarm","loadBalTrapReboot","Long Descr.: The system is rebooted.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5835","Critical","equipment alarm","loadBalTrapSNATAdd","Long Descr.: SNAT is added.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5837","Minor","equipment alarm","loadBalTrapSshFail","Long Descr.: There are too many authentication failures for 
+ssh, deny.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5839","Major","equipment alarm","loadBalTrapSshPassFail","Long Descr.: Wrong password for ssh , deny.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5841","Normal","equipment alarm","loadBalTrapSysCrash","Long Descr.: The system has unexpectedly crashed. Call 
+support.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5843","Normal","equipment alarm","loadBalTrapSysPanic","Long Descr.: The system is panic. Call support.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5845","Normal","equipment alarm","loadBalTrapSysUnstable","Long Descr.: The system is not stable.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5847","Major","equipment alarm","loadBalTrapUnitNotReady","Long Descr.: The unit is not ready.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5849","Major","equipment alarm","loadBalTrapUnkownUser","Long Descr.: Illegal user is trying to login, failed.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5851","Critical","equipment alarm","loadBalTrapVIPAdd","Long Descr.: A virtual IP is added.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5853","Critical","equipment alarm","loadBalTrapVIPRedefine","Long Descr.: A virtual IP is redefined.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5855","Major","equipment alarm","loadBalTrapWarn","Long Descr.: Warning condition is detected. Check logs.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5857","Major","environment alarm","ucdShutdown","'This trap is sent when the agent terminates'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5859","Critical","environment alarm","ucdStart","''","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5861","Warning","equipment alarm","tempCPUThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the CPU temperature 
+threshold has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5863","Warning","equipment alarm","tempFrontAmbientThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the ambient temperature 
+threshold has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5865","Warning","equipment alarm","tempInternalThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the internal 
+temperature threshold has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5867","Critical","equipment alarm","threednsTrapActiveToStandby","Long Descr.: Active to standby","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5869","Critical","equipment alarm","threednsTrapCRCFailure","Long Descr.: CRC failure.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5871","Critical","equipment alarm","threednsTrapECVGreenToRed","Long Descr.: ECV check status change from green to red.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5873","Critical","equipment alarm","threednsTrapECVRedToGreen","Long Descr.: ECV check status change from red to green.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5875","Critical","equipment alarm","threednsTrapLinkGreenToRed","Long Descr.: Link check status change from green to red.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5877","Critical","equipment alarm","threednsTrapLinkRedToGreen","Long Descr.: Link check status change from red to green.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5879","Critical","equipment alarm","threednsTrapObjectDisabled","Long Descr.: Object Disabled","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5881","Critical","equipment alarm","threednsTrapObjectEnabled","Long Descr.: Object Enabled","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5883","Critical","equipment alarm","threednsTrapPoolGreenToYellow","Long Descr.: Pool status change from green to yellow.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5885","Critical","equipment alarm","threednsTrapPoolVSGreenToRed","Long Descr.: Pool virtual server change from green to red 
+status.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5887","Critical","equipment alarm","threednsTrapPoolVSRedToGreen","Long Descr.: Pool virtual server change from red to green 
+status.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5889","Critical","equipment alarm","threednsTrapPoolYellowToGreen","Long Descr.: Pool status change from yellow to green.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5891","Critical","equipment alarm","threednsTrapServerGreenToRed","Long Descr.: Server change from green to red status.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5893","Critical","equipment alarm","threednsTrapServerRedToGreen","Long Descr.: Server change from red to green status.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5895","Critical","equipment alarm","threednsTrapStandbyToActive","Long Descr.: Standby to active","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5897","Critical","equipment alarm","threednsTrapVSGreenToRed","Long Descr.: Virtual server change from green to red status.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5899","Critical","equipment alarm","threednsTrapVSRedToGreen","Long Descr.: Virtual server change from red to green status.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5901","Critical","equipment alarm","powerSupplyACBadChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the powerSupplyACBad 
+object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5903","Critical","equipment alarm","powerSupplyHasFailedChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the 
+powerSupplyHasFailed object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5905","Critical","equipment alarm","powerSupplyIsAbsentChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the powerSupplyAbsent 
+object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5907","Critical","equipment alarm","powerSupplyPowerOKChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the powerSupplyPowerOK 
+object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5909","Critical","equipment alarm","powerSupplyPredictedFailChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the 
+powerSupplyPredictedFail object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5911","Critical","equipment alarm","noiAlarmAckStateChanged:noiAlarmSystemDN=%s noiAlarmId=%s noiAlarmEventTime=%s noiAlarmSpecificProblem=%s noiAlarmText=%s noiAlarmPerceivedSeverity=%s noiAlarmAdditionalText=%s noiAlarmProbableCause=%s noiAlarmEventType=%s noiAlarmNotificationId=%s noiAlarmAckState=%s noiAlarmAckTime=%s noiAlarmAckUserId=%s","Long Descr.: This notification is used when the 
+acknowledgement state of an alarm has changed. The value of 
+noiAlarmID must be equal to the value ff the noiAlarmId of 
+the correlated alarm notification. The alarm information 
+carried in this notification shall contain identical set of 
+parameters as the correlated alarm notification. The alarm 
+is removed from the alarm table when the alarm has been 
+cleared before (e.g. severity of the alarm is 'cleared' and 
+this notification has been send by the agent. If the alarm 
+in the alarm table is not cleared, it remains in the table. 
+Values of noiAlarmAckState , noiAlarmAckTime, 
+noiAlarmAckUserId are updated. If the agent does not 
+support the concept of acknowledgment for alarms, than this 
+notification shall not be supported.
+Variables:
+01: noiAlarmSystemDN
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the System 
+    Distinguished Name (SDN) of the managed object detecting 
+    the fault.'
+02: noiAlarmId
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the alarm identifier of 
+    an alarm in the alarm table It uniquely identifies an entry 
+    in the alarm table. The alarmId object is read-only even 
+    though it is used as index in the alarm table'
+03: noiAlarmEventTime
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the event time, time of 
+    occurrence of the event in the Network Element.'
+04: noiAlarmSpecificProblem
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the specific problem 
+    assigned to the fault situation.'
+05: noiAlarmText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the alarm text and 
+    contains basic information on the fault'
+06: noiAlarmPerceivedSeverity
+    Syntax = 'INTEGER'
+      1=critical
+      2=major
+      3=minor
+      4=warning
+      5=cleared
+      0=indeterminate
+    Descr = 'This object represents the perceived severity 
+    of the fault.'
+07: noiAlarmAdditionalText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the additional text and 
+    provides further qualification on the fault.'
+08: noiAlarmProbableCause
+    Syntax = 'INTEGER'
+      0=m3100Indeterminate
+      1=m3100AlarmIndicationSignal
+      2=m3100CallSetupFailure
+      3=m3100DegradedSignal
+      4=m3100FarEndReceiverFailure
+      5=m3100FramingError
+      6=m3100LossOfFrame
+      7=m3100LossOfPointer
+      8=m3100LossOfSignal
+      9=m3100PayloadTypeMismatch
+      10=m3100TransmissionError
+      11=m3100RemoteAlarmInterface
+      12=m3100ExcessiveBitErrorRate
+      13=m3100PathTraceMismatch
+      14=m3100Unavailable
+      15=m3100SignalLabelMismatch
+      16=m3100LossOfMultiFrame
+      51=m3100BackPlaneFailure
+      52=m3100DataSetProblem
+      53=m3100EquipmentIdentifierDuplication
+      54=m3100ExternalIfDeviceProblem
+      55=m3100LineCardProblem
+      56=m3100MultiplexerProblem
+      57=m3100NeIdentifierDuplication
+      58=m3100PowerProblem
+      59=m3100ProcessorProblem
+      60=m3100ProtectionPathFailure
+      61=m3100ReceiverFailure
+      62=m3100ReplaceableUnitMissing
+      63=m3100ReplaceableUnitTypeMismatch
+      64=m3100SynchronisationSourceMismatch
+      65=m3100TerminalProblem
+      66=m3100TimingProblem
+      67=m3100TransmitterFailure
+      68=m3100TrunkCardProblem
+      69=m3100ReplaceableUnitProblem
+      101=m3100AirCompressorFailure
+      102=m3100AirConditioningFailure
+      103=m3100AirDryerFailure
+      104=m3100BatteryDischarging
+      105=m3100BatteryFailure
+      106=m3100CommercialPowerFailure
+      107=m3100CoolingFanFailure
+      108=m3100EngineFailure
+      109=m3100FireDetectorFailure
+      110=m3100FuseFailure
+      111=m3100GeneratorFailure
+      112=m3100LowBatteryThreshold
+      113=m3100PumpFailure
+      114=m3100RectifierFailure
+      115=m3100RectifierHighVoltage
+      116=m3100RectifierLowVoltage
+      117=m3100VentilationSystemFailure
+      118=m3100EnclosureDoorOpen
+      119=m3100ExplosiveGas
+      120=m3100Fire
+      121=m3100Flood
+      122=m3100HighHumidity
+      123=m3100HighTemperature
+      124=m3100HighWind
+      125=m3100IceBuildUp
+      127=m3100LowFuel
+      128=m3100LowHumidity
+      129=m3100LowCablePressure
+      130=m3100LowTemperature
+      131=m3100LowWater
+      132=m3100Smoke
+      133=m3100ToxicGas
+      151=m3100StorageCapacityProblem
+      152=m3100MemoryMismatch
+      153=m3100CorruptData
+      154=m3100OutOfCPUCycles
+      155=m3100SoftwareEnvironmentProblem
+      156=m3100SoftwareDownloadFailure
+      1000001=x733AdapterError
+      1000002=x733ApplicationSubsystemFailure
+      1000003=x733BandwidthReduced
+      1000005=x733CommunicationsProtocolError
+      1000006=x733CommunicationsSubsystemFailure
+      1000007=x733ConfigurationOrCustomizationError
+      1000008=x733Congestion
+      1000010=x733CpuCyclesLimitExceeded
+      1000011=x733DataSetOrModemError
+      1000013=x733DTEDCEInterfaceError
+      1000015=x733EquipmentMalfunction
+      1000016=x733ExcessiveVibration
+      1000017=x733FileError
+      1000021=x733HeatingOrVentilationOrCoolingSystemProblem
+      1000022=x733HumidityUnacceptable
+      1000023=x733InputOutputDeviceError
+      1000024=x733InputDeviceError
+      1000025=x733LANError
+      1000026=x733LeakDetected
+      1000027=x733LocalNodeTransmissionError
+      1000030=x733MaterialSupplyExhausted
+      1000032=x733OutOfMemory
+      1000033=x733OuputDeviceError
+      1000034=x733PerformanceDegraded
+      1000036=x733PressureUnacceptable
+      1000039=x733QueueSizeExceeded
+      1000040=x733ReceiveFailure
+      1000042=x733RemoteNodeTransmissionError
+      1000043=x733ResourceAtOrNearingCapacity
+      1000044=x733ResponseTimeExcessive
+      1000045=x733RetransmissionRateExcessive
+      1000046=x733SoftwareError
+      1000047=x733SoftwareProgramAbnormallyTerminated
+      1000048=x733SoftwareProgramError
+      1000050=x733TemperatureUnacceptable
+      1000051=x733ThresholdCrossed
+      1000053=x733ToxicLeakDetected
+      1000054=x733TransmitFailure
+      1000056=x733UnderlyingResourceUnavailable
+      1000057=x733VersionMismatch
+      2000001=x736AuthenticationFailure
+      2000002=x736BreachOfConfidentiality
+      2000003=x736CableTamper
+      2000004=x736DelayedInformation
+      2000005=x736DenialOfService
+      2000006=x736DuplicateInformation
+      2000007=x736InformationMissing
+      2000008=x736InformationModificationDetected
+      2000009=x736InformationOutOfSequence
+      2000010=x736IntrusionDetection
+      2000011=x736KeyExpired
+      2000012=x736NonRepudiationFailure
+      2000013=x736OutOfHoursActivity
+      2000014=x736OutOfService
+      2000015=x736ProceduralError
+      2000016=x736UnauthorizedAccessAttempt
+      2000017=x736UnexpectedInformation
+      2000018=x736UnspecifiedReason
+      3000001=gsm1211AbisToBTSInterfaceFailure
+      3000002=gsm1211AbisToTRXInterfaceFailure
+      3000003=gsm1211AntennaProblem
+      3000004=gsm1211BatteryBreakdown
+      3000005=gsm1211BatteryChargingFault
+      30000056=gsm1211ClockSynchronisationProblem
+      3000007=gsm1211CombinerProblem
+      3000008=gsm1211DiskProblem
+      3000010=gsm1211ExcessiveReceiverTemperature
+      3000011=gsm1211ExcessiveTransmitterOutputPower
+      3000012=gsm1211ExcessiveTransmitterTemperature
+      3000013=gsm1211FrequencyHoppingDegraded
+      3000014=gsm1211FrequencyHoppingFailure
+      3000015=gsm1211FrequencyRedefinitionFailed
+      3000016=gsm1211LineInterfaceFailure
+      3000017=gsm1211LinkFailure
+      3000018=gsm1211LossOfSynchronisation
+      3000019=gsm1211LostRedundancy
+      3000020=gsm1211MainsBreakdownWithBatteryBackUp
+      3000021=gsm1211MainsBreakdownWithoutBatteryBackUp
+      3000022=gsm1211PowerSupplyFailure
+      3000023=gsm1211ReceiverAntennaFault
+      3000025=gsm1211ReceiverMulticouplerFailure
+      3000026=gsm1211ReducedTransmitterOutputPower
+      3000027=gsm1211SignalQualityEvaluationFault
+      3000028=gsm1211TimeslotHardwareFailure
+      3000029=gsm1211TransceiverProblem
+      3000030=gsm1211TranscoderProblem
+      3000031=gsm1211TranscoderOrRateAdapterProblem
+      3000032=gsm1211TransmitterAntennaFailure
+      3000033=gsm1211TransmitterAntennaNotAdjusted
+      3000035=gsm1211TransmitterLowVoltageOrCurrent
+      3000036=gsm1211TransmitterOffFrequency
+      3000037=gsm1211DatabaseInconsistency
+      3000038=gsm1211FileSystemCallUnsuccessful
+      3000039=gsm1211InputParameterOutOfRange
+      3000040=gsm1211InvalidParameter
+      3000041=gsm1211InvalidPointer
+      3000042=gsm1211MessageNotExpected
+      3000043=gsm1211MessageNotInitialised
+      3000044=gsm1211MessageOutOfSequence
+      3000045=gsm1211SystemCallUnsuccessful
+      3000046=gsm1211TimeoutExpired
+      3000047=gsm1211VariableOutOfRange
+      3000048=gsm1211WatchDogTimerExpired
+      3000049=gsm1211CoolingSystemFailure
+      3000050=gsm1211ExternalEquipmentFailure
+      3000051=gsm1211ExternalPowerSupplyFailure
+      3000052=gsm1211ExternalTransmissionDeviceFailure
+      3000061=gsm1211ReducedAlarmReporting
+      3000062=gsm1211ReducedEventReporting
+      3000063=gsm1211ReducedLoggingCapability
+      3000064=gsm1211SystemResourcesOverload
+      3000065=gsm1211BroadcastChannelFailure
+      3000066=gsm1211ConnectionEstablishmentError
+      3000067=gsm1211InvalidMessageReceived
+      3000068=gsm1211InvalidMSUReceived
+      3000069=gsm1211LAPDLinkProtocolFailure
+      3000070=gsm1211LocalAlarmIndication
+      3000071=gsm1211RemoteAlarmIndication
+      3000072=gsm1211RoutingFailure
+      3000073=gsm1211SS7ProtocolFailure
+      3000074=gsm1211TransmissionError
+    Descr = 'This object represents the probable cause of 
+    the alarm'
+09: noiAlarmEventType
+    Syntax = 'INTEGER'
+      0=unknown
+      2=communicationsAlarm
+      3=environmentalAlarm
+      4=equipmentAlarm
+      10=processingErrorAlarm
+      11=qualityOfServiceAlarm
+    Descr = 'This object represents the event type'
+10: noiAlarmNotificationId
+    Syntax = 'INTEGER'
+    Descr = 'This object represent the notification 
+    identifier. It is a unique value for a notification.'
+11: noiAlarmAckState
+    Syntax = 'INTEGER'
+      1=acknowledged
+      2=unacknowledged
+      3=indeterminate
+    Descr = 'This object represents the acknowledgement 
+    status of the of the alarm If the agent does not support 
+    the concept of acknowledgement, than the value 
+    'indeterminate' shall be used'
+12: noiAlarmAckTime
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represent the time of the last 
+    modification of the acknowledgement state of an alarm in 
+    the alarm table.'
+13: noiAlarmAckUserId
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represent the user who made the 
+    last modification of the acknowledgement state of an alarm 
+    in the alarm table.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5913","Critical","equipment alarm","noiAlarmChanged:noiAlarmSystemDN=%s noiAlarmId=%s noiAlarmEventTime=%s noiAlarmSpecificProblem=%s noiAlarmText=%s noiAlarmPerceivedSeverity=%s noiAlarmAdditionalText=%s noiAlarmProbableCause=%s noiAlarmEventType=%s noiAlarmNotificationId=%s","Long Descr.: This notification is used when the severity of 
+an alarm has changed. The value 'cleared' is not allowed in 
+conjunction with this notification. The value of noiAlarmID 
+must be equal to the value of the noiAlarmId of the 
+correlated alarm notification. The noiAlarmSystemDN , 
+noiAlarmSpecificProblem , NoiAlarmText, 
+noiAlarmProbableCause, noiAlarmEventType must be equal to 
+the values of the correlated alarm. The agent may use a 
+different noiAlarmAdditionalText than the original alarm. 
+The noiAlarmEventTime is naturally different from the 
+original alarm
+Variables:
+01: noiAlarmSystemDN
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the System 
+    Distinguished Name (SDN) of the managed object detecting 
+    the fault.'
+02: noiAlarmId
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the alarm identifier of 
+    an alarm in the alarm table It uniquely identifies an entry 
+    in the alarm table. The alarmId object is read-only even 
+    though it is used as index in the alarm table'
+03: noiAlarmEventTime
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the event time, time of 
+    occurrence of the event in the Network Element.'
+04: noiAlarmSpecificProblem
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the specific problem 
+    assigned to the fault situation.'
+05: noiAlarmText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the alarm text and 
+    contains basic information on the fault'
+06: noiAlarmPerceivedSeverity
+    Syntax = 'INTEGER'
+      1=critical
+      2=major
+      3=minor
+      4=warning
+      5=cleared
+      0=indeterminate
+    Descr = 'This object represents the perceived severity 
+    of the fault.'
+07: noiAlarmAdditionalText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the additional text and 
+    provides further qualification on the fault.'
+08: noiAlarmProbableCause
+    Syntax = 'INTEGER'
+      0=m3100Indeterminate
+      1=m3100AlarmIndicationSignal
+      2=m3100CallSetupFailure
+      3=m3100DegradedSignal
+      4=m3100FarEndReceiverFailure
+      5=m3100FramingError
+      6=m3100LossOfFrame
+      7=m3100LossOfPointer
+      8=m3100LossOfSignal
+      9=m3100PayloadTypeMismatch
+      10=m3100TransmissionError
+      11=m3100RemoteAlarmInterface
+      12=m3100ExcessiveBitErrorRate
+      13=m3100PathTraceMismatch
+      14=m3100Unavailable
+      15=m3100SignalLabelMismatch
+      16=m3100LossOfMultiFrame
+      51=m3100BackPlaneFailure
+      52=m3100DataSetProblem
+      53=m3100EquipmentIdentifierDuplication
+      54=m3100ExternalIfDeviceProblem
+      55=m3100LineCardProblem
+      56=m3100MultiplexerProblem
+      57=m3100NeIdentifierDuplication
+      58=m3100PowerProblem
+      59=m3100ProcessorProblem
+      60=m3100ProtectionPathFailure
+      61=m3100ReceiverFailure
+      62=m3100ReplaceableUnitMissing
+      63=m3100ReplaceableUnitTypeMismatch
+      64=m3100SynchronisationSourceMismatch
+      65=m3100TerminalProblem
+      66=m3100TimingProblem
+      67=m3100TransmitterFailure
+      68=m3100TrunkCardProblem
+      69=m3100ReplaceableUnitProblem
+      101=m3100AirCompressorFailure
+      102=m3100AirConditioningFailure
+      103=m3100AirDryerFailure
+      104=m3100BatteryDischarging
+      105=m3100BatteryFailure
+      106=m3100CommercialPowerFailure
+      107=m3100CoolingFanFailure
+      108=m3100EngineFailure
+      109=m3100FireDetectorFailure
+      110=m3100FuseFailure
+      111=m3100GeneratorFailure
+      112=m3100LowBatteryThreshold
+      113=m3100PumpFailure
+      114=m3100RectifierFailure
+      115=m3100RectifierHighVoltage
+      116=m3100RectifierLowVoltage
+      117=m3100VentilationSystemFailure
+      118=m3100EnclosureDoorOpen
+      119=m3100ExplosiveGas
+      120=m3100Fire
+      121=m3100Flood
+      122=m3100HighHumidity
+      123=m3100HighTemperature
+      124=m3100HighWind
+      125=m3100IceBuildUp
+      127=m3100LowFuel
+      128=m3100LowHumidity
+      129=m3100LowCablePressure
+      130=m3100LowTemperature
+      131=m3100LowWater
+      132=m3100Smoke
+      133=m3100ToxicGas
+      151=m3100StorageCapacityProblem
+      152=m3100MemoryMismatch
+      153=m3100CorruptData
+      154=m3100OutOfCPUCycles
+      155=m3100SoftwareEnvironmentProblem
+      156=m3100SoftwareDownloadFailure
+      1000001=x733AdapterError
+      1000002=x733ApplicationSubsystemFailure
+      1000003=x733BandwidthReduced
+      1000005=x733CommunicationsProtocolError
+      1000006=x733CommunicationsSubsystemFailure
+      1000007=x733ConfigurationOrCustomizationError
+      1000008=x733Congestion
+      1000010=x733CpuCyclesLimitExceeded
+      1000011=x733DataSetOrModemError
+      1000013=x733DTEDCEInterfaceError
+      1000015=x733EquipmentMalfunction
+      1000016=x733ExcessiveVibration
+      1000017=x733FileError
+      1000021=x733HeatingOrVentilationOrCoolingSystemProblem
+      1000022=x733HumidityUnacceptable
+      1000023=x733InputOutputDeviceError
+      1000024=x733InputDeviceError
+      1000025=x733LANError
+      1000026=x733LeakDetected
+      1000027=x733LocalNodeTransmissionError
+      1000030=x733MaterialSupplyExhausted
+      1000032=x733OutOfMemory
+      1000033=x733OuputDeviceError
+      1000034=x733PerformanceDegraded
+      1000036=x733PressureUnacceptable
+      1000039=x733QueueSizeExceeded
+      1000040=x733ReceiveFailure
+      1000042=x733RemoteNodeTransmissionError
+      1000043=x733ResourceAtOrNearingCapacity
+      1000044=x733ResponseTimeExcessive
+      1000045=x733RetransmissionRateExcessive
+      1000046=x733SoftwareError
+      1000047=x733SoftwareProgramAbnormallyTerminated
+      1000048=x733SoftwareProgramError
+      1000050=x733TemperatureUnacceptable
+      1000051=x733ThresholdCrossed
+      1000053=x733ToxicLeakDetected
+      1000054=x733TransmitFailure
+      1000056=x733UnderlyingResourceUnavailable
+      1000057=x733VersionMismatch
+      2000001=x736AuthenticationFailure
+      2000002=x736BreachOfConfidentiality
+      2000003=x736CableTamper
+      2000004=x736DelayedInformation
+      2000005=x736DenialOfService
+      2000006=x736DuplicateInformation
+      2000007=x736InformationMissing
+      2000008=x736InformationModificationDetected
+      2000009=x736InformationOutOfSequence
+      2000010=x736IntrusionDetection
+      2000011=x736KeyExpired
+      2000012=x736NonRepudiationFailure
+      2000013=x736OutOfHoursActivity
+      2000014=x736OutOfService
+      2000015=x736ProceduralError
+      2000016=x736UnauthorizedAccessAttempt
+      2000017=x736UnexpectedInformation
+      2000018=x736UnspecifiedReason
+      3000001=gsm1211AbisToBTSInterfaceFailure
+      3000002=gsm1211AbisToTRXInterfaceFailure
+      3000003=gsm1211AntennaProblem
+      3000004=gsm1211BatteryBreakdown
+      3000005=gsm1211BatteryChargingFault
+      30000056=gsm1211ClockSynchronisationProblem
+      3000007=gsm1211CombinerProblem
+      3000008=gsm1211DiskProblem
+      3000010=gsm1211ExcessiveReceiverTemperature
+      3000011=gsm1211ExcessiveTransmitterOutputPower
+      3000012=gsm1211ExcessiveTransmitterTemperature
+      3000013=gsm1211FrequencyHoppingDegraded
+      3000014=gsm1211FrequencyHoppingFailure
+      3000015=gsm1211FrequencyRedefinitionFailed
+      3000016=gsm1211LineInterfaceFailure
+      3000017=gsm1211LinkFailure
+      3000018=gsm1211LossOfSynchronisation
+      3000019=gsm1211LostRedundancy
+      3000020=gsm1211MainsBreakdownWithBatteryBackUp
+      3000021=gsm1211MainsBreakdownWithoutBatteryBackUp
+      3000022=gsm1211PowerSupplyFailure
+      3000023=gsm1211ReceiverAntennaFault
+      3000025=gsm1211ReceiverMulticouplerFailure
+      3000026=gsm1211ReducedTransmitterOutputPower
+      3000027=gsm1211SignalQualityEvaluationFault
+      3000028=gsm1211TimeslotHardwareFailure
+      3000029=gsm1211TransceiverProblem
+      3000030=gsm1211TranscoderProblem
+      3000031=gsm1211TranscoderOrRateAdapterProblem
+      3000032=gsm1211TransmitterAntennaFailure
+      3000033=gsm1211TransmitterAntennaNotAdjusted
+      3000035=gsm1211TransmitterLowVoltageOrCurrent
+      3000036=gsm1211TransmitterOffFrequency
+      3000037=gsm1211DatabaseInconsistency
+      3000038=gsm1211FileSystemCallUnsuccessful
+      3000039=gsm1211InputParameterOutOfRange
+      3000040=gsm1211InvalidParameter
+      3000041=gsm1211InvalidPointer
+      3000042=gsm1211MessageNotExpected
+      3000043=gsm1211MessageNotInitialised
+      3000044=gsm1211MessageOutOfSequence
+      3000045=gsm1211SystemCallUnsuccessful
+      3000046=gsm1211TimeoutExpired
+      3000047=gsm1211VariableOutOfRange
+      3000048=gsm1211WatchDogTimerExpired
+      3000049=gsm1211CoolingSystemFailure
+      3000050=gsm1211ExternalEquipmentFailure
+      3000051=gsm1211ExternalPowerSupplyFailure
+      3000052=gsm1211ExternalTransmissionDeviceFailure
+      3000061=gsm1211ReducedAlarmReporting
+      3000062=gsm1211ReducedEventReporting
+      3000063=gsm1211ReducedLoggingCapability
+      3000064=gsm1211SystemResourcesOverload
+      3000065=gsm1211BroadcastChannelFailure
+      3000066=gsm1211ConnectionEstablishmentError
+      3000067=gsm1211InvalidMessageReceived
+      3000068=gsm1211InvalidMSUReceived
+      3000069=gsm1211LAPDLinkProtocolFailure
+      3000070=gsm1211LocalAlarmIndication
+      3000071=gsm1211RemoteAlarmIndication
+      3000072=gsm1211RoutingFailure
+      3000073=gsm1211SS7ProtocolFailure
+      3000074=gsm1211TransmissionError
+    Descr = 'This object represents the probable cause of 
+    the alarm'
+09: noiAlarmEventType
+    Syntax = 'INTEGER'
+      0=unknown
+      2=communicationsAlarm
+      3=environmentalAlarm
+      4=equipmentAlarm
+      10=processingErrorAlarm
+      11=qualityOfServiceAlarm
+    Descr = 'This object represents the event type'
+10: noiAlarmNotificationId
+    Syntax = 'INTEGER'
+    Descr = 'This object represent the notification 
+    identifier. It is a unique value for a notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5915","Critical","equipment alarm","noiAlarmCleared:noiAlarmSystemDN=%s noiAlarmId=%s noiAlarmEventTime=%s noiAlarmSpecificProblem=%s noiAlarmText=%s noiAlarmPerceivedSeverity=%s noiAlarmAdditionalText=%s noiAlarmProbableCause=%s noiAlarmEventType=%s noiAlarmNotificationId=%s","Long Descr.: This notification is used when an alarm is 
+cleared. The only permitted value for the 
+'noiAlarmPerceivedSeverity' is 'cleared' The value of 
+noiAlarmId must be equal to the value Of the noiAlarmId 
+must of the correlated alarm notification. The 
+noiAlarmSystemDN , noiAlarmSpecificProblem , 
+noiAlarmProbableCause, noiAlarmEventType must be equal to 
+the values of the correlated alarm. The agent might use 
+empty string for noiAlarmText and NoiAlarmAdditionalText, 
+otherwise the values must be equal to the values of the 
+correlated alarm. The active alarm is cleared and removed 
+from the alarm table, if the acknowledgement state is 
+'acknowledged'. otherwise, the alarm will remain in the 
+alarm table. If the agent does not support the concept of 
+acknowledgement, than the alarm will be removed from the 
+alarm table when this notification is send by the agent
+Variables:
+01: noiAlarmSystemDN
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the System 
+    Distinguished Name (SDN) of the managed object detecting 
+    the fault.'
+02: noiAlarmId
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the alarm identifier of 
+    an alarm in the alarm table It uniquely identifies an entry 
+    in the alarm table. The alarmId object is read-only even 
+    though it is used as index in the alarm table'
+03: noiAlarmEventTime
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the event time, time of 
+    occurrence of the event in the Network Element.'
+04: noiAlarmSpecificProblem
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the specific problem 
+    assigned to the fault situation.'
+05: noiAlarmText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the alarm text and 
+    contains basic information on the fault'
+06: noiAlarmPerceivedSeverity
+    Syntax = 'INTEGER'
+      1=critical
+      2=major
+      3=minor
+      4=warning
+      5=cleared
+      0=indeterminate
+    Descr = 'This object represents the perceived severity 
+    of the fault.'
+07: noiAlarmAdditionalText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the additional text and 
+    provides further qualification on the fault.'
+08: noiAlarmProbableCause
+    Syntax = 'INTEGER'
+      0=m3100Indeterminate
+      1=m3100AlarmIndicationSignal
+      2=m3100CallSetupFailure
+      3=m3100DegradedSignal
+      4=m3100FarEndReceiverFailure
+      5=m3100FramingError
+      6=m3100LossOfFrame
+      7=m3100LossOfPointer
+      8=m3100LossOfSignal
+      9=m3100PayloadTypeMismatch
+      10=m3100TransmissionError
+      11=m3100RemoteAlarmInterface
+      12=m3100ExcessiveBitErrorRate
+      13=m3100PathTraceMismatch
+      14=m3100Unavailable
+      15=m3100SignalLabelMismatch
+      16=m3100LossOfMultiFrame
+      51=m3100BackPlaneFailure
+      52=m3100DataSetProblem
+      53=m3100EquipmentIdentifierDuplication
+      54=m3100ExternalIfDeviceProblem
+      55=m3100LineCardProblem
+      56=m3100MultiplexerProblem
+      57=m3100NeIdentifierDuplication
+      58=m3100PowerProblem
+      59=m3100ProcessorProblem
+      60=m3100ProtectionPathFailure
+      61=m3100ReceiverFailure
+      62=m3100ReplaceableUnitMissing
+      63=m3100ReplaceableUnitTypeMismatch
+      64=m3100SynchronisationSourceMismatch
+      65=m3100TerminalProblem
+      66=m3100TimingProblem
+      67=m3100TransmitterFailure
+      68=m3100TrunkCardProblem
+      69=m3100ReplaceableUnitProblem
+      101=m3100AirCompressorFailure
+      102=m3100AirConditioningFailure
+      103=m3100AirDryerFailure
+      104=m3100BatteryDischarging
+      105=m3100BatteryFailure
+      106=m3100CommercialPowerFailure
+      107=m3100CoolingFanFailure
+      108=m3100EngineFailure
+      109=m3100FireDetectorFailure
+      110=m3100FuseFailure
+      111=m3100GeneratorFailure
+      112=m3100LowBatteryThreshold
+      113=m3100PumpFailure
+      114=m3100RectifierFailure
+      115=m3100RectifierHighVoltage
+      116=m3100RectifierLowVoltage
+      117=m3100VentilationSystemFailure
+      118=m3100EnclosureDoorOpen
+      119=m3100ExplosiveGas
+      120=m3100Fire
+      121=m3100Flood
+      122=m3100HighHumidity
+      123=m3100HighTemperature
+      124=m3100HighWind
+      125=m3100IceBuildUp
+      127=m3100LowFuel
+      128=m3100LowHumidity
+      129=m3100LowCablePressure
+      130=m3100LowTemperature
+      131=m3100LowWater
+      132=m3100Smoke
+      133=m3100ToxicGas
+      151=m3100StorageCapacityProblem
+      152=m3100MemoryMismatch
+      153=m3100CorruptData
+      154=m3100OutOfCPUCycles
+      155=m3100SoftwareEnvironmentProblem
+      156=m3100SoftwareDownloadFailure
+      1000001=x733AdapterError
+      1000002=x733ApplicationSubsystemFailure
+      1000003=x733BandwidthReduced
+      1000005=x733CommunicationsProtocolError
+      1000006=x733CommunicationsSubsystemFailure
+      1000007=x733ConfigurationOrCustomizationError
+      1000008=x733Congestion
+      1000010=x733CpuCyclesLimitExceeded
+      1000011=x733DataSetOrModemError
+      1000013=x733DTEDCEInterfaceError
+      1000015=x733EquipmentMalfunction
+      1000016=x733ExcessiveVibration
+      1000017=x733FileError
+      1000021=x733HeatingOrVentilationOrCoolingSystemProblem
+      1000022=x733HumidityUnacceptable
+      1000023=x733InputOutputDeviceError
+      1000024=x733InputDeviceError
+      1000025=x733LANError
+      1000026=x733LeakDetected
+      1000027=x733LocalNodeTransmissionError
+      1000030=x733MaterialSupplyExhausted
+      1000032=x733OutOfMemory
+      1000033=x733OuputDeviceError
+      1000034=x733PerformanceDegraded
+      1000036=x733PressureUnacceptable
+      1000039=x733QueueSizeExceeded
+      1000040=x733ReceiveFailure
+      1000042=x733RemoteNodeTransmissionError
+      1000043=x733ResourceAtOrNearingCapacity
+      1000044=x733ResponseTimeExcessive
+      1000045=x733RetransmissionRateExcessive
+      1000046=x733SoftwareError
+      1000047=x733SoftwareProgramAbnormallyTerminated
+      1000048=x733SoftwareProgramError
+      1000050=x733TemperatureUnacceptable
+      1000051=x733ThresholdCrossed
+      1000053=x733ToxicLeakDetected
+      1000054=x733TransmitFailure
+      1000056=x733UnderlyingResourceUnavailable
+      1000057=x733VersionMismatch
+      2000001=x736AuthenticationFailure
+      2000002=x736BreachOfConfidentiality
+      2000003=x736CableTamper
+      2000004=x736DelayedInformation
+      2000005=x736DenialOfService
+      2000006=x736DuplicateInformation
+      2000007=x736InformationMissing
+      2000008=x736InformationModificationDetected
+      2000009=x736InformationOutOfSequence
+      2000010=x736IntrusionDetection
+      2000011=x736KeyExpired
+      2000012=x736NonRepudiationFailure
+      2000013=x736OutOfHoursActivity
+      2000014=x736OutOfService
+      2000015=x736ProceduralError
+      2000016=x736UnauthorizedAccessAttempt
+      2000017=x736UnexpectedInformation
+      2000018=x736UnspecifiedReason
+      3000001=gsm1211AbisToBTSInterfaceFailure
+      3000002=gsm1211AbisToTRXInterfaceFailure
+      3000003=gsm1211AntennaProblem
+      3000004=gsm1211BatteryBreakdown
+      3000005=gsm1211BatteryChargingFault
+      30000056=gsm1211ClockSynchronisationProblem
+      3000007=gsm1211CombinerProblem
+      3000008=gsm1211DiskProblem
+      3000010=gsm1211ExcessiveReceiverTemperature
+      3000011=gsm1211ExcessiveTransmitterOutputPower
+      3000012=gsm1211ExcessiveTransmitterTemperature
+      3000013=gsm1211FrequencyHoppingDegraded
+      3000014=gsm1211FrequencyHoppingFailure
+      3000015=gsm1211FrequencyRedefinitionFailed
+      3000016=gsm1211LineInterfaceFailure
+      3000017=gsm1211LinkFailure
+      3000018=gsm1211LossOfSynchronisation
+      3000019=gsm1211LostRedundancy
+      3000020=gsm1211MainsBreakdownWithBatteryBackUp
+      3000021=gsm1211MainsBreakdownWithoutBatteryBackUp
+      3000022=gsm1211PowerSupplyFailure
+      3000023=gsm1211ReceiverAntennaFault
+      3000025=gsm1211ReceiverMulticouplerFailure
+      3000026=gsm1211ReducedTransmitterOutputPower
+      3000027=gsm1211SignalQualityEvaluationFault
+      3000028=gsm1211TimeslotHardwareFailure
+      3000029=gsm1211TransceiverProblem
+      3000030=gsm1211TranscoderProblem
+      3000031=gsm1211TranscoderOrRateAdapterProblem
+      3000032=gsm1211TransmitterAntennaFailure
+      3000033=gsm1211TransmitterAntennaNotAdjusted
+      3000035=gsm1211TransmitterLowVoltageOrCurrent
+      3000036=gsm1211TransmitterOffFrequency
+      3000037=gsm1211DatabaseInconsistency
+      3000038=gsm1211FileSystemCallUnsuccessful
+      3000039=gsm1211InputParameterOutOfRange
+      3000040=gsm1211InvalidParameter
+      3000041=gsm1211InvalidPointer
+      3000042=gsm1211MessageNotExpected
+      3000043=gsm1211MessageNotInitialised
+      3000044=gsm1211MessageOutOfSequence
+      3000045=gsm1211SystemCallUnsuccessful
+      3000046=gsm1211TimeoutExpired
+      3000047=gsm1211VariableOutOfRange
+      3000048=gsm1211WatchDogTimerExpired
+      3000049=gsm1211CoolingSystemFailure
+      3000050=gsm1211ExternalEquipmentFailure
+      3000051=gsm1211ExternalPowerSupplyFailure
+      3000052=gsm1211ExternalTransmissionDeviceFailure
+      3000061=gsm1211ReducedAlarmReporting
+      3000062=gsm1211ReducedEventReporting
+      3000063=gsm1211ReducedLoggingCapability
+      3000064=gsm1211SystemResourcesOverload
+      3000065=gsm1211BroadcastChannelFailure
+      3000066=gsm1211ConnectionEstablishmentError
+      3000067=gsm1211InvalidMessageReceived
+      3000068=gsm1211InvalidMSUReceived
+      3000069=gsm1211LAPDLinkProtocolFailure
+      3000070=gsm1211LocalAlarmIndication
+      3000071=gsm1211RemoteAlarmIndication
+      3000072=gsm1211RoutingFailure
+      3000073=gsm1211SS7ProtocolFailure
+      3000074=gsm1211TransmissionError
+    Descr = 'This object represents the probable cause of 
+    the alarm'
+09: noiAlarmEventType
+    Syntax = 'INTEGER'
+      0=unknown
+      2=communicationsAlarm
+      3=environmentalAlarm
+      4=equipmentAlarm
+      10=processingErrorAlarm
+      11=qualityOfServiceAlarm
+    Descr = 'This object represents the event type'
+10: noiAlarmNotificationId
+    Syntax = 'INTEGER'
+    Descr = 'This object represent the notification 
+    identifier. It is a unique value for a notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5917","Critical","equipment alarm","noiAlarmListRebuildInitiated:noiAlarmSystemDN=%s noiAlarmEventTime=%s noiAlarmNotificationId=%s","Long Descr.: This notification is used when the alarm table 
+in the agent is about the be rebuild. The notification will 
+be emitted prior to the rebuild, immediately after dropping 
+the content of the alarm table. On reception of this 
+notification, the manager shall clean the internal alarm 
+table to be in snyc with the agent. The agent can decide to 
+log this notification in the alarm log like any other 
+notification. The objects, which are not used for this 
+notification shall remain empty (strings) or use default 
+value (0) for integer types
+Variables:
+01: noiAlarmSystemDN
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the System 
+    Distinguished Name (SDN) of the managed object detecting 
+    the fault.'
+02: noiAlarmEventTime
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the event time, time of 
+    occurrence of the event in the Network Element.'
+03: noiAlarmNotificationId
+    Syntax = 'INTEGER'
+    Descr = 'This object represent the notification 
+    identifier. It is a unique value for a notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5919","Critical","equipment alarm","noiAlarmListRebuild:noiAlarmSystemDN=%s noiAlarmEventTime=%s noiAlarmNotificationId=%s","Long Descr.: This notification is used when the alarm table 
+in the agent has been rebuild. The notification will be 
+emitted after a successful rebuild. On reception of this 
+notification, the manager will synchronise the alarm table 
+in the agent with it's internal alarm table by retrieving 
+the content of the alarm table in the agent. While re-build 
+the alarm table, the agent shall not emit notifications, 
+when entering new alarms into the alarm table. The agent 
+can decide to log this notification in the alarm log like 
+any other notification. The objects, which are not used for 
+this notification shall remain empty (strings) or use 
+default value (0) for integer types.
+Variables:
+01: noiAlarmSystemDN
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the System 
+    Distinguished Name (SDN) of the managed object detecting 
+    the fault.'
+02: noiAlarmEventTime
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the event time, time of 
+    occurrence of the event in the Network Element.'
+03: noiAlarmNotificationId
+    Syntax = 'INTEGER'
+    Descr = 'This object represent the notification 
+    identifier. It is a unique value for a notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5921","Critical","equipment alarm","noiAlarmNew:noiAlarmSystemDN=%s noiAlarmId=%s noiAlarmEventTime=%s noiAlarmSpecificProblem=%s noiAlarmText=%s noiAlarmPerceivedSeverity=%s noiAlarmAdditionalText=%s noiAlarmProbableCause=%s noiAlarmEventType=%s noiAlarmNotificationId=%s","Long Descr.: This notification is used when a fault 
+situation occurs in the NE and the agent send the alarm 
+notification to inform the OS about the fault. The value 
+'cleared' for the noiAlarmPerceivedSeverity is not allowed 
+for an alarm notification.
+Variables:
+01: noiAlarmSystemDN
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the System 
+    Distinguished Name (SDN) of the managed object detecting 
+    the fault.'
+02: noiAlarmId
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the alarm identifier of 
+    an alarm in the alarm table It uniquely identifies an entry 
+    in the alarm table. The alarmId object is read-only even 
+    though it is used as index in the alarm table'
+03: noiAlarmEventTime
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the event time, time of 
+    occurrence of the event in the Network Element.'
+04: noiAlarmSpecificProblem
+    Syntax = 'INTEGER'
+    Descr = 'This object represents the specific problem 
+    assigned to the fault situation.'
+05: noiAlarmText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the alarm text and 
+    contains basic information on the fault'
+06: noiAlarmPerceivedSeverity
+    Syntax = 'INTEGER'
+      1=critical
+      2=major
+      3=minor
+      4=warning
+      5=cleared
+      0=indeterminate
+    Descr = 'This object represents the perceived severity 
+    of the fault.'
+07: noiAlarmAdditionalText
+    Syntax = 'OCTET STRING'
+    Descr = 'This object represents the additional text and 
+    provides further qualification on the fault.'
+08: noiAlarmProbableCause
+    Syntax = 'INTEGER'
+      0=m3100Indeterminate
+      1=m3100AlarmIndicationSignal
+      2=m3100CallSetupFailure
+      3=m3100DegradedSignal
+      4=m3100FarEndReceiverFailure
+      5=m3100FramingError
+      6=m3100LossOfFrame
+      7=m3100LossOfPointer
+      8=m3100LossOfSignal
+      9=m3100PayloadTypeMismatch
+      10=m3100TransmissionError
+      11=m3100RemoteAlarmInterface
+      12=m3100ExcessiveBitErrorRate
+      13=m3100PathTraceMismatch
+      14=m3100Unavailable
+      15=m3100SignalLabelMismatch
+      16=m3100LossOfMultiFrame
+      51=m3100BackPlaneFailure
+      52=m3100DataSetProblem
+      53=m3100EquipmentIdentifierDuplication
+      54=m3100ExternalIfDeviceProblem
+      55=m3100LineCardProblem
+      56=m3100MultiplexerProblem
+      57=m3100NeIdentifierDuplication
+      58=m3100PowerProblem
+      59=m3100ProcessorProblem
+      60=m3100ProtectionPathFailure
+      61=m3100ReceiverFailure
+      62=m3100ReplaceableUnitMissing
+      63=m3100ReplaceableUnitTypeMismatch
+      64=m3100SynchronisationSourceMismatch
+      65=m3100TerminalProblem
+      66=m3100TimingProblem
+      67=m3100TransmitterFailure
+      68=m3100TrunkCardProblem
+      69=m3100ReplaceableUnitProblem
+      101=m3100AirCompressorFailure
+      102=m3100AirConditioningFailure
+      103=m3100AirDryerFailure
+      104=m3100BatteryDischarging
+      105=m3100BatteryFailure
+      106=m3100CommercialPowerFailure
+      107=m3100CoolingFanFailure
+      108=m3100EngineFailure
+      109=m3100FireDetectorFailure
+      110=m3100FuseFailure
+      111=m3100GeneratorFailure
+      112=m3100LowBatteryThreshold
+      113=m3100PumpFailure
+      114=m3100RectifierFailure
+      115=m3100RectifierHighVoltage
+      116=m3100RectifierLowVoltage
+      117=m3100VentilationSystemFailure
+      118=m3100EnclosureDoorOpen
+      119=m3100ExplosiveGas
+      120=m3100Fire
+      121=m3100Flood
+      122=m3100HighHumidity
+      123=m3100HighTemperature
+      124=m3100HighWind
+      125=m3100IceBuildUp
+      127=m3100LowFuel
+      128=m3100LowHumidity
+      129=m3100LowCablePressure
+      130=m3100LowTemperature
+      131=m3100LowWater
+      132=m3100Smoke
+      133=m3100ToxicGas
+      151=m3100StorageCapacityProblem
+      152=m3100MemoryMismatch
+      153=m3100CorruptData
+      154=m3100OutOfCPUCycles
+      155=m3100SoftwareEnvironmentProblem
+      156=m3100SoftwareDownloadFailure
+      1000001=x733AdapterError
+      1000002=x733ApplicationSubsystemFailure
+      1000003=x733BandwidthReduced
+      1000005=x733CommunicationsProtocolError
+      1000006=x733CommunicationsSubsystemFailure
+      1000007=x733ConfigurationOrCustomizationError
+      1000008=x733Congestion
+      1000010=x733CpuCyclesLimitExceeded
+      1000011=x733DataSetOrModemError
+      1000013=x733DTEDCEInterfaceError
+      1000015=x733EquipmentMalfunction
+      1000016=x733ExcessiveVibration
+      1000017=x733FileError
+      1000021=x733HeatingOrVentilationOrCoolingSystemProblem
+      1000022=x733HumidityUnacceptable
+      1000023=x733InputOutputDeviceError
+      1000024=x733InputDeviceError
+      1000025=x733LANError
+      1000026=x733LeakDetected
+      1000027=x733LocalNodeTransmissionError
+      1000030=x733MaterialSupplyExhausted
+      1000032=x733OutOfMemory
+      1000033=x733OuputDeviceError
+      1000034=x733PerformanceDegraded
+      1000036=x733PressureUnacceptable
+      1000039=x733QueueSizeExceeded
+      1000040=x733ReceiveFailure
+      1000042=x733RemoteNodeTransmissionError
+      1000043=x733ResourceAtOrNearingCapacity
+      1000044=x733ResponseTimeExcessive
+      1000045=x733RetransmissionRateExcessive
+      1000046=x733SoftwareError
+      1000047=x733SoftwareProgramAbnormallyTerminated
+      1000048=x733SoftwareProgramError
+      1000050=x733TemperatureUnacceptable
+      1000051=x733ThresholdCrossed
+      1000053=x733ToxicLeakDetected
+      1000054=x733TransmitFailure
+      1000056=x733UnderlyingResourceUnavailable
+      1000057=x733VersionMismatch
+      2000001=x736AuthenticationFailure
+      2000002=x736BreachOfConfidentiality
+      2000003=x736CableTamper
+      2000004=x736DelayedInformation
+      2000005=x736DenialOfService
+      2000006=x736DuplicateInformation
+      2000007=x736InformationMissing
+      2000008=x736InformationModificationDetected
+      2000009=x736InformationOutOfSequence
+      2000010=x736IntrusionDetection
+      2000011=x736KeyExpired
+      2000012=x736NonRepudiationFailure
+      2000013=x736OutOfHoursActivity
+      2000014=x736OutOfService
+      2000015=x736ProceduralError
+      2000016=x736UnauthorizedAccessAttempt
+      2000017=x736UnexpectedInformation
+      2000018=x736UnspecifiedReason
+      3000001=gsm1211AbisToBTSInterfaceFailure
+      3000002=gsm1211AbisToTRXInterfaceFailure
+      3000003=gsm1211AntennaProblem
+      3000004=gsm1211BatteryBreakdown
+      3000005=gsm1211BatteryChargingFault
+      30000056=gsm1211ClockSynchronisationProblem
+      3000007=gsm1211CombinerProblem
+      3000008=gsm1211DiskProblem
+      3000010=gsm1211ExcessiveReceiverTemperature
+      3000011=gsm1211ExcessiveTransmitterOutputPower
+      3000012=gsm1211ExcessiveTransmitterTemperature
+      3000013=gsm1211FrequencyHoppingDegraded
+      3000014=gsm1211FrequencyHoppingFailure
+      3000015=gsm1211FrequencyRedefinitionFailed
+      3000016=gsm1211LineInterfaceFailure
+      3000017=gsm1211LinkFailure
+      3000018=gsm1211LossOfSynchronisation
+      3000019=gsm1211LostRedundancy
+      3000020=gsm1211MainsBreakdownWithBatteryBackUp
+      3000021=gsm1211MainsBreakdownWithoutBatteryBackUp
+      3000022=gsm1211PowerSupplyFailure
+      3000023=gsm1211ReceiverAntennaFault
+      3000025=gsm1211ReceiverMulticouplerFailure
+      3000026=gsm1211ReducedTransmitterOutputPower
+      3000027=gsm1211SignalQualityEvaluationFault
+      3000028=gsm1211TimeslotHardwareFailure
+      3000029=gsm1211TransceiverProblem
+      3000030=gsm1211TranscoderProblem
+      3000031=gsm1211TranscoderOrRateAdapterProblem
+      3000032=gsm1211TransmitterAntennaFailure
+      3000033=gsm1211TransmitterAntennaNotAdjusted
+      3000035=gsm1211TransmitterLowVoltageOrCurrent
+      3000036=gsm1211TransmitterOffFrequency
+      3000037=gsm1211DatabaseInconsistency
+      3000038=gsm1211FileSystemCallUnsuccessful
+      3000039=gsm1211InputParameterOutOfRange
+      3000040=gsm1211InvalidParameter
+      3000041=gsm1211InvalidPointer
+      3000042=gsm1211MessageNotExpected
+      3000043=gsm1211MessageNotInitialised
+      3000044=gsm1211MessageOutOfSequence
+      3000045=gsm1211SystemCallUnsuccessful
+      3000046=gsm1211TimeoutExpired
+      3000047=gsm1211VariableOutOfRange
+      3000048=gsm1211WatchDogTimerExpired
+      3000049=gsm1211CoolingSystemFailure
+      3000050=gsm1211ExternalEquipmentFailure
+      3000051=gsm1211ExternalPowerSupplyFailure
+      3000052=gsm1211ExternalTransmissionDeviceFailure
+      3000061=gsm1211ReducedAlarmReporting
+      3000062=gsm1211ReducedEventReporting
+      3000063=gsm1211ReducedLoggingCapability
+      3000064=gsm1211SystemResourcesOverload
+      3000065=gsm1211BroadcastChannelFailure
+      3000066=gsm1211ConnectionEstablishmentError
+      3000067=gsm1211InvalidMessageReceived
+      3000068=gsm1211InvalidMSUReceived
+      3000069=gsm1211LAPDLinkProtocolFailure
+      3000070=gsm1211LocalAlarmIndication
+      3000071=gsm1211RemoteAlarmIndication
+      3000072=gsm1211RoutingFailure
+      3000073=gsm1211SS7ProtocolFailure
+      3000074=gsm1211TransmissionError
+    Descr = 'This object represents the probable cause of 
+    the alarm'
+09: noiAlarmEventType
+    Syntax = 'INTEGER'
+      0=unknown
+      2=communicationsAlarm
+      3=environmentalAlarm
+      4=equipmentAlarm
+      10=processingErrorAlarm
+      11=qualityOfServiceAlarm
+    Descr = 'This object represents the event type'
+10: noiAlarmNotificationId
+    Syntax = 'INTEGER'
+    Descr = 'This object represent the notification 
+    identifier. It is a unique value for a notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5923","Critical","equipment alarm","mVolts12VThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the threshold voltage 
+for 12V has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5925","Critical","equipment alarm","mVolts25VThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the threshold voltage 
+for 2.5V has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5927","Critical","equipment alarm","mVolts33VThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the threshold voltage 
+for 3.3V has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5929","Critical","equipment alarm","mVolts5VThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the threshold voltage 
+for 5V has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5931","Warning","equipment alarm","mVoltsCPUThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the threshold voltage 
+for the CPU has been exceeded
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5933","Critical","equipment alarm","hardDriveSMARTStatusChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the SMART status of a 
+drive has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5935","Critical","equipment alarm","hdPartitionUsageThresholdExceeded:rlxTrapMessage=%s","Long Descr.: This trap reports that the usage of a 
+partition has been exceeded.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5937","Critical","equipment alarm","fanSpeedChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the fanSpeed object has 
+changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Text string which describes the 
+    fanSpeedChangedTrap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5939","Critical","equipment alarm","cpuThrottlingChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the CPU throttling for 
+this Blade has changed from/to on or off.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5941","Critical","equipment alarm","bladeFaultLEDChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the bladeFaultLED 
+object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5943","Critical","equipment alarm","bladeGoodLEDChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the bladeGoodLED object 
+has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5945","Critical","equipment alarm","bladePanelLEDChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the bladePanelLED 
+object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-5947","Critical","equipment alarm","bladesPresentChanged:rlxTrapMessage=%s","Long Descr.: This trap reports that the bladesPresent 
+object has changed.
+Variables:
+01: rlxTrapMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'A descriptive message used to pass more 
+    information along with the occurrence of a trap.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10047","Critical","communication alarm","bigipARPConflict:bigipNotifyObjMsg=%s","'There is an ARP conflict.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10049","Critical","environment alarm","bigipActiveActive:bigipNotifyObjMsg=%s","'The system is going into active-active mode.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10051","Critical","environment alarm","bigipActive:bigipNotifyObjMsg=%s","'The system is going into active mode.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10053","Critical","environment alarm","bigipAgentRestart","'An indication that the agent has been restarted. This does 
+not imply anything about whether the configuration has 
+changed (unlike the standard coldStart or warmStart traps)'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10055","Critical","environment alarm","bigipAgentShutdown","'An indication that the agent is in the process of being 
+shut down.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10057","Critical","environment alarm","bigipAgentStart","'An indication that the agent has started running.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10059","Warning","environment alarm","bigipAggrReaperStateChange:bigipNotifyObjMsg=%s","'The aggressive reaper state changed. Aggressive reaper 
+state changes indicate the system is moving into 
+distress-mode for DOS prevention.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10061","Major","indeterminate","bigipAuthFailed:bigipNotifyObjMsg=%s","'The login authentication has failed.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10063","Warning","equipment alarm","bigipChassisFanBad:bigipNotifyObjMsg=%s","'Chassis fan status is bad.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10065","Normal","equipment alarm","bigipChassisPowerSupplyBad:bigipNotifyObjMsg=%s","'Chassis power supply status is bad.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10067","Warning","equipment alarm","bigipChassisTempHigh:bigipNotifyObjMsg=%s","'Chassis temperature is too high.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10069","Critical","environment alarm","bigipConfigLoaded:bigipNotifyObjMsg=%s","'The configuration was loaded.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10071","Major","equipment alarm","bigipCpuFanSpeedBad:bigipNotifyObjMsg=%s","'CPU fan speed signal not received.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10073","Warning","equipment alarm","bigipCpuFanSpeedLow:bigipNotifyObjMsg=%s","'CPU fan speed is too low.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10075","Warning","equipment alarm","bigipCpuTempHigh:bigipNotifyObjMsg=%s","'CPU temperature is too high.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10077","Major","equipment alarm","bigipDiskPartitionGrowth:bigipNotifyObjMsg=%s","'The disk partition exceeds the growth limit.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10079","Major","equipment alarm","bigipDiskPartitionWarn:bigipNotifyObjMsg=%s","'The disk partition has very limited free space.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10081","Warning","environment alarm","bigipFeatureFailed:bigipNotifyObjMsg=%s","'A high availability feature triggered action failed.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10083","Normal","environment alarm","bigipFeatureOnline:bigipNotifyObjMsg=%s","'A high availability feature is now responding.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10085","Normal","indeterminate","bigipLicenseExpired:bigipNotifyObjMsg=%s","'The license has expired.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10087","Normal","processing alarm","bigipLicenseFailed:bigipNotifyObjMsg=%s","'The license validation failed.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10089","Normal","indeterminate","bigipLogAlert:bigipNotifyObjMsg=%s","'Action must be taken immediately for the system to work 
+properly.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10091","Normal","environment alarm","bigipLogCrit:bigipNotifyObjMsg=%s","'The system is in a critical condition.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10093","Normal","environment alarm","bigipLogEmerg:bigipNotifyObjMsg=%s","'The system is in an unusable situation.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10095","Warning","indeterminate","bigipLogErr:bigipNotifyObjMsg=%s","'The system has some error conditions.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10097","Major","indeterminate","bigipLogWarning:bigipNotifyObjMsg=%s","'The system is experiencing some warning conditions.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10099","Warning","communication alarm","bigipNetLinkDown:bigipNotifyObjMsg=%s","'An interface link is down.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10101","Normal","equipment alarm","bigipNodeDown:bigipNotifyObjMsg=%s bigipNotifyObjNode=%s","'A node is detected DOWN.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'
+02: bigipNotifyObjNode
+    Syntax = 'OCTET STRING'
+    Descr = 'The address or host name of the box.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10103","Critical","equipment alarm","bigipNodeUp:bigipNotifyObjMsg=%s bigipNotifyObjNode=%s","'A node is detected UP.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'
+02: bigipNotifyObjNode
+    Syntax = 'OCTET STRING'
+    Descr = 'The address or host name of the box.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10105","Major","communication alarm","bigipPacketRejected:bigipNotifyObjMsg=%s","'The packets are rejected.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10107","Critical","indeterminate","bigipServiceDown:bigipNotifyObjMsg=%s bigipNotifyObjNode=%s bigipNotifyObjPort=%s","'A service is detected DOWN.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'
+02: bigipNotifyObjNode
+    Syntax = 'OCTET STRING'
+    Descr = 'The address or host name of the box.'
+03: bigipNotifyObjPort
+    Syntax = 'OCTET STRING'
+    Descr = 'The port or service name.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10109","Normal","indeterminate","bigipServiceUp:bigipNotifyObjMsg=%s bigipNotifyObjNode=%s bigipNotifyObjPort=%s","'A service is detected UP.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'
+02: bigipNotifyObjNode
+    Syntax = 'OCTET STRING'
+    Descr = 'The address or host name of the box.'
+03: bigipNotifyObjPort
+    Syntax = 'OCTET STRING'
+    Descr = 'The port or service name.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10111","Warning","environment alarm","bigipStandby:bigipNotifyObjMsg=%s","'The system is going into standby mode.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10113","Warning","indeterminate","bigipTamdAlert:bigipNotifyObjMsg=%s","'Too many authentication failures (> 60) in 1 second.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10115","Major","environment alarm","ipv6IfStateChange:ipv6IfDescr=%s ipv6IfOperStatus=%s","'An ipv6IfStateChange notification signifies that there has 
+been a change in the state of an ipv6 interface. This 
+notification should be generated when the interface's 
+operational status transitions to or from the up(1) state.'
+Variables:
+01: ipv6IfDescr
+    Syntax = 'OCTET STRING'
+    Descr = 'A textual string containing information about 
+    the interface. This string may be set by the network 
+    management system.'
+02: ipv6IfOperStatus
+    Syntax = 'INTEGER'
+      1=up
+      2=down
+      3=noIfIdentifier
+      4=unknown
+      5=notPresent
+    Descr = 'The current operational state of the 
+    interface. The noIfIdentifier(3) state indicates that no 
+    valid Interface Identifier is assigned to the interface. 
+    This state usually indicates that the link-local interface 
+    address failed Duplicate Address Detection. If 
+    ipv6IfAdminStatus is down(2) then ipv6IfOperStatus should 
+    be down(2). If ipv6IfAdminStatus is changed to up(1) then 
+    ipv6IfOperStatus should change to up(1) if the interface is 
+    ready to transmit and receive network traffic; it should 
+    remain in the down(2) or noIfIdentifier(3) state if and 
+    only if there is a fault that prevents it from going to the 
+    up(1) state; it should remain in the notPresent(5) state if 
+    the interface has missing (typically, lower layer) 
+    components.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10275","Major","equipment alarm","Compression license limit exceeded.","'The compression license limit is exceeded.'
+Variables:
+01: bigipNotifyObjMsg
+    Syntax = 'OCTET STRING'
+    Descr = 'The additional information about the related 
+    notification.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10843","Major","communication alarm","At least one queue crossed the double alarms threshold.","'This event is generated when a queue is above the doubles 
+threshold. The alarm is not sent again when another queue 
+goes above this threshold. The alarm is cleared when the 
+level of all queues is back under the doubles level. The 
+alarm is not cleared when a restart occurs during an alarm 
+situation.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10844","Cleared","communication alarm","All queues are back under the double alarms threshold.","'This event is generated when the number of alarms in all 
+queues is back under the doubles threshold.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10845","Major","communication alarm","An agent queue exeeded the %s threshold.","'This event is generated when a specific severity overload 
+situation is reached. It is not generated per queue but 
+indicates the highest overload situation seen over all 
+queues. The alarm is cleared when the level of all queues 
+is again normal. The alarm is not cleared when a restart 
+occurs during an alarm situation.'
+Variables:
+01: osAlarmThreshold
+    Syntax = 'INTEGER'
+      1=warning
+      2=minor
+      3=major
+      4=critical
+      5=blacklist
+    Descr = 'OS Alarm severity threshold level that has 
+    been crossed.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10846","Cleared","communication alarm","All agents queue levels are back to normal.","'This event is generated when all specific severity 
+overload situations are cleared. It is not generated per 
+queue but indicates a clear of the overload situation seen 
+over all queues.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10847","Critical","communication alarm","System overload: new traps are ignored.","'This event is generated when the total number of traps 
+counted over all queues crossed the threshold. Processing 
+of traps present in queues continues but new incoming traps 
+are not put onto a queue until the total number of traps is 
+back under the threshold. The alarm is cleared when the 
+total number of traps counted over all queues is again 
+under the threshold. The alarm is not cleared when a 
+restart occurs during an alarm situation.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10848","Cleared","communication alarm","System overload ended.","'This event is generated when the total number of traps 
+counted over all queues is again under the threshold.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10849","Major","communication alarm","Double alarms of agent %s/%s will be removed.","'This event is generated when the number of alarms in a 
+specific queue is above the doubles threshold. When this 
+happens all identical alarms are removed from the queue. 
+The alarm is cleared when the queue level is back under the 
+doubles level. The alarm is not cleared when a restart 
+occurs during an alarm situation (otherwise restart would 
+cause a flood of clear alarms).'
+Variables:
+01: osAlarmIpaddress
+    Syntax = 'IpAddress'
+    Descr = 'IpAddress of the agent for which an OS Alarm 
+    is generated.'
+02: osAlarmTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community of the agent for which an OS 
+    Alarm is generated.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10850","Cleared","communication alarm","Queue level of agent %s/%s back under doubles threshold.","'This event is generated when the number of alarms in a 
+specific queue is back under the doubles threshold.'
+Variables:
+01: osAlarmIpaddress
+    Syntax = 'IpAddress'
+    Descr = 'IpAddress of the agent for which an OS Alarm 
+    is generated.'
+02: osAlarmTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community of the agent for which an OS 
+    Alarm is generated.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10851","Major","communication alarm","Agent %s/%s queue exeeded the %s threshold.","'This event is generated when the number of alarms in a 
+specific queue is above a severity threshold. When this 
+happens all alarms with this severity and a lower severity 
+are removed from the queue. The alarm is cleared when the 
+queue level is back to normal. The alarm is not cleared 
+when a restart occurs during an alarm situation (otherwise 
+restart would cause a flood of clear alarms).'
+Variables:
+01: osAlarmIpaddress
+    Syntax = 'IpAddress'
+    Descr = 'IpAddress of the agent for which an OS Alarm 
+    is generated.'
+02: osAlarmTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community of the agent for which an OS 
+    Alarm is generated.'
+03: osAlarmThreshold
+    Syntax = 'INTEGER'
+      1=warning
+      2=minor
+      3=major
+      4=critical
+      5=blacklist
+    Descr = 'OS Alarm severity threshold level that has 
+    been crossed.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10852","Cleared","communication alarm","Agent %s/%s queue level normal.","'This event is generated when the number of alarms in a 
+specific queue is back under the lowest severity threshold.'
+Variables:
+01: osAlarmIpaddress
+    Syntax = 'IpAddress'
+    Descr = 'IpAddress of the agent for which an OS Alarm 
+    is generated.'
+02: osAlarmTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community of the agent for which an OS 
+    Alarm is generated.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10853","Minor","communication alarm","Realignment of agent %s/%s limited to %s alarms.","'This event is generated when realignment detects too many 
+entries in the alarm history. Realignment is limited to 
+clear alarms and alarms with the indicated severity level. 
+This alarm is generated per configured realigner. The alarm 
+is cleared at the end of realignment. The alarm is not 
+cleared when a restart occurs during an alarm situation.'
+Variables:
+01: osAlarmIpaddress
+    Syntax = 'IpAddress'
+    Descr = 'IpAddress of the agent for which an OS Alarm 
+    is generated.'
+02: osAlarmTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community of the agent for which an OS 
+    Alarm is generated.'
+03: preprocConfigurationSeverity
+    Syntax = 'INTEGER'
+      1=cleared
+      2=indeterminate
+      3=critical
+      4=major
+      5=minor
+      6=warning
+    Descr = 'Indicates the severity of the configuration 
+    status'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10854","Cleared","communication alarm","Realignment of agent %s/%s limited to %s alarms.","'This event is generated when realignment detects too many 
+entries in the alarm history. Realignment is limited to 
+clear alarms and alarms with the indicated severity level. 
+This alarm is generated per configured realigner. The alarm 
+is cleared at the end of realignment. The alarm is not 
+cleared when a restart occurs during an alarm situation.'
+Variables:
+01: osAlarmIpaddress
+    Syntax = 'IpAddress'
+    Descr = 'IpAddress of the agent for which an OS Alarm 
+    is generated.'
+02: osAlarmTrapComm
+    Syntax = 'OCTET STRING'
+    Descr = 'Trap community of the agent for which an OS 
+    Alarm is generated.'
+03: preprocConfigurationSeverity
+    Syntax = 'INTEGER'
+      1=cleared
+      2=indeterminate
+      3=critical
+      4=major
+      5=minor
+      6=warning
+    Descr = 'Indicates the severity of the configuration 
+    status'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10855","Warning","processing alarm","QueueId=%s, Severity=%s, Message=%s","This event is generated when there is a problem with the 
+configuration of a preporcessor for a specific queue.
+Variables:
+01: preprocQueueId
+    Syntax = 'OCTET STRING'
+    Descr = 'Unique ID of the queue for which the 
+    preprocessor is configured.'
+02: preprocConfigurationSeverity
+    Syntax = 'INTEGER'
+      1=cleared
+      2=indeterminate
+      3=critical
+      4=major
+      5=minor
+      6=warning
+    Descr = 'Indicates the severity of the configuration 
+    status'
+03: preprocConfigurationMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Describes the configuration status of a 
+    particular preprocessor.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-10856","Cleared","processing alarm","QueueId=%s, Severity=%s, Message=%s","This event is generated when there is a problem with the 
+configuration of a preporcessor for a specific queue.
+Variables:
+01: preprocQueueId
+    Syntax = 'OCTET STRING'
+    Descr = 'Unique ID of the queue for which the 
+    preprocessor is configured.'
+02: preprocConfigurationSeverity
+    Syntax = 'INTEGER'
+      1=cleared
+      2=indeterminate
+      3=critical
+      4=major
+      5=minor
+      6=warning
+    Descr = 'Indicates the severity of the configuration 
+    status'
+03: preprocConfigurationMessage
+    Syntax = 'OCTET STRING'
+    Descr = 'Describes the configuration status of a 
+    particular preprocessor.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-13091","Major","communication alarm","ICMP: PingStatus=%s","'Long Descr.: This event is generated when an ICMP poll 
+reported up / down.'
+Variables:
+01: nePollStatus
+    Syntax = 'OCTET STRING'
+    Descr = 'Status of the polled host. For Notification 
+    use only.'
+02: proxyPollingHost
+    Syntax = 'OCTET STRING'
+    Descr = 'Host name of the polled host. For Notification 
+    use only.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-13092","Cleared","communication alarm","ICMP: PingStatus=%s","'Long Descr.: This event is generated when an ICMP poll 
+reported up / down.'
+Variables:
+01: nePollStatus
+    Syntax = 'OCTET STRING'
+    Descr = 'Status of the polled host. For Notification 
+    use only.'
+02: proxyPollingHost
+    Syntax = 'OCTET STRING'
+    Descr = 'Host name of the polled host. For Notification 
+    use only.'","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16193","Major","equipment alarm","A virtual server is disabled in global traffic management module. ","A virtual server is disabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16194","Cleared","equipment alarm","A virtual server is enabled in global traffic management module. ","A virtual server is enabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16195","Minor","equipment alarm","A link is becoming unavailable in global traffic management module. ","A link is becoming unavailable in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16199","Warning","equipment alarm","The box is becoming available in global management module. ","The box is becoming available in global management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16203","Critical","equipment alarm","The hard disk is failing. ","The hard disk is failing. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16205","Minor","equipment alarm","The HTTP request issued a violation to the current active policy.","The HTTP request issued a violation to the current active policy. This violation is marked as an alerting violation in that policy in Application Security Module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16207","Major","equipment alarm","A virtual server is becoming unavailable in global traffic management module. ","A virtual server is becoming unavailable in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16211","Minor","equipment alarm","The box is becoming unavailable in global management module. ","The box is becoming unavailable in global management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16213","Minor","equipment alarm","A pool is disabled in global traffic management module. ","A pool is disabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16214","Cleared","equipment alarm","A pool is enabled in global traffic management module. ","A pool is enabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16215","Warning","equipment alarm","BIG-IP GTM BIG3D SSL Cert will expire. ","BIG-IP GTM BIG3D SSL Cert will expire. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16217","Warning","equipment alarm","An application is becoming available in global management module. ","An application is becoming available in global management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16219","Warning","equipment alarm","A server is becoming available in global traffic management module. ","A server is becoming available in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16221","Warning","equipment alarm","A pool member is becoming available in global traffic management module. ","A pool member is becoming available in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16223","Warning","equipment alarm","An application object is becoming unavailable in global management module. ","An application object is becoming unavailable in global management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16225","Warning","equipment alarm","BIG-IP GTM joined sync group. ","BIG-IP GTM joined sync group. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16227","Warning","equipment alarm","BIG-IP GTM SSL Cert will expire. ","BIG-IP GTM SSL Cert will expire. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16229","Minor","equipment alarm","A wide IP is disabled in global traffic management module. ","A wide IP is disabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16230","Cleared","equipment alarm","A wide IP is enabled in global traffic management module. ","A wide IP is enabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16231","Warning","equipment alarm","A link is becoming available in global traffic management module. ","A link is becoming available in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16233","Critical","equipment alarm","An external interface link status change either DOWN or UP.","An external interface link status change either DOWN or UP. This is an occurrence when network cables are added or removed and the network re-configured. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16235","Major","equipment alarm","A server is disabled in global traffic management module. ","A server is disabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16236","Cleared","equipment alarm","A server is enabled in global traffic management module. ","A server is enabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16239","Minor","equipment alarm","A pool is becoming unavailable in global traffic management module. ","A pool is becoming unavailable in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16241","Warning","equipment alarm","A wide IP is becoming available in global traffic management module. ","A wide IP is becoming available in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16245","Major","equipment alarm","The SSL licnense limits are exceeded either for TPS (Transactions Per Second) or for MPS (Megabits Per Second). ","The SSL licnense limits are exceeded either for TPS (Transactions Per Second) or for MPS (Megabits Per Second). ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16247","Warning","equipment alarm","A data center is becoming available in global traffic management module. ","A data center is becoming available in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16249","Minor","equipment alarm","A wide IP is becoming unavailable in global traffic management module. ","A wide IP is becoming unavailable in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16251","Warning","equipment alarm","A virtual server is becoming available in global traffic management module. ","A virtual server is becoming available in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16255","Warning","equipment alarm","An application is becoming unavailable in global management module. ","An application is becoming unavailable in global management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16257","Major","equipment alarm","A server is becoming unavailable in global traffic management module. ","A server is becoming unavailable in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16259","Minor","equipment alarm","An application object is becoming available in global management module. ","An application object is becoming available in global management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16261","Warning","equipment alarm","A pool is becoming available in global traffic management module. ","A pool is becoming available in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16265","Warning","equipment alarm","The HTTP request was blocked.","The HTTP request was blocked because it issued (at least one) violation(s) which is marked as blocking at the current active policy in Application Security Module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16267","Warning","equipment alarm","BIG-IP GTM BIG3D SSL Cert has expired. ","BIG-IP GTM BIG3D SSL Cert has expired. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16269","Minor","equipment alarm","A data center is disabled in global traffic management module. ","A data center is disabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16270","Cleared","equipment alarm","A data center is enabled in global traffic management module. ","A data center is enabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16271","Minor","equipment alarm","A pool member is disabled in global traffic management module. ","A pool member is disabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16272","Cleared","equipment alarm","A pool member is enabled in global traffic management module. ","A pool member is enabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16273","Warning","equipment alarm","BIG-IP GTM left sync group. ","BIG-IP GTM left sync group. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16275","Warning","equipment alarm","BIG-IP GTM SSL Cert has expired. ","BIG-IP GTM SSL Cert has expired. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16277","Minor","equipment alarm","A data center is becoming unavailable in global traffic management module. ","A data center is becoming unavailable in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16279","Major","equipment alarm","In failover condition this standby will not be able to go active. ","In failover condition this standby will not be able to go active. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16281","Major","equipment alarm","The inet port is exhausted. ","The inet port is exhausted. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16283","Minor","equipment alarm","A pool member is becoming unavailable in global traffic management module. ","A pool member is becoming unavailable in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16285","Minor","equipment alarm","A link is disabled in global traffic management module.","A link is disabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16286","Cleared","equipment alarm","A link is enabled in global traffic management module. ","A link is enabled in global traffic management module. ","Not Available","-- not available --",
+"F5","F5_BIG-IP","1-16957","Major","equipment alarm","Brute force attack detected.","Brute force attack detected by Application Security Module.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16959","Major","equipment alarm","DoS attack detected.","DoS attack detected by Application Security Module.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16961","Minor","equipment alarm","The FTP request was blocked.","The FTP request was blocked because it issued (at least one) violation(s) which is marked as blocking at the current active policy in Application Security Module.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16963","Minor","equipment alarm","The FTP request issued a violation to the current active policy.","The FTP request issued a violation to the current active policy. This violation is marked as an alerting violation in that policy in Application Security Module.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16965","Minor","equipment alarm","The FTP request was blocked.","The FTP request was blocked because it issued (at least one) violation(s) which is marked as blocking at the current active policy in Application Security Module.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16967","Minor","equipment alarm","The FTP request issued a violation to the current active policy.","The FTP request issued a violation to the current active policy. This violation is marked as an alerting violation in that policy in Application Security Module.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16969","Minor","equipment alarm","A blade lost power.","A blade lost power.The blade may be pulled out","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16971","Minor","equipment alarm","A blade has failed - offline.","A blade has failed - offline.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16973","Minor","equipment alarm","Blade temperature is too high","Blade temperature is too high.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16975","Minor","equipment alarm","The cluster daemon failed to respond for 10 or more seconds","The cluster daemon failed to respond for 10 or more seconds.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16997","Warning","environment alarm","AOM reports the air temperature near the host CPU too high.","AOM reports the air temperature near the host CPU too high.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-16999","Normal","processing alarm","DNSSEC Key generation has rolled over.","DNSSEC Key generation has rolled over.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-17001","Normal","equipment alarm","DNSSEC Key generation has expired.","DNSSEC Key generation has expired.","Not available","-- not available --",
+"F5","F5_BIG-IP","1-17003","Warning","equipment alarm","Disk failure in a RAID disk array.","Disk failure in a RAID disk array.","Not available","-- not available --",

@@ -1,0 +1,136 @@
+
+Name  EPS Session Management
+Entity  - Flexi NS - MME ID (c-number)
+- tracking area identity (TAI)
+-   - public land mobile network (PLMN)
+-     - mobile country code (MCC)
+-     - mobile network code (MNC)
+-   - tracking area code (TAC)
+
+The Session Management measurement provides information on, for example, successful
+  and failed default bearer activation procedures.
+
+  The counters are collected on the tracking area level.
+
++---------+------------------------------------------------------------------------+-------+
+| PID     | NAME                                                                   | GROUP |
++---------+------------------------------------------------------------------------+-------+
+| m51c000 | EPS DEF BEARER ACT SUCC                                                | smmt  |
+| m51c001 | EPS DEF BEARER ACT FAIL                                                | smmt  |
+| m51c002 | EPS DEF BEARER DEACT                                                   | smmt  |
+| m51c003 | GW INITIATED BEARER MODIFICATION SUCCESS                               | smmt  |
+| m51c004 | GW INITIATED BEARER MODIFICATION FAILURE                               | smmt  |
+| m51c005 | GW INITIATED BEARER MODIFICATION FAILURE UE ERROR                      | smmt  |
+| m51c006 | GW INITIATED BEARER MODIFICATION FAILURE ENB ERROR                     | smmt  |
+| m51c007 | GW INITIATED BEARER MODIFICATION FAILURE SGW ERROR                     | smmt  |
+| m51c008 | GW INITIATED BEARER MODIFICATION FAILURE MME ERROR                     | smmt  |
+| m51c038 | DEDICATED BEARER REQUESTED BY MME                                      | smmt  |
+| m51c039 | DEDICATED BEARER CONFIRMED BY UE                                       | smmt  |
+| m51c040 | DEFAULT S5/S8 BEARER REQUESTED BY MME                                  | smmt  |
+| m51c041 | DEFAULT S5/S8 BEARER CONFIRMED BY SGW                                  | smmt  |
+| m51c042 | DEDICATED S5/S8 BEARER REQUESTED BY MME                                | smmt  |
+| m51c043 | DEDICATED S5/S8 BEARER CONFIRMED BY SGW                                | smmt  |
+| m51c062 | EPS ATTACH INCORRECT APN RECEIVED HOME                                 | smmt  |
+| m51c063 | EPS ATTACH INCORRECT APN RECEIVED ROAMING                              | smmt  |
+| m51c064 | EPS ATTACH APN REPLACED HOME                                           | smmt  |
+| m51c065 | EPS ATTACH APN REPLACED ROAMING                                        | smmt  |
+| m51c066 | EPS PDN CONNECTIVITY INCORRECT APN RECEIVED HOME                       | smmt  |
+| m51c067 | EPS PDN CONNECTIVITY INCORRECT APN RECEIVED ROAMING                    | smmt  |
+| m51c068 | EPS PDN CONNECTIVITY APN REPLACED HOME                                 | smmt  |
+| m51c069 | EPS PDN CONNECTIVITY APN REPLACED ROAMING                              | smmt  |
+| m51c086 | EPS CHANGE NOTIFICATION SUCCESSFUL                                     | smmt  |
+| m51c087 | EPS CHANGE NOTIFICATION FAIL                                           | smmt  |
+| m51c088 | EPS P-CSCF RESTORATION ACTIVATION RECEIVED                             | smmt  |
+| m51c089 | MPS DEFAULT BEARER ACTIVATION SUCCESSFUL                               | smmt  |
+| m51c090 | MPS DEFAULT BEARER ACTIVATION FAIL                                     | smmt  |
+| m51c091 | MPS DEFAULT BEARER MODIFICATION  SUCCESSFUL                            | smmt  |
+| m51c092 | MPS DEFAULT BEARER MODIFICATION FAIL                                   | smmt  |
+| m51c093 | MPS DEDICATED BEARER ACTIVATION SUCCESSFUL                             | smmt  |
+| m51c094 | MPS DEDICATED BEARER ACTIVATION FAIL                                   | smmt  |
+| m51c095 | MPS DEDICATED BEARER MODIFICATION  SUCCESSFUL                          | smmt  |
+| m51c096 | MPS DEDICATED BEARER MODIFICATION FAIL                                 | smmt  |
+| m51c055 | EPS DEDICATED BEARER ACTIVATION IN PDN CONNECTIVITY ATTEMPTED          | smmt  |
+| m51c056 | EPS DEDICATED BEARER ACTIVATION IN PDN CONNECTIVITY SUCCESSFUL         | smmt  |
+| m51c057 | EPS DEDICATED BEARER ACTIVATION IN PDN CONNECTIVITY DISCARDED          | smmt  |
+| m51c009 | HSS INITIATED BEARER MODIFICATION SUCCESS                              | smmt  |
+| m51c010 | HSS INITIATED BEARER MODIFICATION FAILURE                              | smmt  |
+| m51c011 | HSS INITIATED BEARER MODIFICATION FAILURE UE ERROR                     | smmt  |
+| m51c012 | HSS INITIATED BEARER MODIFICATION FAILURE ENB ERROR                    | smmt  |
+| m51c013 | HSS INITIATED BEARER MODIFICATION FAILURE SGW ERROR                    | smmt  |
+| m51c024 | DEDICATED BEARER PGW INITIATED ACTIVATION SUCCESSFUL                   | smmt  |
+| m51c025 | DEDICATED BEARER PGW INITIATED ACTIVATION FAIL                         | smmt  |
+| m51c026 | DEDICATED BEARER PGW INITIATED MODIFICATION SUCCESSFUL                 | smmt  |
+| m51c027 | DEDICATED BEARER PGW INITIATED MODIFICATION FAIL                       | smmt  |
+| m51c028 | DEDICATED BEARER PGW INITIATED DEACTIVATION SUCCESSFUL                 | smmt  |
+| m51c029 | DEDICATED BEARER MME INITIATED DEACTIVATION SUCCESSFUL                 | smmt  |
+| m51c030 | DEDICATED BEARER MME INITIATED DEACTIVATION ABNORMAL                   | smmt  |
+| m51c031 | DEDICATED BEARER UE INITIATED ACTIVATION SUCCESSFUL                    | smmt  |
+| m51c032 | DEDICATED BEARER UE INITIATED ACTIVATION FAIL                          | smmt  |
+| m51c033 | DEDICATED BEARER UE INITIATED MODIFICATION SUCCESSFUL                  | smmt  |
+| m51c034 | DEDICATED BEARER UE INITIATED MODIFICATION FAIL                        | smmt  |
+| m51c035 | DEDICATED BEARER UE INITIATED DEACTIVATION SUCCESSFUL                  | smmt  |
+| m51c036 | DEDICATED BEARER UE INITIATED DEACTIVATION FAIL                        | smmt  |
+| m51c014 | PDN PGW INITIATED DEACTIVATION SUCCESSFUL                              | smmt  |
+| m51c015 | PDN PGW INITIATED DEACTIVATION FAILED                                  | smmt  |
+| m51c016 | PDN MME INITIATED DEACTIVATION SUCCESSFUL                              | smmt  |
+| m51c017 | PDN MME INITIATED DEACTIVATION FAILED                                  | smmt  |
+| m51c018 | PDN UE INITIATED ACTIVATION SUCCESSFUL                                 | smmt  |
+| m51c019 | PDN UE INITIATED ACTIVATION FAILED                                     | smmt  |
+| m51c020 | PDN UE INITIATED DEACTIVATION SUCCESSFUL                               | smmt  |
+| m51c021 | PDN UE INITIATED DEACTIVATION FAILED                                   | smmt  |
+| m51c085 | EPS PDN UE INITIATED ACTIVATION UNSPECIFIED FAILED                     | smmt  |
+| m51c070 | EPS PDN UE INITIATED ACTIVATION ATTEMPTED                              | smmt  |
+| m51c071 | EPS PDN UE INITIATED ACTIVATION FAILED DUE OPERATOR DETERMINED BARRING | smmt  |
+|         | CAUSE 08                                                               |       |
+| m51c072 | EPS PDN UE INITIATED ACTIVATION FAILED DUE MISSING OR UNKNOWN APN      | smmt  |
+|         | CAUSE 27                                                               |       |
+| m51c073 | EPS PDN UE INITIATED ACTIVATION FAILED DUE UNKNOWN PDN TYPE CAUSE 28   | smmt  |
+| m51c074 | EPS PDN UE INITIATED ACTIVATION FAILED DUE USER AUTHENTICATION FAILED  | smmt  |
+|         | CAUSE 29                                                               |       |
+| m51c075 | EPS PDN UE INITIATED ACTIVATION FAILED DUE REQUEST REJECTED            | smmt  |
+|         | UNSPECIFIED CAUSE 31                                                   |       |
+| m51c082 | EPS PDN UE INITIATED ACTIVATION DNS FAILED                             | smmt  |
+| m51c083 | EPS PDN UE INITIATED ACTIVATION GW CREATE SESSION FAILED               | smmt  |
+| m51c084 | EPS PDN UE INITIATED ACTIVATION GW MODIFY BEARER FAILED                | smmt  |
+| m51c061 | EPS PDN CONNECTIVITY WITH OPERATOR DETERMINED BARRING  REJECTED        | smmt  |
+| m51c076 | EPS BEARER RESOURCE ALLOCATION ATTEMPTED                               | smmt  |
+| m51c077 | EPS BEARER RESOURCE ALLOCATION SUCCESSFUL                              | smmt  |
+| m51c078 | EPS BEARER RESOURCE ALLOCATION FAILED DUE REQUEST REJECTED BY SGW OR   | smmt  |
+|         | PDN GW CAUSE 30                                                        |       |
+| m51c079 | EPS BEARER RESOURCE ALLOCATION FAILED DUE REQUEST REJECTED UNSPECIFIED | smmt  |
+|         | CAUSE 31                                                               |       |
+| m51c080 | EPS BEARER RESOURCE ALLOCATION FAILED DUE REQUESTED OPTION NOT         | smmt  |
+|         | SUBSCRIBED CAUSE 33                                                    |       |
+| m51c081 | EPS BEARER RESOURCE ALLOCATION FAILED DUE PTI ALREADY IN USE CAUSE 35  | smmt  |
+| m51c099 | PDN UEINIT ACT NAS 33 FAIL                                             | smmt  |
+| m51c100 | EPS DEDICATED BEARER ACTIVATION FOR VOLTE QCI1 ATTEMPTED               | smmt  |
+| m51c101 | EPS DEDICATED BEARER ACTIVATION FOR VOLTE QCI1 SUCCESSFUL              | smmt  |
+| m51c102 | EPS DEDICATED BEARER ACTIVATION FOR VOLTE QCI2 ATTEMPTED               | smmt  |
+| m51c103 | EPS DEDICATED BEARER ACTIVATION FOR VOLTE QCI2 SUCCESSFUL              | smmt  |
+| m51c044 | EMERGENCY CALL PDN CONNECTION SUCCESSFUL                               | smmt  |
+| m51c045 | EMERGENCY CALL PDN CONNECTION FAILED                                   | smmt  |
+| m51c046 | EMERGENCY CALL DEDICATED BEARER ACTIVATION SUCCESSFUL                  | smmt  |
+| m51c047 | EMERGENCY CALL DEDICATED BEARER ACTIVATION FAILED                      | smmt  |
+| m51c052 | EPS BEARER REJECTIONS DUE TO MAX QOS LIMIT                             | smmt  |
+| m51c097 | EPS ROAM PDN ACTIVATION FOR VOLTE SUCC                                 | smmt  |
+| m51c098 | EPS ROAM PDN ACTIVATION FOR VOLTE FAIL                                 | smmt  |
+| m51c104 | EPS DEDICATED BEARER MODIFICATION FOR VOLTE QCI1 ATTEMPTED             | smmt  |
+| m51c105 | EPS DEDICATED BEARER MODIFICATION FOR VOLTE QCI1 SUCCESSFUL            | smmt  |
+| m51c106 | EPS DEDICATED BEARER MODIFICATION FOR VOLTE QCI2 ATTEMPTED             | smmt  |
+| m51c107 | EPS DEDICATED BEARER MODIFICATION FOR VOLTE QCI2 SUCCESSFUL            | smmt  |
+| m51c108 | EPS DEDICATED BEARER P-GW INITIATED DEACTIVATION FOR VOLTE QCI1        | smmt  |
+|         | SUCCESSFUL                                                             |       |
+| m51c109 | EPS DEDICATED BEARER P-GW INITIATED DEACTIVATION FOR VOLTE QCI2        | smmt  |
+|         | SUCCESSFUL                                                             |       |
+| m51c110 | EPS DEDICATED BEARER MME INITIATED DEACTIVATION FOR VOLTE QCI1         | smmt  |
+|         | ATTEMPTED                                                              |       |
+| m51c111 | EPS DEDICATED BEARER MME INITIATED DEACTIVATION FOR VOLTE QCI2         | smmt  |
+|         | ATTEMPTED                                                              |       |
+| m51c058 | EPS ABNORMAL PDN REJECTED                                              | smmt  |
+| m51c059 | EPS ABNORMAL PDN DETACHED                                              | smmt  |
+| m51c060 | EPS ABNORMAL PDN DROPPED                                               | smmt  |
+| m51c048 | EPS PDN ACTIVATION FOR VOLTE SUCC                                      | smmt  |
+| m51c049 | EPS PDN ACTIVATION FOR VOLTE FAILED                                    | smmt  |
+| m51c053 | EPS DEFAULT BEARER ACTIVATION VOLTE SUCCESSFUL                         | smmt  |
+| m51c054 | EPS DEFAULT BEARER ACTIVATION VOLTE FAILED                             | smmt  |
++---------+------------------------------------------------------------------------+-------+

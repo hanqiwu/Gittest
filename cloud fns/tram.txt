@@ -1,0 +1,22 @@
+
+Name  EPS Trace Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- global eNB identifier
+-   - public land mobile network (PLMN)
+-     - mobile country code (MCC)
+-     - mobile network code (MNC)
+-   - eNB
+
+The EPS Trace measurement provides information on the successful and failed cell
+  traffic trace procedures.
+
+  The counters are collected on the eNB level, except for the counter M76C000 EPS
+  CELL TRAFFIC TRACE SUCC that is collected on the MME level.
+
++---------+-----------------------------------+-------+
+| PID     | NAME                              | GROUP |
++---------+-----------------------------------+-------+
+| m76c001 | EPS CELL TRAFFIC TRACE ATTEMPTED  | tram  |
+| m76c002 | EPS CELL TRAFFIC TRACE ERROR      | tram  |
+| m76c000 | EPS CELL TRAFFIC TRACE SUCCESSFUL | tram  |
++---------+-----------------------------------+-------+

@@ -1,0 +1,17 @@
+
+Name  EPS Round Trip Time Measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS Round Trip Time (RTT) measurement provides information on the duration of
+  completing a procedure. The counters are collected on the MME level.
+
+  The counters are collected on the MME level.
+
++---------+------------------------------------+-------+
+| PID     | NAME                               | GROUP |
++---------+------------------------------------+-------+
+| m65c001 | ATTACH ROUND TRIP TIME  MAXIMUM    | rttm  |
+| m65c000 | ATTACH ROUND TRIP TIME MINIMUM     | rttm  |
+| m65c002 | ATTACH ROUND TRIP TIME SUM         | rttm  |
+| m65c003 | ATTACH ROUND TRIP TIME DENOMINATOR | rttm  |
++---------+------------------------------------+-------+

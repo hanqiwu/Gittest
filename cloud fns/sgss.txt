@@ -1,0 +1,23 @@
+
+Name  EPS SGS SCTP Management Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- VLR ID
+- Connection identifier
+
+The EPS SGs SCTP Management measurement provides information on each SCTP protocol
+  association on the SGs interface. The provided data includes, for example, the SCTP
+  congestion duration and the number of sent/received SCTP data chunks.
+
+  The counters are collected on an SCTP association level.
+
++---------+-------------------------------+-------+
+| PID     | NAME                          | GROUP |
++---------+-------------------------------+-------+
+| m73c000 | SGS SCTP DATA CHUNK SENT      | sgss  |
+| m73c001 | SGS SCTP DATA CHUNK RECEIVED  | sgss  |
+| m73c002 | SGS SCTP DATA CHUNK RESENT    | sgss  |
+| m73c003 | SGS SCTP CONGESTION DURATION  | sgss  |
+| m73c004 | SGS SCTP CONGESTION           | sgss  |
+| m73c005 | SGS SCTP UNAVAILABLE DURATION | sgss  |
+| m73c006 | SGS SCTP UNAVAILABLE          | sgss  |
++---------+-------------------------------+-------+

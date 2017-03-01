@@ -1,0 +1,33 @@
+
+Name  EPS M3 Interface Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- IP address of the external node (IP)
+
+"The EPS M3 Interface measurement provides information on the sending and receiving\
+  \ of messages on the M3 interface. \nThe counters are collected on the IP level."
+
++---------+----------------------------------------------+-------+
+| PID     | NAME                                         | GROUP |
++---------+----------------------------------------------+-------+
+| m78c000 | M3 MESSAGES RECEIVED                         | m3ap  |
+| m78c001 | M3 MESSAGES SENT                             | m3ap  |
+| m78c002 | M3 MESSAGES ERRONEOUSLY RECEIVED             | m3ap  |
+| m78c003 | M3 SETUP REQUEST RECEIVED                    | m3ap  |
+| m78c004 | M3 SETUP RESPONSE SENT                       | m3ap  |
+| m78c005 | M3 SETUP FAILURE SENT                        | m3ap  |
+| m78c006 | M3 RESET RECEIVED                            | m3ap  |
+| m78c007 | M3 RESET ACKNOWLEDGE SENT                    | m3ap  |
+| m78c008 | M3 MCE CONFIGURATION UPDATE RECEIVED         | m3ap  |
+| m78c009 | M3 MCE CONFIGURATION UPDATE ACKNOWLEDGE SENT | m3ap  |
+| m78c010 | M3 MCE CONFIGURATION UPDATE FAILURE SENT     | m3ap  |
+| m78c011 | M3 MBMS SESSION START REQUEST SENT           | m3ap  |
+| m78c012 | M3 MBMS SESSION START RESPONSE RECEIVED      | m3ap  |
+| m78c013 | M3 MBMS SESSION START FAILURE RECEIVED       | m3ap  |
+| m78c014 | M3 MBMS SESSION STOP REQUEST SENT            | m3ap  |
+| m78c015 | M3 MBMS SESSION STOP RESPONSE RECEIVED       | m3ap  |
+| m78c016 | M3 MBMS SESSION UPDATE REQUEST SENT          | m3ap  |
+| m78c017 | M3 MBMS SESSION UPDATE RESPONSE RECEIVED     | m3ap  |
+| m78c018 | M3 MBMS SESSION UPDATE FAILURE RECEIVED      | m3ap  |
+| m78c019 | M3 ERROR INDICATION SENT                     | m3ap  |
+| m78c020 | M3 ERROR INDICATION RECEIVED                 | m3ap  |
++---------+----------------------------------------------+-------+

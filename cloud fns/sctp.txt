@@ -1,0 +1,26 @@
+
+Name  EPS SCTP Measurement
+Entity  - Flexi NS - MME ID (c-number)
+- global eNB identifier
+-   - public land mobile network (PLMN)
+-     - mobile country code (MCC)
+-     - mobile network code (MNC)
+-   - eNB
+
+The EPS SCTP measurement provides information on each SCTP protocol associations
+  via the S1 interface. The provided data includes, for example, the SCTP congestion
+  duration and the number of sent/received SCTP data chunks.
+
+  The counters are collected on an SCTP association level.
+
++---------+------------------------------+-------+
+| PID     | NAME                         | GROUP |
++---------+------------------------------+-------+
+| m66c000 | S1 SCTP DATA CHUNK SENT      | sctp  |
+| m66c001 | S1 SCTP DATA CHUNK RECEIVED  | sctp  |
+| m66c002 | S1 SCTP DATA CHUNK RESENT    | sctp  |
+| m66c003 | S1 SCTP CONGESTION DURATION  | sctp  |
+| m66c004 | S1 SCTP CONGESTION           | sctp  |
+| m66c005 | S1 SCTP UNAVAILABLE DURATION | sctp  |
+| m66c006 | S1 SCTP UNAVAILABLE          | sctp  |
++---------+------------------------------+-------+

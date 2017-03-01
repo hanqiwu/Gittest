@@ -1,0 +1,26 @@
+
+Name  EPS user TA level measurement
+Entity  - Flexi NS - MME ID (c-number)
+- tracking area identity (TAI)
+-   - public land mobile network (PLMN)
+-     - mobile country code (MCC)
+-     - mobile network code (MNC)
+-   - tracking area code (TAC)
+
+The EPS User TA Level measurement provides information on the EPS-CONNECTED and EPS-IDLE
+  state LTE subscribers per TA.
+
+  The counters are collected on the network element level.
+
++---------+-----------------------------+-------+
+| PID     | NAME                        | GROUP |
++---------+-----------------------------+-------+
+| m71c000 | EPS ECM CONNECTED  TA MIN   | utlm  |
+| m71c001 | EPS ECM CONNECTED  TA MAX   | utlm  |
+| m71c002 | EPS ECM CONNECTED  TA SUM   | utlm  |
+| m71c003 | EPS ECM CONNECTED  TA DENOM | utlm  |
+| m71c004 | EPS ECM IDLE TA MIN         | utlm  |
+| m71c005 | EPS ECM IDLE TA MAX         | utlm  |
+| m71c006 | EPS ECM IDLE TA SUM         | utlm  |
+| m71c007 | EPS ECM IDLE TA DENOM       | utlm  |
++---------+-----------------------------+-------+

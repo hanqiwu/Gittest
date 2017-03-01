@@ -1,0 +1,53 @@
+
+Name  GTP based interface measurement
+Entity  - Flexi NS - MME ID (c-number)
+- IP address of the external node (IP)
+
+The GTP-based Interface measurement provides information about successful and failed
+  messages on the GTP-based interfaces, both the S10 message counters and Echo message
+  counters related to the S10 path management messages (GTPv2) are updated.
+
+  The counters are collected on the IP level.
+
++---------+----------------------------------------------------------+-------+
+| PID     | NAME                                                     | GROUP |
++---------+----------------------------------------------------------+-------+
+| m70c004 | S10/S3 CONTEXT REQUEST SENT                              | gtpm  |
+| m70c005 | S10/S3 CONTEXT REQUEST RECEIVED                          | gtpm  |
+| m70c006 | S10/S3 CONTEXT RESPONSE SENT                             | gtpm  |
+| m70c007 | S10/S3 CONTEXT RESPONSE RECEIVED                         | gtpm  |
+| m70c008 | S10/S3 CONTEXT ACKNOWLEDGE SENT                          | gtpm  |
+| m70c009 | S10/S3 CONTEXT ACKNOWLEDGE RECEIVED                      | gtpm  |
+| m70c010 | S10/S3 FORWARD RELOCATION REQUEST SENT                   | gtpm  |
+| m70c011 | S10/S3 FORWARD RELOCATION REQUEST RECEIVED               | gtpm  |
+| m70c012 | S10/S3 FORWARD RELOCATION RESPONSE SENT                  | gtpm  |
+| m70c013 | S10/S3 FORWARD RELOCATION RESPONSE RECEIVED              | gtpm  |
+| m70c014 | S10/S3 FORWARD ACCESS CONTEXT NOTIFICATION SENT          | gtpm  |
+| m70c015 | S10/S3 FORWARD ACCESS CONTEXT NOTIFICATION RECEIVED      | gtpm  |
+| m70c016 | S10/S3 FORWARD ACCESS CONTEXT ACKNOWLEDGE SENT           | gtpm  |
+| m70c017 | S10/S3 FORWARD ACCESS CONTEXT ACKNOWLEDGE RECEIVED       | gtpm  |
+| m70c018 | S10/S3 FORWARD RELOCATION COMPLETE NOTIFICATION SENT     | gtpm  |
+| m70c019 | S10/S3 FORWARD RELOCATION COMPLETE NOTIFICATION RECEIVED | gtpm  |
+| m70c020 | S10/S3 FORWARD RELOCATION COMPLETE ACKNOWLEDGE SENT      | gtpm  |
+| m70c021 | S10/S3 FORWARD RELOCATION COMPLETE ACKNOWLEDGE RECEIVED  | gtpm  |
+| m70c026 | S10/S3 IDENTIFICATION REQUEST SENT                       | gtpm  |
+| m70c027 | S10/S3 IDENTIFICATION REQUEST RECEIVED                   | gtpm  |
+| m70c028 | S10/S3 IDENTIFICATION RESPONSE SENT                      | gtpm  |
+| m70c029 | S10/S3 IDENTIFICATION RESPONSE RECEIVED                  | gtpm  |
+| m70c022 | S10/S3 RELOCATION CANCEL REQUEST SENT                    | gtpm  |
+| m70c023 | S10/S3 RELOCATION CANCEL REQUEST RECEIVED                | gtpm  |
+| m70c024 | S10/S3 RELOCATION CANCEL RESPONSE SENT                   | gtpm  |
+| m70c025 | S10/S3 RELOCATION CANCEL RESPONSE RECEIVED               | gtpm  |
+| m70c030 | SM MBMS SESSION START REQUEST RECEIVED                   | gtpm  |
+| m70c031 | SM MBMS SESSION START RESPONSE SENT                      | gtpm  |
+| m70c032 | SM MBMS SESSION UPDATE REQUEST RECEIVED                  | gtpm  |
+| m70c033 | SM MBMS SESSION UPDATE RESPONSE SENT                     | gtpm  |
+| m70c034 | SM MBMS SESSION STOP REQUEST RECEIVED                    | gtpm  |
+| m70c035 | SM MBMS SESSION STOP RESPONSE SENT                       | gtpm  |
+| m70c036 | GTP2 PGW RESTART NOTIFICATION MESSAGE RECEIVED           | gtpm  |
+| m70c037 | GTP2 PGW RESTART NOTIFICATION ACKNOWLEDGE MESSAGE SENT   | gtpm  |
+| m70c000 | GTP2 ECHO REQUEST MESSAGE SENT                           | gtpm  |
+| m70c001 | GTP2 ECHO REQUEST MESSAGE RECEIVED                       | gtpm  |
+| m70c002 | GTP2 ECHO RESPONSE MESSAGE SENT                          | gtpm  |
+| m70c003 | GTP2 ECHO RESPONSE MESSAGE RECEIVED                      | gtpm  |
++---------+----------------------------------------------------------+-------+

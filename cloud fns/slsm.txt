@@ -1,0 +1,18 @@
+
+Name  EPS SLS interface measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS SLS Interface measurement provides information on the sending and receiving
+  messages on the SLs interface. This measurement includes received and sent connection
+  oriented information message counters.
+
+  The counters are collected on the network element level.
+
++---------+--------------------------------------------------+-------+
+| PID     | NAME                                             | GROUP |
++---------+--------------------------------------------------+-------+
+| m69c000 | CONNECTION ORIENTED INFORMATION MESSAGE RECEIVED | slsm  |
+| m69c001 | CONNECTION ORIENTED INFORMATION MESSAGE SENT     | slsm  |
+| m69c002 | CONNECTIONLESS INFORMATION MESSAGE RECEIVED      | slsm  |
+| m69c003 | CONNECTIONLESS INFORMATION MESSAGE SENT          | slsm  |
++---------+--------------------------------------------------+-------+

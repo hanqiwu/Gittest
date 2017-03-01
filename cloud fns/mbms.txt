@@ -1,0 +1,17 @@
+
+Name  EPS MBMS Session Management
+Entity  - Flexi NS - MME ID (c-number)
+- Temporary Mobile Group Identity (TMGI)
+
+"The EPS MBMS Session Management measurement provides information MBMS Session procedures.\
+  \ \nThe counters are collected on TMGI level."
+
++---------+------------------------------------+-------+
+| PID     | NAME                               | GROUP |
++---------+------------------------------------+-------+
+| m79c000 | EPS MBMS SESSION START SUCCESSFUL  | mbms  |
+| m79c001 | EPS MBMS SESSION START FAILED      | mbms  |
+| m79c002 | EPS MBMS SESSION UPDATE SUCCESSFUL | mbms  |
+| m79c003 | EPS MBMS SESSION UPDATE FAILED     | mbms  |
+| m79c004 | EPS MBMS SESSION STOP              | mbms  |
++---------+------------------------------------+-------+

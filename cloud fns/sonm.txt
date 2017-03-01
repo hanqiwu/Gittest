@@ -1,0 +1,21 @@
+
+Name  EPS Self Organizing Network Measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS Self Organizing Networks (SON) measurement provides information on the sending
+  and receiving SON configuration messages by MME.
+
+  The counters are collected on the MME level.
+
++---------+------------------------------------------------------------------------+-------+
+| PID     | NAME                                                                   | GROUP |
++---------+------------------------------------------------------------------------+-------+
+| m56c000 | SON ENB CONFIGURATION TRANSFER TO MME WITH REQUEST                     | sonm  |
+| m56c001 | SON ENB CONFIGURATION TRANSFER TO MME WITH REPLY                       | sonm  |
+| m56c002 | SON MME CONFIGURATION SENT TO ENB WITH REQUEST                         | sonm  |
+| m56c003 | SON MME CONFIGURATION  SENT TO ENB WITH REPLY                          | sonm  |
+| m56c004 | SON CONFIGURATION TRANSFER TUNNEL SENT TO OTHER MME WITH REQUEST       | sonm  |
+| m56c005 | SON CONFIGURATION TRANSFER TUNNEL SENT TO OTHER MME WITH REPLY         | sonm  |
+| m56c006 | SON CONFIGURATION TRANSFER TUNNEL RECEIVED FROM OTHER MME WITH REQUEST | sonm  |
+| m56c007 | SON CONFIGURATION TRANSFER TUNNEL RECEIVED FROM OTHER MME WITH REPLY   | sonm  |
++---------+------------------------------------------------------------------------+-------+

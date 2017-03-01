@@ -1,0 +1,56 @@
+
+Name  EPS User MME Level
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS User MME Level measurement provides information on users in ECM connected,
+  ECM idle, EMM registered and EMM deregistered states on the MME level. The maximum
+  and minimum number of users in each state is reported. This measurement includes
+  also some extra counters, for example, SRVCC counters.
+
+  The counters are collected on the MME level.
+
++---------+-----------------------------------------------------+-------+
+| PID     | NAME                                                | GROUP |
++---------+-----------------------------------------------------+-------+
+| m53c017 | SRVCC CS AND PS HANDOVER PROCEDURE TO 3G SUCCESSFUL | umlm  |
+| m53c018 | SRVCC CS ONLY HANDOVER PROCEDURE TO 3G SUCCESSFUL   | umlm  |
+| m53c020 | SRVCC PS AND CS HANDOVER PROCEDURE TO 3G FAIL       | umlm  |
+| m53c021 | SRVCC CS HANDOVER PROCEDURE TO 3G FAIL              | umlm  |
+| m53c022 | SRVCC CS HANDOVER PROCEDURE TO 2G SUCC              | umlm  |
+| m53c023 | SRVCC CS HANDOVER PROCEDURE TO 2G FAIL              | umlm  |
+| m53c024 | SRVCC EMERGENCY HANDOVER PROCEDURE TO 3G SUCC       | umlm  |
+| m53c025 | SRVCC EMERGENCY HANDOVER PROCEDURE TO 3G FAIL       | umlm  |
+| m53c026 | SRVCC EMERGENCY HANDOVER PROCEDURE TO 2G SUCC       | umlm  |
+| m53c027 | SRVCC EMERGENCY HANDOVER PROCEDURE TO 2G FAIL       | umlm  |
+| m53c028 | SRVCC HANDOVER PROCEDURE TO 3G CANCELLED            | umlm  |
+| m53c029 | SRVCC HANDOVER PROCEDURE TO 2G CANCELLED            | umlm  |
+| m53c030 | SRVCC EMERGENCY HANDOVER PROCEDURE TO 3G CANCELLED  | umlm  |
+| m53c031 | SRVCC EMERGENCY HANDOVER PROCEDURE TO 2G CANCELLED  | umlm  |
+| m53c039 | SRVCC TO CDMA PROCEDURE ATTEMPTED                   | umlm  |
+| m53c040 | SRVCC EMERGENCY PROCEDURE TO CDMA ATTEMPTED         | umlm  |
+| m53c032 | EPS LICENSE REGISTRATION FAIL                       | umlm  |
+| m53c033 | EPS LICENSE BEARER CREATION FAIL                    | umlm  |
+| m53c034 | EPS PURGE HSS OK SUCC                               | umlm  |
+| m53c035 | EPS PURGE HSS NOK SUCC                              | umlm  |
+| m53c036 | SUBSCRIBER MOVE IN SOURCE MME SUCC                  | umlm  |
+| m53c037 | SUBSCRIBER MOVE IN SOURCE MME FAIL                  | umlm  |
+| m53c038 | SUBSCRIBER MOVE IN TARGET MME RECEIVED              | umlm  |
+| m53c041 | EPS LOCATION REPORTING CONTROL NOT STARTED          | umlm  |
+| m53c042 | EPS LOCATION REPORTING CONTROL RESUMED              | umlm  |
+| m53c043 | NUMBER OF DOWNLINK DATA NOTIFICATION WITH MPS ARP   | umlm  |
+| m53c044 | NUMBER OF CREATE BEARER REQUEST WITH MPS ARP        | umlm  |
+| m53c045 | NUMBER OF UPDATE BEARER REQUEST WITH MPS ARP        | umlm  |
+| m53c019 | OVERLOAD CONTROL DROPPED PROCEDURES                 | umlm  |
+| m53c000 | EPS ECM CONN MIN                                    | umlm  |
+| m53c001 | EPS ECM CONN MAX                                    | umlm  |
+| m53c002 | EPS ECM CONN SUM                                    | umlm  |
+| m53c003 | EPS ECM CONN DENOM                                  | umlm  |
+| m53c004 | EPS ECM IDLE MIN                                    | umlm  |
+| m53c005 | EPS ECM IDLE MAX                                    | umlm  |
+| m53c006 | EPS ECM IDLE SUM                                    | umlm  |
+| m53c007 | EPS ECM IDLE DENOM                                  | umlm  |
+| m53c008 | EPS EMM REG MIN                                     | umlm  |
+| m53c009 | EPS EMM REG MAX                                     | umlm  |
+| m53c010 | EPS EMM DEREG MIN                                   | umlm  |
+| m53c011 | EPS EMM DEREG MAX                                   | umlm  |
++---------+-----------------------------------------------------+-------+

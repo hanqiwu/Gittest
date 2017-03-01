@@ -1,0 +1,30 @@
+
+Name  EPS S1 Interface Measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS S1 Interface measurement provides information on the sending and receiving
+  of S1AP (S1 Application Protocol) and S1 NAS (S1 Non Access Stratum) messages on
+  the S1 interface.
+
+  The counters are collected on the MME level.
+
++---------+----------------------------------------------------------+-------+
+| PID     | NAME                                                     | GROUP |
++---------+----------------------------------------------------------+-------+
+| m59c006 | NAS DOWNLINK LPP MESSAGE TO UE SENT                      | s1me  |
+| m59c007 | NAS UPLINK LPP MESSAGE FROM UE RECEIVED                  | s1me  |
+| m59c002 | S1AP MESSAGES ERRONEOUSLY RECEIVED                       | s1me  |
+| m59c005 | NAS MESSAGES ERRONEOUSLY RECEIVED                        | s1me  |
+| m59c004 | NAS MESSAGES SENT                                        | s1me  |
+| m59c003 | NAS MESSAGES RECEIVED                                    | s1me  |
+| m59c008 | NAS CS SERVICE NOTIFICATION SENT                         | s1me  |
+| m59c011 | S1AP LOCATION REPORT CONTROL SENT                        | s1me  |
+| m59c012 | S1AP LOCATION REPORT CONTROL FAILED                      | s1me  |
+| m59c014 | S1AP UPLINK LPPA UE ASSOCIATED TRANSFER MESSAGE RECEIVED | s1me  |
+| m59c015 | S1AP DOWNLINK LPPA UE ASSOCIATED TRANSFER MESSAGE SENT   | s1me  |
+| m59c000 | S1AP MESSAGES RECEIVED                                   | s1me  |
+| m59c001 | S1AP MESSAGES SENT                                       | s1me  |
+| m59c009 | S1AP NON UE ASSOCIATED LPPA MESSAGE SENT                 | s1me  |
+| m59c010 | S1AP NON UE ASSOCIATED LPPA MESSAGE RECEIVED             | s1me  |
+| m59c013 | S1 CELL TRAFFIC TRACE MESSAGE RECEIVED                   | s1me  |
++---------+----------------------------------------------------------+-------+

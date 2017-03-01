@@ -1,0 +1,34 @@
+
+Name  EPS MMDU User Level
+Entity  - Flexi NS - MME ID (c-number)
+- MMDU index
+
+The EPS MMDU User Level measurement provides information on users in the EMM registered
+  and EMM deregistered states on the MMDU level. The minimum, maximum and average
+  number of users in each state is reported per MMDU. The reported average value is
+  a result of two counters: denominator and sum.
+
+  The counters are collected on the MMDU level.
+
++---------+-----------------------------------+-------+
+| PID     | NAME                              | GROUP |
++---------+-----------------------------------+-------+
+| m58c000 | EPS MMDU EMM REG MIN              | mulm  |
+| m58c001 | EPS MMDU EMM REG MAX              | mulm  |
+| m58c002 | EPS MMDU EMM REG SUM              | mulm  |
+| m58c003 | EPS MMDU EMM REG DENOM            | mulm  |
+| m58c004 | EPS MMDU EMM DEREG MIN            | mulm  |
+| m58c005 | EPS MMDU EMM DEREG MAX            | mulm  |
+| m58c006 | EPS MMDU EMM DEREG SUM            | mulm  |
+| m58c007 | EPS MMDU EMM DEREG DENOM          | mulm  |
+| m58c008 | BEARERS ACTIVE MAXIMUM            | mulm  |
+| m58c009 | DEDICATED ACTIVE BEARERS MAXIMUM  | mulm  |
+| m58c010 | DEDICATED ACTIVE BEARERS SUM      | mulm  |
+| m58c011 | DEDICATED BEARER DENOMINATOR      | mulm  |
+| m58c012 | DEFAULT ACTIVE BEARERS MAXIMUM    | mulm  |
+| m58c013 | DEFAULT ACTIVE BEARERS SUM        | mulm  |
+| m58c014 | DEFAULT ACTIVE BEARER DENOMINATOR | mulm  |
+| m58c015 | EPS VOLTE USER MAX                | mulm  |
+| m58c016 | EPS VOLTE USER SUM                | mulm  |
+| m58c017 | EPS VOLTE USER DENOM              | mulm  |
++---------+-----------------------------------+-------+

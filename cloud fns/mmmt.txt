@@ -1,0 +1,231 @@
+
+Name  EPS Mobility Management
+Entity  - Flexi NS - MME ID (c-number)
+- tracking area identity (TAI)
+-   - public land mobile network (PLMN)
+-     - mobile country code (MCC)
+-     - mobile network code (MNC)
+-   - tracking area code (TAC)
+
+The EPS Mobility Management measurement provides information on, for example, successful
+  and failed EPS attaches and detaches, tracking area updates, service requests, handovers
+  and paging procedures. The mobility management functions are used to keep track
+  of the current location of a user equipment (UE) within the public land mobile network
+  (PLMN) or within another PLMN.
+
+  The counters are collected on the tracking area level.
+
++---------+------------------------------------------------------------------------+-------+
+| PID     | NAME                                                                   | GROUP |
++---------+------------------------------------------------------------------------+-------+
+| m50c000 | EPS ATTACH SUCC                                                        | mmmt  |
+| m50c001 | EPS ATTACH FAIL                                                        | mmmt  |
+| m50c052 | EPS ATTACH SUCCESS WITH APN PROVIDED BY UE                             | mmmt  |
+| m50c053 | EPS ATTACH SUCCESS APN PROVIDED BY UE OVERRIDDEN                       | mmmt  |
+| m50c054 | EPS ATTACH FAILURE DUE ESM INFORMATION REQUEST ERROR                   | mmmt  |
+| m50c077 | EPS ATTACH FAILED DUE ILLEGAL UE CAUSE #3                              | mmmt  |
+| m50c078 | EPS ATTACH FAILED DUE ILLEGAL ME CAUSE #6                              | mmmt  |
+| m50c079 | EPS ATTACH FAILED DUE EPS SERVICES NOT ALLOWED CAUSE #7                | mmmt  |
+| m50c080 | EPS ATTACH FAILED DUE EPS/NON-EPS NOT ALLOWED CAUSE #8                 | mmmt  |
+| m50c194 | EPS ATTACH FAILED DUE IMEI NOT ACCEPTED CAUSE 05                       | mmmt  |
+| m50c195 | EPS ATTACH FAILED DUE EPS SERVICES NOT ALLOWED USER CAUSE 07           | mmmt  |
+| m50c196 | EPS ATTACH FAILED DUE NO SUITABLE CELLS IN TRACKING AREA CAUSE 15      | mmmt  |
+| m50c197 | EPS ATTACH FAILED DUE NO SUITABLE CELLS IN TRACKING AREA USER CAUSE 15 | mmmt  |
+| m50c198 | EPS ATTACH FAILED DUE ESM FAILURE CAUSE 19                             | mmmt  |
+| m50c218 | EPS ATTACH NAS PROTOCOL FAIL                                           | mmmt  |
+| m50c219 | EPS ATTACH NAS 11 14 FAIL                                              | mmmt  |
+| m50c220 | EPS ATTACH NAS SM 27 FAIL                                              | mmmt  |
+| m50c221 | EPS ATTACH NAS SM 29 FAIL                                              | mmmt  |
+| m50c222 | EPS ATTACH NAS SM USER FAIL                                            | mmmt  |
+| m50c009 | EPS X2HO NO SGW CHG SUCC                                               | mmmt  |
+| m50c010 | EPS X2HO FAIL                                                          | mmmt  |
+| m50c002 | EPS DETACH                                                             | mmmt  |
+| m50c122 | EPS ATTACH REJECT RESTRICTED TAI FOR HOME SUBSCRIBERS                  | mmmt  |
+| m50c123 | EPS ATTACH REJECT RESTRICTED TAI FOR ROAMING SUBSCRIBERS               | mmmt  |
+| m50c124 | EPS TAU REJECT RESTRICTED TAI FOR HOME SUBSCRIBERS                     | mmmt  |
+| m50c125 | EPS TAU REJECT RESTRICTED TAI FOR ROAMING SUBSCRIBERS                  | mmmt  |
+| m50c126 | EPS SERVICE REQUEST REJECT RESTRICTED TAI FOR HOME SUBSCRIBERS         | mmmt  |
+| m50c127 | EPS SERVICE REQUEST REJECT RESTRICTED TAI FOR ROAMING SUBSCRIBERS      | mmmt  |
+| m50c128 | EPS EXTENDED SERVICE REQUEST REJECT RESTRICTED TAI FOR HOME            | mmmt  |
+|         | SUBSCRIBERS                                                            |       |
+| m50c129 | EPS EXTENDED SERVICE REQUEST REJECT RESTRICTED TAI FOR ROAMING         | mmmt  |
+|         | SUBSCRIBERS                                                            |       |
+| m50c130 | EPS HANDOVER REJECT RESTRICTED TAI FOR HOME SUBSCRIBERS                | mmmt  |
+| m50c131 | EPS HANDOVER REJECT RESTRICTED TAI FOR ROAMING SUBSCRIBERS             | mmmt  |
+| m50c007 | EPS SERVICE REQUEST SUCC                                               | mmmt  |
+| m50c008 | EPS SERVICE REQUEST FAIL                                               | mmmt  |
+| m50c019 | INTRAMME S1HO NO SGW CHG SUCC                                          | mmmt  |
+| m50c020 | EPS INTRA MME S1HO FAIL                                                | mmmt  |
+| m50c055 | INTRAMME S1HO SGW CHG FAIL                                             | mmmt  |
+| m50c059 | MME OFFLOAD SUCCESSFUL                                                 | mmmt  |
+| m50c060 | MME OFFLOAD SUCCESSFUL ABNORMAL                                        | mmmt  |
+| m50c061 | MME OFFLOAD FAILED                                                     | mmmt  |
+| m50c062 | MME OFFLOAD FAILED ENB ERROR                                           | mmmt  |
+| m50c063 | MME OFFLOAD FAILED COLLISIONS                                          | mmmt  |
+| m50c057 | EPS X2HO SGW CHG SUCC                                                  | mmmt  |
+| m50c045 | EPS COMBINED ATTACH SUCCESSFUL                                         | mmmt  |
+| m50c048 | EPS COMBINED ATTACH FAILED                                             | mmmt  |
+| m50c047 | EPS COMBINED ATTACH EPS FAILED                                         | mmmt  |
+| m50c046 | EPS COMBINED ATTACH EPS SUCCESSFUL                                     | mmmt  |
+| m50c003 | EPS PERIODIC TAU SUCC                                                  | mmmt  |
+| m50c005 | EPS TAU SUCC                                                           | mmmt  |
+| m50c035 | EPS_CMB_INTRA_TAU_SUCC                                                 | mmmt  |
+| m50c037 | EPS_CMB_INTRA_TAU_IMSI_ATT_SUCC                                        | mmmt  |
+| m50c043 | INTRAMME TAU NO SGW CHG SUCC                                           | mmmt  |
+| m50c006 | EPS TAU FAIL                                                           | mmmt  |
+| m50c004 | EPS PERIODIC TAU FAIL                                                  | mmmt  |
+| m50c036 | EPS_CMB_INTRA_TAU_FAIL                                                 | mmmt  |
+| m50c038 | EPS_CMB_INTRA_TAU_IMSI_ATT_FAIL                                        | mmmt  |
+| m50c044 | EPS INTRA MME TAU FAIL                                                 | mmmt  |
+| m50c041 | EPS_INTER_TAU_OG_SUCC                                                  | mmmt  |
+| m50c039 | EPS_CMB_INTER_TAU_SUCC                                                 | mmmt  |
+| m50c042 | EPS_INTER_TAU_OG_FAIL                                                  | mmmt  |
+| m50c040 | EPS_CMB_INTER_TAU_FAIL                                                 | mmmt  |
+| m50c014 | EPS TO 3G GN BASED INTER SYSTEM HO SUCCCESS                            | mmmt  |
+| m50c015 | EPS TO 3G GN BASED INTER SYSTEM HO FAILURE DUE RELOCATION REJECTED IN  | mmmt  |
+|         | TARGET SYSTEM                                                          |       |
+| m50c017 | EPS TO 3G GN BASED INTER SYSTEM HO CANCELLED BY ENODEB                 | mmmt  |
+| m50c018 | EPS TO 3G GN BASED INTER SYSTEM HO FAILURE                             | mmmt  |
+| m50c058 | INTRAMME TAU SGW CHG SUCC                                              | mmmt  |
+| m50c081 | EPS TAU FAILED DUE ILLEGAL UE CAUSE #3                                 | mmmt  |
+| m50c082 | EPS TAU FAILED DUE ILLEGAL ME CAUSE #6                                 | mmmt  |
+| m50c083 | EPS TAU FAILED DUE EPS SERVICES NOT ALLOWED CAUSE #7                   | mmmt  |
+| m50c084 | EPS TAU FAILED DUE EPS/NON-EPS NOT ALLOWED CAUSE #8                    | mmmt  |
+| m50c049 | ESR_MO_ATTEMPTS                                                        | mmmt  |
+| m50c050 | ESR_MT_ATTEMPTS                                                        | mmmt  |
+| m50c051 | ESR_MO_EMERGENCY_ATTEMPTS                                              | mmmt  |
+| m50c199 | EPS EXTENDED SERVICE REQUEST ATTEMPTED                                 | mmmt  |
+| m50c200 | EPS EXTENDED SERVICE REQUEST SUCCESSFUL                                | mmmt  |
+| m50c056 | INTRAMME S1HO SGW CHG SUCC                                             | mmmt  |
+| m50c163 | EPS EMERGENCY ATTACH SUCC AUTHENTICATED                                | mmmt  |
+| m50c164 | EPS EMERGENCY ATTACH FAIL                                              | mmmt  |
+| m50c165 | EPS EMERGENCY ATTACH ATTEMPT                                           | mmmt  |
+| m50c166 | EPS EMERGENCY ATTACH SUCC UNAUTHENTICATED                              | mmmt  |
+| m50c167 | EPS EMERGENCY ATTACH SUCC UICCLESS                                     | mmmt  |
+| m50c012 | EPS PAGING SUCC                                                        | mmmt  |
+| m50c013 | EPS PAGING FAIL                                                        | mmmt  |
+| m50c011 | EPS PAGING ATTEMPTS                                                    | mmmt  |
+| m50c085 | EPS PAGING FIRST ATTEMPT SUCCESSFUL                                    | mmmt  |
+| m50c176 | EPS PAGING QUICK ENB LEVEL ATTEMPTED                                   | mmmt  |
+| m50c177 | EPS PAGING QUICK ENB LEVEL ATTEMPT SUCCESSFUL                          | mmmt  |
+| m50c178 | EPS PAGING ENB LEVEL ATTEMPTED                                         | mmmt  |
+| m50c179 | EPS PAGING ENB LEVEL ATTEMPT SUCCESSFUL                                | mmmt  |
+| m50c180 | EPS PAGING ENB GROUP LEVEL ATTEMPTED                                   | mmmt  |
+| m50c181 | EPS PAGING ENB GROUP LEVEL ATTEMPT SUCCESSFUL                          | mmmt  |
+| m50c182 | EPS PAGING TA LEVEL ATTEMPTED                                          | mmmt  |
+| m50c183 | EPS PAGING TA LEVEL ATTEMPT SUCCESSFUL                                 | mmmt  |
+| m50c184 | EPS PAGING TA LIST LEVEL ATTEMPTED                                     | mmmt  |
+| m50c185 | EPS PAGING TA LIST LEVEL ATTEMPT SUCCESSFUL                            | mmmt  |
+| m50c186 | EPS PAGING PROCEDURE DURATION                                          | mmmt  |
+| m50c064 | INTER MME TRACKING AREA UPDATE WITHOUT S-GW CHANGE INCOMING SUCCESSFUL | mmmt  |
+| m50c065 | INTER MME TRACKING AREA UPDATE OUTGOING SUCCESSFUL                     | mmmt  |
+| m50c066 | INTER MME S1 BASED HANDOVER WITHOUT S-GW CHANGE INCOMING SUCCESSFUL    | mmmt  |
+| m50c067 | INTER MME S1 BASED HANDOVER OUTGOING SUCCESSFUL                        | mmmt  |
+| m50c072 | ATTACH WITH MME CHANGE INCOMING SUCCESSFUL                             | mmmt  |
+| m50c068 | INTER MME TRACKING AREA UPDATE INCOMING FAILED                         | mmmt  |
+| m50c069 | INTER MME TRACKING AREA UPDATE OUTGOING FAILED                         | mmmt  |
+| m50c070 | INTER-MME S1 BASED HANDOVER INCOMING FAILED                            | mmmt  |
+| m50c071 | INTER-MME S1 BASED HANDOVER OUTGOING FAILED                            | mmmt  |
+| m50c073 | ATTACH WITH MME CHANGE INCOMING FAILED                                 | mmmt  |
+| m50c132 | EPS INTER MME S1 BASED HANDOVER WITH SGW CHANGE INCOMING SUCCESSFUL    | mmmt  |
+| m50c133 | EPS INTER MME TAU WITH SGW CHANGE INCOMING SUCCESSFUL                  | mmmt  |
+| m50c134 | EPS S1 BASED HANDOVER MME SELECTION FAILURE                            | mmmt  |
+| m50c135 | EPS S1 BASED HANDOVER FORWARD RELOCATION OUTGOING FAILURE              | mmmt  |
+| m50c136 | EPS HANDOVER SESSION CREATION FAILED                                   | mmmt  |
+| m50c137 | EPS HANDOVER PREPARATION FAILED                                        | mmmt  |
+| m50c139 | EPS S1 BASED HANDOVER EXECUTION TIMER OUTGOING FAILURE                 | mmmt  |
+| m50c140 | EPS HANDOVER EXECUTION TIMER INCOMING FAILED                           | mmmt  |
+| m50c141 | EPS S1 BASED HANDOVER EXECUTION TIMER FAILURE                          | mmmt  |
+| m50c142 | EPS HANDOVER BEARER MODIFICATION FAILED                                | mmmt  |
+| m50c143 | EPS S1 BASED HANDOVER CANCELLATION FAILURE                             | mmmt  |
+| m50c144 | EPS HANDOVER RELOCATION CANCELLATION FAILED                            | mmmt  |
+| m50c145 | EPS HANDOVER COLLISION WITH OTHER PROCEDURE FAILED                     | mmmt  |
+| m50c146 | EPS HANDOVER UNSPECIFIED SUBPROCEDURE FAILED                           | mmmt  |
+| m50c147 | EPS INTER SYSTEM S3 BASED RAU OUTGOING ATTEMPT                         | mmmt  |
+| m50c148 | EPS INTER SYSTEM S3 BASED RAU OUTGOING FAILED                          | mmmt  |
+| m50c149 | EPS S3 BASED TRACKING AREA UPDATE WITHOUT SGW CHANGE SUCCESSFUL        | mmmt  |
+| m50c150 | EPS S3 BASED TRACKING AREA UPDATE WITH SGW CHANGE SUCCESSFUL           | mmmt  |
+| m50c151 | EPS S3 BASED TRACKING AREA UPDATE FAILED                               | mmmt  |
+| m50c152 | S10 S3 OUTGOING IDENTIFICATION REQUEST PROCEDURE ATTEMPTS              | mmmt  |
+| m50c153 | S10 S3 OUTGOING IDENTIFICATION REQUEST PROCEDURES FAILED               | mmmt  |
+| m50c154 | S10 S3 INCOMING IDENTIFICATION REQUEST PROCEDURE ATTEMPTS              | mmmt  |
+| m50c155 | S10 S3 INCOMING IDENTIFICATION REQUEST PROCEDURES FAILED               | mmmt  |
+| m50c159 | EPS X2 BASED HANDOVER BEARER MODIFICATION FAILURE                      | mmmt  |
+| m50c160 | EPS X2 BASED HANDOVER SESSION CREATION FAILURE                         | mmmt  |
+| m50c161 | EPS X2 BASED HANDOVER COLLISION WITH OTHER PROCEDURE FAILURE           | mmmt  |
+| m50c162 | EPS X2 BASED HANDOVER UNSPECIFIED SUBPROCEDURE FAILURE                 | mmmt  |
+| m50c156 | EPS INTER SYSTEM S3 BASED HANDOVER OUTGOING SUCCESSFUL                 | mmmt  |
+| m50c157 | EPS INTER SYSTEM S3 BASED                                              | mmmt  |
+|         | HANDOVER OUTGOING FAILED                                               |       |
+| m50c138 | EPS HANDOVER FORWARD RELOCATION INCOMING FAILED                        | mmmt  |
+| m50c158 | EPS S1 BASED HANDOVER SGSN SELECTION FAILURE                           | mmmt  |
+| m50c201 | 3G TO EPS GN BASED INTER SYSTEM HO SUCCESSFUL                          | mmmt  |
+| m50c202 | 3G TO EPS GN BASED INTER SYSTEM HO FAILED                              | mmmt  |
+| m50c203 | EPS EMERGENCY ATTACH UICCLESS FAIL                                     | mmmt  |
+| m50c204 | EPS PAGING PRIORITY ATTEMPTS                                           | mmmt  |
+| m50c205 | EPS PAGING PRIORITY SUCCESSFUL                                         | mmmt  |
+| m50c206 | EPS PAGING PRIORITY FAIL                                               | mmmt  |
+| m50c207 | MT CSFB PAGING PRIORITY ATTEMPTS                                       | mmmt  |
+| m50c208 | MO CSFB WITH PRIORITY                                                  | mmmt  |
+| m50c171 | EPS TAU FAILURE DUE TA OR RA GROUP CHANGE                              | mmmt  |
+| m50c172 | EPS TA GROUP DETACHES                                                  | mmmt  |
+| m50c173 | EPS INTER SYSTEM S3 BASED HANDOVER WITHOUT SGW CHANGE INCOMING         | mmmt  |
+|         | SUCCESSFUL                                                             |       |
+| m50c174 | EPS INTER SYSTEM S3 BASED HANDOVER WITH SGW CHANGE INCOMING SUCCESSFUL | mmmt  |
+| m50c175 | EPS INTER SYSTEM S3 BASED HANDOVER INCOMING FAILED                     | mmmt  |
+| m50c192 | EPS ATTACH WITH OPERATOR DETERMINED BARRING REJECTED                   | mmmt  |
+| m50c193 | EPS TAU WITH OPERATOR DETERMINED BARRING  REJECTED                     | mmmt  |
+| m50c209 | INTRAMME TAU ATTEMPT                                                   | mmmt  |
+| m50c210 | INTERMME TAU ATTEMPT                                                   | mmmt  |
+| m50c211 | INTRAMME TAU WO SGW CHG ATT                                            | mmmt  |
+| m50c212 | INTERMME TAU WO SGW CHG ATT                                            | mmmt  |
+| m50c213 | INTRAMME TAU SGW CHG ATT                                               | mmmt  |
+| m50c214 | INTERMME TAU SGW CHG IN ATT                                            | mmmt  |
+| m50c215 | EPS PAGING CSFB ATTEMPT                                                | mmmt  |
+| m50c216 | EPS PAGING CSFB SUCC                                                   | mmmt  |
+| m50c217 | EPS PAGING 1ST ATTEMPT ATTEMPT                                         | mmmt  |
+| m50c187 | EPS ABNORMAL ATTACH REJECTED                                           | mmmt  |
+| m50c188 | EPS ABNORMAL ATTACH DROPPED                                            | mmmt  |
+| m50c189 | EPS ABNORMAL SERVICE REQUEST REJECTED                                  | mmmt  |
+| m50c190 | EPS ABNORMAL SERVICE REQUEST DETACHED                                  | mmmt  |
+| m50c191 | EPS ABNORMAL SERVICE REQUEST DROPPED                                   | mmmt  |
+| m50c086 | EPS ATTACH ATTEMPT                                                     | mmmt  |
+| m50c087 | EPS COMBINED ATTACH ATTEMPT                                            | mmmt  |
+| m50c088 | EPS ATTACH HSS RESTRICTION FAIL                                        | mmmt  |
+| m50c089 | EPS ATTACH HSS NO ROAM FAIL                                            | mmmt  |
+| m50c090 | EPS ATTACH HSS NO RESPONSE FAIL                                        | mmmt  |
+| m50c091 | EPS ATTACH EIR NO RESPONSE FAIL                                        | mmmt  |
+| m50c092 | EPS ATTACH IMEI BLOCKED FAIL                                           | mmmt  |
+| m50c093 | EPS ATTACH DNS NO NAME FOUND FAIL                                      | mmmt  |
+| m50c094 | EPS ATTACH SGW CREATE SESSION FAIL                                     | mmmt  |
+| m50c095 | EPS ATTACH SGW MODIFY BEARER FAIL                                      | mmmt  |
+| m50c096 | EPS ATTACH INITIAL CONTEXT FAIL                                        | mmmt  |
+| m50c097 | EPS ATTACH UE SECURITY UNSUPPORTED FAIL                                | mmmt  |
+| m50c098 | EPS ATTACH AKA FAIL                                                    | mmmt  |
+| m50c099 | EPS ATTACH SMC FAIL                                                    | mmmt  |
+| m50c100 | EPS ATTACH UE NOT COMPLETE FAIL                                        | mmmt  |
+| m50c101 | EPS ATTACH LOCAL NO ROAM FAIL                                          | mmmt  |
+| m50c102 | EPS ATTACH COLLISION FAIL                                              | mmmt  |
+| m50c103 | EPS ATTACH UNSPECIFIED FAIL                                            | mmmt  |
+| m50c104 | EPS TAU ATTEMPT                                                        | mmmt  |
+| m50c105 | EPS COMBINED TAU ATTEMPT                                               | mmmt  |
+| m50c106 | EPS TAU HSS RESTRICTION FAIL                                           | mmmt  |
+| m50c107 | EPS TAU HSS NO ROAM FAIL                                               | mmmt  |
+| m50c108 | EPS TAU HSS NO RESPONSE FAIL                                           | mmmt  |
+| m50c109 | EPS TAU EIR NO RESPONSE FAIL                                           | mmmt  |
+| m50c110 | EPS TAU IMEI BLOCKED FAIL                                              | mmmt  |
+| m50c111 | EPS TAU DNS NO NAME FOUND FAIL                                         | mmmt  |
+| m50c112 | EPS TAU SGW CREATE SESSION FAIL                                        | mmmt  |
+| m50c113 | EPS TAU SGW MODIFY BEARER FAIL                                         | mmmt  |
+| m50c114 | EPS TAU INITIAL CONTEXT FAIL                                           | mmmt  |
+| m50c115 | EPS TAU UE SECURITY UNSUPPORTED FAIL                                   | mmmt  |
+| m50c116 | EPS TAU AKA FAIL                                                       | mmmt  |
+| m50c117 | EPS TAU SMC FAIL                                                       | mmmt  |
+| m50c118 | EPS TAU LOCAL NO ROAM FAIL                                             | mmmt  |
+| m50c119 | EPS TAU COLLISION FAIL                                                 | mmmt  |
+| m50c120 | EPS TAU UNSPECIFIED FAIL                                               | mmmt  |
+| m50c121 | EPS TAU CONTEXT REQUEST FAIL                                           | mmmt  |
+| m50c168 | EPS PAGING VOLTE ATTEMPT                                               | mmmt  |
+| m50c169 | EPS PAGING VOLTE SUCCESSFUL                                            | mmmt  |
+| m50c170 | EPS PAGING VOLTE FAIL                                                  | mmmt  |
++---------+------------------------------------------------------------------------+-------+

@@ -1,0 +1,24 @@
+
+Name  EPS Location Services Measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS Location Services measurement provides information on location service procedure
+  related counters. The provided data includes counters for ELP procedures between
+  the GMLC and the MME and the location service request procedure between the E-SMLC
+  and the MME.
+
+  The counters are collected on the network element level.
+
++---------+-------------------------------------------------+-------+
+| PID     | NAME                                            | GROUP |
++---------+-------------------------------------------------+-------+
+| m68c000 | PROVIDE SUBSCRIBER LOCATION SUCCESSFUL          | lcsm  |
+| m68c001 | PROVIDE SUBSCRIBER LOCATION ABNORMAL SUCCESSFUL | lcsm  |
+| m68c002 | PROVIDE SUBSCRIBER LOCATION ABNORMAL FAIL       | lcsm  |
+| m68c003 | LOCATION SERVICE REQUEST SUCCESSFUL             | lcsm  |
+| m68c004 | LOCATION SERVICE REQUEST FAIL                   | lcsm  |
+| m68c005 | LOCATION REPORT ANSWER SUCCESSFUL               | lcsm  |
+| m68c006 | LOCATION REPORT ANSWER FAIL                     | lcsm  |
+| m68c007 | S6A SUBSCRIBER LOCATION SUCCESSFUL              | lcsm  |
+| m68c008 | S6A SUBSCRIBER LOCATION ABNORMAL SUCCESSFUL     | lcsm  |
++---------+-------------------------------------------------+-------+

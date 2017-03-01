@@ -1,0 +1,21 @@
+
+Name  EPS RIM Transfer message
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS RIM Transfer message measurement provides information on, for example, successful
+  and failed received/sent (transferred) messages by the MME.
+
+  The counters are collected on the MME level from IPDU and CPPU units.
+
++---------+------------------------------------------------------------------------+-------+
+| PID     | NAME                                                                   | GROUP |
++---------+------------------------------------------------------------------------+-------+
+| m64c002 | RADIO ACCESS NETWORK INFORMATION MANAGEMENT(RIM) MESSAGES SENT         | rimm  |
+| m64c003 | RADIO ACCESS NETWORK INFORMATION MANAGEMENT(RIM) MESSAGES WHERE SGSN   | rimm  |
+|         | NFOUND                                                                 |       |
+| m64c005 | S3 RIM MESSAGES SENT                                                   | rimm  |
+| m64c004 | S3 RIM MESSAGES RECEIVED AND FORWARDED                                 | rimm  |
+| m64c000 | RADIO ACCESS NETWORK INFORMATION MANAGEMENT(RIM) MESSAGES RECEIVED     | rimm  |
+| m64c001 | RADIO ACCESS NETWORK INFORMATION MANAGEMENT(RIM) MESSAGES WHERE ENB    | rimm  |
+|         | NFOUND                                                                 |       |
++---------+------------------------------------------------------------------------+-------+

@@ -1,0 +1,26 @@
+Applied Filter Selection,,,,,,,,
+,,,,,,,,
+NE Name,NE Type,Msg Set,Msg ID,Detailed output,Severity Level,Including Ascending Severity Levels,Only events with annotation,Total Number
+shel,Schroff_ATCA_Shelf,all,all,TRUE,cleared,TRUE,FALSE,17
+,,,,,,,,
+,,,,,,,,
+Resulting Event Definition(s),,,,,,,,
+,,,,,,,,
+NE Name,NE Type,Event ID,Severity,Event Type,Description,Long Text,Repair Text,Annotation
+shel,Schroff_ATCA_Shelf,800-1000,Critical,processing alarm,Board Reset,Board Reset,Board Reset,-- not available --
+shel,Schroff_ATCA_Shelf,800-1100,Critical,processing alarm,M6 -> M1; State: Inactive,M6 -> M1; State: Inactive,M6 -> M1; State: Inactive,-- not available --
+shel,Schroff_ATCA_Shelf,800-1101,Cleared,processing alarm,M1 -> M2; State: Activation Request,M1 -> M2; State: Activation Request,M1 -> M2; State: Activation Request,-- not available --
+shel,Schroff_ATCA_Shelf,800-1102,Cleared,processing alarm,M2 -> M3; State: Activation in Progress,M2 -> M3; State: Activation in Progress,M2 -> M3; State: Activation in Progress,-- not available --
+shel,Schroff_ATCA_Shelf,800-1103,Cleared,processing alarm,M3 -> M4; State: FRU Active,M3 -> M4; State: FRU Active,M3 -> M4; State: FRU Active,-- not available --
+shel,Schroff_ATCA_Shelf,800-1104,Critical,processing alarm,M4 -> M5; State: Deactivation Request,M4 -> M5; State: Deactivation Request,M4 -> M5; State: Deactivation Request,-- not available --
+shel,Schroff_ATCA_Shelf,800-1105,Critical,processing alarm,M4 -> M6; State: Deactivation in Progress,M4 -> M6; State: Deactivation in Progress,M4 -> M6; State: Deactivation in Progress,-- not available --
+shel,Schroff_ATCA_Shelf,800-1200,Cleared,processing alarm,ACPI Power State working (S0/G0),ACPI Power State working (S0/G0),ACPI Power State working (S0/G0),-- not available --
+shel,Schroff_ATCA_Shelf,800-1201,Critical,processing alarm,ACPI Power State sleeping (S5 - soft off),ACPI Power State sleeping (S5 - soft off),ACPI Power State sleeping (S5 - soft off),-- not available --
+shel,Schroff_ATCA_Shelf,800-1300,Critical,processing alarm,RTM (Rear Transition Modules): MMC Reboot,RTM (Rear Transition Modules): MMC Reboot,RTM (Rear Transition Modules): MMC Reboot,-- not available --
+shel,Schroff_ATCA_Shelf,800-1400,Cleared,processing alarm,Management Subsystem Health - FT Oper.Status Activate,Management Subsystem Health - FT Oper.Status Activate,Management Subsystem Health - FT Oper.Status Activate,-- not available --
+shel,Schroff_ATCA_Shelf,800-1401,Critical,processing alarm,Management Subsystem Health - FT Oper.Status Deactivate,Management Subsystem Health - FT Oper.Status Deactivate,Management Subsystem Health - FT Oper.Status Deactivate,-- not available --
+shel,Schroff_ATCA_Shelf,800-1402,Critical,processing alarm,Management Subsystem Health - SHM Redundancy,Management Subsystem Health - SHM Redundancy,Management Subsystem Health - SHM Redundancy,-- not available --
+shel,Schroff_ATCA_Shelf,800-1500,Critical,processing alarm,Management Subsystem Health - Cooling State,Management Subsystem Health - Fans State,Management Subsystem Health - Fans State,-- not available --
+shel,Schroff_ATCA_Shelf,800-1600,Critical,processing alarm, AC5 Reset Source, AC5 Reset Source, AC5 Reset Source,-- not available --
+shel,Schroff_ATCA_Shelf,800-1601,Critical,processing alarm, Deactivate HDD, Deactivate HDD, Deactivate HDD,-- not available --
+shel,Schroff_ATCA_Shelf,800-1602,Cleared,processing alarm, Activate HDD, Activate HDD, Activate HDD,-- not available --

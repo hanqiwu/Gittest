@@ -1,0 +1,54 @@
+Present in PCS9.0 but Missing in PCS10:
+
+Failure Rate-405.4.2.3
+Sent Responses-405.4.2.2
+Received Requests-405.4.2.1
+Failure Rate-413.2.3
+Rejecting overload Rq messages sent in last period-289.0.7
+Rejecting overload Rq messages sent-289.0.6
+MaximumCPUloadinlast15minutes-294.1.3
+AvarageCPULoadinlast15minutes-294.1.2
+CurrentCPULoad-294.1.1
+Terminalsmaxinlastperiod-280.0.0
+ReceivedRequests-405.1.1.1
+FailureRate-405.1.1.3
+SentRequests-405.4.1.1
+ReceivedResponses-405.4.1.2
+FailureRate-405.4.1.3
+Received Requests-405.4.2.1
+Sent Responses-405.4.2.2
+Failure Rate-405.4.2.3
+Rejecting overload Rq messages sent in last period-289.0.7
+Rqsessionscurrentlyexisting-289.1.0 
+Rqsessionscreated-289.1.1 
+
+
+#############################################################
+
+New in PCS10:
+
+Received Requests-413.1.1
+Sent Responses-413.1.2
+Sy Messages Dropped on Overload-306.5.2
+Sy Messages Dropped on Overload in last period-306.5.3
+Sy Messages Rejected on Overload in last period-306.5.1
+Sy Messages Rejected on Overload-306.5.0
+SPR read requests ever sent-295.1.0
+SPR subscriber trigger ever received-295.1.9
+SPR trigger ever dropped due to no active pdp session-295.2.2
+SPR subscriber trigger ever processed-295.2.0
+SPR trigger ever dropped due to collision-295.2.1
+Failure SPR update response ever received-295.1.3
+SPR read answer timeout due to no or late SPR response-295.1.4
+SPR read responses ever received-295.1.1
+Failure SPR read response ever received-295.1.2
+Update (modify) response ever received-295.1.7
+Late SPR read response received after timeout-295.1.8
+SPR read answer timeout at remote site ever received-295.1.5
+Update (modify) request ever sent-295.1.6
+Rx priority session dropped-285.1.14
+Rx priority session created-285.1.13
+Rx priority session dropped in last period-285.1.12
+Rx priority session currently exist-285.1.11
+Rx priority session created in last period-285.1.10
+

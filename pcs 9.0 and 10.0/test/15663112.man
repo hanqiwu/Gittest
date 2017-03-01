@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.nokia.oss.fm.fmbasic:AlarmDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.nokia.oss.fm.fmbasic="http:///com/nokia/oss/fm/fmbasic.ecore" patchLevel="01.011" specificProblem="15663112" alarmText="FAULT IN PCS5000 ( 239-8 )" probableCause="308" alarmType="qualityOfService" meaning="The load level of a certain PCS resource increased to ABOVE_NORMAL.On this level and above, tracing is switch off(except error tracing).This alarm is cleared automatically by a clearing event(#58) when the load level decreases to NORMAL" instructions="If the alarm frequently occurs or is not cleared automatically after a short time, reduce load.e.g, message rate on affected external interface, or ask the NSN service for a PCS variant with higher capacity" cancelling="Warnings can't be cleared">
+  <Adaptation href="../com.nsn.pcsne.common#/"/>
+</com.nokia.oss.fm.fmbasic:AlarmDescription>

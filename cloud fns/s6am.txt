@@ -1,0 +1,48 @@
+
+Name  EPS S6a Interface Measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS S6a Interface measurement provides information on the sending and receiving
+  of messages on the S6a interface. This measurement includes uplink, authentication,
+  purge, notify, cancel location, insert/delete subscriber and Diameter counters.
+
+  The counters are collected on the MME level.
+
++---------+---------------------------------------------------------+-------+
+| PID     | NAME                                                    | GROUP |
++---------+---------------------------------------------------------+-------+
+| m61c000 | S6A UPDATE LOCATION REQUEST MESSAGES SENT               | s6am  |
+| m61c001 | S6A UPDATE LOCATION ANSWER MESSAGES RECEIVED            | s6am  |
+| m61c002 | S6A AUTHENTICATION INFORMATION REQUEST MESSAGES SENT    | s6am  |
+| m61c003 | S6A AUTHENTICATION INFORMATION ANSWER MESSAGES RECEIVED | s6am  |
+| m61c004 | S6A PURGE UE REQUEST MESSAGES SENT                      | s6am  |
+| m61c005 | S6A PURGE UE ANSWER MESSAGES RECEIVED                   | s6am  |
+| m61c006 | S6A NOTIFY REQUEST MESSAGES SENT                        | s6am  |
+| m61c007 | S6A NOTIFY ANSWER MESSAGES RECEIVED                     | s6am  |
+| m61c008 | S6A CANCEL LOCATION REQUEST MESSAGES RECEIVED           | s6am  |
+| m61c009 | S6A CANCEL LOCATION ANSWER MESSAGES SENT                | s6am  |
+| m61c010 | S6A INSERT SUBSCRIBER DATA REQUEST MESSAGES RECEIVED    | s6am  |
+| m61c011 | S6A INSERT SUBSCRIBER DATA ANSWER MESSAGES SENT         | s6am  |
+| m61c012 | S6A DELETE SUBSCRIBER DATA REQUEST MESSAGES RECEIVED    | s6am  |
+| m61c013 | S6A DELETE SUBSCRIBER DATA ANSWER MESSAGES SENT         | s6am  |
+| m61c014 | DIAMETER CAPABILITIES EXCHANGE REQUEST MESSAGES SENT    | s6am  |
+| m61c015 | DIAMETER CAPABILITIES EXCHANGE ANSWER MESSAGES RECEIVED | s6am  |
+| m61c016 | DIAMETER DISCONNECT PEER ANSWER MESSAGES SENT           | s6am  |
+| m61c017 | DIAMETER DISCONNECT PEER REQUEST MESSAGES RECEIVED      | s6am  |
+| m61c018 | DIAMETER DEVICE WATCHDOG REQUEST MESSAGES SENT          | s6am  |
+| m61c019 | DIAMETER DEVICE WATCHDOG ANSWER MESSAGES SENT           | s6am  |
+| m61c020 | DIAMETER DEVICE WATCHDOG REQUEST MESSAGES RECEIVED      | s6am  |
+| m61c021 | DIAMETER DEVICE WATCHDOG ANSWER MESSAGES RECEIVED       | s6am  |
+| m61c022 | DIAMETER SUCCESSFUL CONNECTIONS                         | s6am  |
+| m61c023 | DIAMETER FAILED CONNECTIONS                             | s6am  |
+| m61c024 | DIAMETER UNKNOWN MESSAGES RECEIVED                      | s6am  |
+| m61c025 | DIAMETER FAILED TRANSPORT                               | s6am  |
+| m61c026 | S6A UPDATE LOCATION ANSWER FAILED                       | s6am  |
+| m61c027 | S6A AUTHENTICATION INFORMATION ANSWER FAILED            | s6am  |
+| m61c028 | S6A PURGE UE ANSWER FAIL                                | s6am  |
+| m61c029 | S6A NOTIFY ANSWER FAIL                                  | s6am  |
+| m61c030 | S6A RESET REQUEST RECEIVED                              | s6am  |
+| m61c031 | S6A RESET ANSWER SENT                                   | s6am  |
+| m61c032 | DIAMETER RESENT MESSAGE                                 | s6am  |
+| m61c033 | DIAMETER REROUTED MESSAGE                               | s6am  |
++---------+---------------------------------------------------------+-------+

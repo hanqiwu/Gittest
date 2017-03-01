@@ -1,0 +1,16 @@
+
+Name  EPS S11 GTP Interface Measurement
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS S11 GTP Interface measurement provides information on sending and receiving
+  messages on the S11 interface.
+
+  The counters are collected on the MME level.
+
++---------+-----------------------------------+-------+
+| PID     | NAME                              | GROUP |
++---------+-----------------------------------+-------+
+| m60c001 | S11 MESSAGES SENT                 | s11m  |
+| m60c000 | S11 MESSAGES RECEIVED             | s11m  |
+| m60c002 | S11 MESSAGES ERRONEOUSLY RECEIVED | s11m  |
++---------+-----------------------------------+-------+

@@ -1,0 +1,25 @@
+
+Name  EPS Security
+Entity  - Flexi NS - MME ID (c-number)
+
+The EPS Security measurement provides information on successful, failed and rejected
+  authentication procedures, successful and failed security mode procedures, and successful
+  and failed identity requests.
+
+  The counters are collected on the MME level.
+
++---------+-------------------------------------------------------------------+-------+
+| PID     | NAME                                                              | GROUP |
++---------+-------------------------------------------------------------------+-------+
+| m54c003 | EPS SEC MODE PROC SUCC                                            | smlm  |
+| m54c004 | EPS SEC MODE PROC FAIL                                            | smlm  |
+| m54c005 | EPS IDENTITY REQUEST SUCC                                         | smlm  |
+| m54c006 | EPS IDENTITY REQUEST FAIL                                         | smlm  |
+| m54c000 | EPS AUTH SUCC                                                     | smlm  |
+| m54c001 | EPS AUTH FAIL BY UE                                               | smlm  |
+| m54c002 | EPS AUTH REJECT BY MME                                            | smlm  |
+| m54c007 | EPS AUTH FAILED DUE MAC FAILURE CAUSE #20                         | smlm  |
+| m54c008 | EPS AUTH FAILED DUE SYNCH FAILURE CAUSE #21                       | smlm  |
+| m54c009 | EPS AUTH FAILED DUE NON-EPS AUTHENTICATION UNACCEPTABLE CAUSE #26 | smlm  |
+| m54c010 | EPS AUTH FAILED DUE NO RESPONSE FROM UE                           | smlm  |
++---------+-------------------------------------------------------------------+-------+

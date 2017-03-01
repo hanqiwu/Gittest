@@ -1,0 +1,955 @@
+use strict;              # Global variables must be qualified lik
+                         # $Package::variable, others must be defined with my.
+use English;             # Get aliases for the built-in punctuation variables.
+use Carp;                # Get detailed trace back
+
+
+######################################################################################
+
+my $dirName =  $ENV{TKTKOA_GENERATOR_BASE_DIR} . "pcosgn/sgn/subsystem/";
+
+my $sgsmeta = $dirName . "sgnrap/sgsmeta_mx.cf";
+my $cdb_rawviews = $dirName . "sgncdb/sgncdb_cre_rawviews.sql";
+#my $cdb_rawviews_gc = $dirName . "sgncdb/sgncdb_cre_rawviews_gc.sql";
+my $rdb_psviews = $dirName . "sgnrdb/sgnrdb_cre_psviews.sql";
+my $rdb_pvviews = $dirName . "sgnrdb/sgnrdb_cre_pvviews.sql";
+my $rdb_tables = $dirName . "sgnrdb/sgnrdb_cre_tables.sql";
+
+
+########################################################Counter for measurement mobmgmnt mobmgmlr mobmgmra###################################
+my @mmmt = qw (
+ M50C000 
+ M50C001 
+ M50C002 
+ M50C003 
+ M50C004 
+ M50C005 
+ M50C006 
+ M50C007 
+ M50C008 
+ M50C009 
+ M50C010 
+ M50C011 
+ M50C012 
+ M50C013 
+ M50C014 
+ M50C015 
+ M50C016 
+ M50C017 
+ M50C018 
+ M50C019 
+ M50C020 
+ M50C021 
+ M50C022 
+ M50C023 
+ M50C024 
+ M50C025 
+ M50C026 
+ M50C027 
+ M50C028 
+ M50C029 
+ M50C030 
+ M50C031 
+ M50C032 
+ M50C033 
+ M50C034 
+ M50C035 
+ M50C036 
+ M50C037 
+ M50C038 
+ M50C039 
+ M50C040 
+ M50C041 
+ M50C042 
+ M50C043 
+ M50C044 
+ M50C045 
+ M50C046 
+ M50C047 
+ M50C048 
+ M50C049 
+ M50C050 
+ M50C051 
+ M50C052 
+ M50C053 
+ M50C054 
+ M50C055 
+ M50C056 
+ M50C057 
+ M50C058 
+ M50C059 
+ M50C060 
+ M50C061 
+ M50C062 
+ M50C063 
+ M50C064 
+ M50C065 
+ M50C066 
+ M50C067 
+ M50C068 
+ M50C069 
+ M50C070 
+ M50C071 
+ M50C072 
+ M50C073 
+ M50C074 
+ M50C075 
+ M50C076 
+ M50C077 
+ M50C078 
+ M50C079 
+ M50C080 
+ M50C081 
+ M50C082 
+ M50C083 
+ M50C084 
+ M50C085 
+ M50C086 
+ M50C087 
+ M50C088 
+ M50C089 
+ M50C090 
+ M50C091 
+ M50C092 
+ M50C093 
+ M50C094 
+ M50C095 
+ M50C096 
+ M50C097 
+ M50C098 
+ M50C099 
+ M50C100 
+ M50C101 
+ M50C102 
+ M50C103 
+ M50C104 
+ M50C105 
+ M50C106 
+ M50C107 
+ M50C108 
+ M50C109 
+ M50C110 
+ M50C111 
+ M50C112 
+ M50C113 
+ M50C114 
+ M50C115 
+ M50C116 
+ M50C117 
+ M50C118 
+ M50C119 
+ M50C120 
+ M50C121 
+ M50C122 
+ M50C123 
+ M50C124 
+ M50C125 
+ M50C126 
+ M50C127 
+ M50C128 
+ M50C129 
+ M50C130 
+ M50C131 
+ M50C132 
+ M50C133 
+ M50C134 
+ M50C135 
+ M50C136 
+ M50C137 
+ M50C138 
+ M50C139 
+ M50C140 
+ M50C141 
+ M50C142 
+ M50C143 
+ M50C144 
+ M50C145 
+ M50C146 
+ M50C147 
+ M50C148 
+ M50C149 
+ M50C150 
+ M50C151 
+ M50C152 
+ M50C153 
+ M50C154 
+ M50C155 
+ M50C156 
+ M50C157 
+ M50C158 
+ M50C159 
+ M50C160 
+ M50C161 
+ M50C162 
+ M50C163 
+ M50C164 
+ M50C165 
+ M50C166 
+ M50C167 
+ M50C168 
+ M50C169 
+ M50C170 
+ M50C171 
+ M50C172 
+ M50C173 
+ M50C174 
+ M50C175 
+ M50C176 
+ M50C177 
+ M50C178 
+ M50C179 
+ M50C180 
+ M50C181 
+ M50C182 
+ M50C183 
+ M50C184 
+ M50C185 
+ M50C186 
+ M50C187 
+ M50C188 
+ M50C189 
+ M50C190 
+ M50C191 
+ M50C192 
+ M50C193 
+ M50C194 
+ M50C195 
+ M50C196 
+ M50C197 
+ M50C198 
+  M50C199 
+ M50C200 
+ M50C201 
+ M50C202 
+ M50C203 
+ M50C204 
+ M50C205 
+ M50C206 
+ M50C207 
+ M50C208 
+ M50C209 
+ M50C210 
+ M50C211 
+ M50C212 
+ M50C213 
+ M50C214 
+ M50C215 
+ M50C216 
+ M50C217 
+ M50C218 
+ M50C219 
+ M50C220 
+ M50C221 
+ M50C222 
+) ;
+
+my @dnsm = qw {
+ M63C000 
+ M63C001
+} ;
+
+my @ne = qw {
+m50c000
+m50c001
+m50c052
+m50c053
+m50c054
+m50c077
+m50c078
+m50c079
+m50c080
+m50c194
+m50c195
+m50c196
+m50c197
+m50c198
+m50c218
+m50c219
+m50c220
+m50c221
+m50c222
+m50c009
+m50c010
+m50c002
+m50c122
+m50c123
+m50c124
+m50c125
+m50c126
+m50c127
+m50c128
+       
+m50c129
+       
+m50c130
+m50c131
+m50c007
+m50c008
+m50c019
+m50c020
+m50c055
+m50c059
+m50c060
+m50c061
+m50c062
+m50c063
+m50c057
+m50c045
+m50c048
+m50c047
+m50c046
+m50c003
+m50c005
+m50c035
+m50c037
+m50c043
+m50c006
+m50c004
+m50c036
+m50c038
+m50c044
+m50c041
+m50c039
+m50c042
+m50c040
+m50c014
+m50c015
+       
+m50c017
+m50c018
+m50c058
+m50c081
+m50c082
+m50c083
+m50c084
+m50c049
+m50c050
+m50c051
+m50c199
+m50c200
+m50c056
+m50c163
+m50c164
+m50c165
+m50c166
+m50c167
+m50c012
+m50c013
+m50c011
+m50c085
+m50c176
+m50c177
+m50c178
+m50c179
+m50c180
+m50c181
+m50c182
+m50c183
+m50c184
+m50c185
+m50c186
+m50c064
+m50c065
+m50c066
+m50c067
+m50c072
+m50c068
+m50c069
+m50c070
+m50c071
+m50c073
+m50c132
+m50c133
+m50c134
+m50c135
+m50c136
+m50c137
+m50c139
+m50c140
+m50c141
+m50c142
+m50c143
+m50c144
+m50c145
+m50c146
+m50c147
+m50c148
+m50c149
+m50c150
+m50c151
+m50c152
+m50c153
+m50c154
+m50c155
+m50c159
+m50c160
+m50c161
+m50c162
+m50c156
+m50c157
+       
+m50c138
+m50c158
+m50c201
+m50c202
+m50c203
+m50c204
+m50c205
+m50c206
+m50c207
+m50c208
+m50c171
+m50c172
+m50c173
+       
+m50c174
+m50c175
+m50c192
+m50c193
+m50c209
+m50c210
+m50c211
+m50c212
+m50c213
+m50c214
+m50c215
+m50c216
+m50c217
+m50c187
+m50c188
+m50c189
+m50c190
+m50c191
+m50c086
+m50c087
+m50c088
+m50c089
+m50c090
+m50c091
+m50c092
+m50c093
+m50c094
+m50c095
+m50c096
+m50c097
+m50c098
+m50c099
+m50c100
+m50c101
+m50c102
+m50c103
+m50c104
+m50c105
+m50c106
+m50c107
+m50c108
+m50c109
+m50c110
+m50c111
+m50c112
+m50c113
+m50c114
+m50c115
+m50c116
+m50c117
+m50c118
+m50c119
+m50c120
+m50c121
+m50c168
+m50c169
+m50c170
+m54c003
+m54c004
+m54c005
+m54c006
+m54c000
+m54c001
+m54c002
+m54c007
+m54c008
+m54c009
+m54c010
+m51c000
+m51c001
+m51c002
+m51c003
+m51c004
+m51c005
+m51c006
+m51c007
+m51c008
+m51c038
+m51c039
+m51c040
+m51c041
+m51c042
+m51c043
+m51c062
+m51c063
+m51c064
+m51c065
+m51c066
+m51c067
+m51c068
+m51c069
+m51c086
+m51c087
+m51c088
+m51c089
+m51c090
+m51c091
+m51c092
+m51c093
+m51c094
+m51c095
+m51c096
+m51c055
+m51c056
+m51c057
+m51c009
+m51c010
+m51c011
+m51c012
+m51c013
+m51c024
+m51c025
+m51c026
+m51c027
+m51c028
+m51c029
+m51c030
+m51c031
+m51c032
+m51c033
+m51c034
+m51c035
+m51c036
+m51c014
+m51c015
+m51c016
+m51c017
+m51c018
+m51c019
+m51c020
+m51c021
+m51c085
+m51c070
+m51c071
+       
+m51c072
+       
+m51c073
+m51c074
+       
+m51c075
+       
+m51c082
+m51c083
+m51c084
+m51c061
+m51c076
+m51c077
+m51c078
+       
+m51c079
+       
+m51c080
+       
+m51c081
+m51c099
+m51c100
+m51c101
+m51c102
+m51c103
+m51c044
+m51c045
+m51c046
+m51c047
+m51c052
+m51c097
+m51c098
+m51c104
+m51c105
+m51c106
+m51c107
+m51c108
+       
+m51c109
+       
+m51c110
+       
+m51c111
+       
+m51c058
+m51c059
+m51c060
+m51c048
+m51c049
+m51c053
+m51c054
+m58c000
+m58c001
+m58c002
+m58c003
+m58c004
+m58c005
+m58c006
+m58c007
+m58c008
+m58c009
+m58c010
+m58c011
+m58c012
+m58c013
+m58c014
+m58c015
+m58c016
+m58c017
+m60c001
+m60c000
+m60c002
+m53c017
+m53c018
+m53c020
+m53c021
+m53c022
+m53c023
+m53c024
+m53c025
+m53c026
+m53c027
+m53c028
+m53c029
+m53c030
+m53c031
+m53c039
+m53c040
+m53c032
+m53c033
+m53c034
+m53c035
+m53c036
+m53c037
+m53c038
+m53c041
+m53c042
+m53c043
+m53c044
+m53c045
+m53c019
+m53c000
+m53c001
+m53c002
+m53c003
+m53c004
+m53c005
+m53c006
+m53c007
+m53c008
+m53c009
+m53c010
+m53c011
+m59c006
+m59c007
+m59c002
+m59c005
+m59c004
+m59c003
+m59c008
+m59c011
+m59c012
+m59c014
+m59c015
+m59c000
+m59c001
+m59c009
+m59c010
+m59c013
+m61c000
+m61c001
+m61c002
+m61c003
+m61c004
+m61c005
+m61c006
+m61c007
+m61c008
+m61c009
+m61c010
+m61c011
+m61c012
+m61c013
+m61c014
+m61c015
+m61c016
+m61c017
+m61c018
+m61c019
+m61c020
+m61c021
+m61c022
+m61c023
+m61c024
+m61c025
+m61c026
+m61c027
+m61c028
+m61c029
+m61c030
+m61c031
+m61c032
+m61c033
+m56c000
+m56c001
+m56c002
+m56c003
+m56c004
+m56c005
+m56c006
+m56c007
+m62c000
+m62c001
+m62c002
+m62c003
+m62c004
+m62c005
+m62c006
+m62c007
+m64c002
+m64c003
+       
+m64c005
+m64c004
+m64c000
+m64c001
+m65c001
+m65c000
+m65c002
+m65c003
+m70c004
+m70c005
+m70c006
+m70c007
+m70c008
+m70c009
+m70c010
+m70c011
+m70c012
+m70c013
+m70c014
+m70c015
+m70c016
+m70c017
+m70c018
+m70c019
+m70c020
+m70c021
+m70c026
+m70c027
+m70c028
+m70c029
+m70c022
+m70c023
+m70c024
+m70c025
+m70c030
+m70c031
+m70c032
+m70c033
+m70c034
+m70c035
+m70c036
+m70c037
+m70c000
+m70c001
+m70c002
+m70c003
+m68c000
+m68c001
+m68c002
+m68c003
+m68c004
+m68c005
+m68c006
+m68c007
+m68c008
+m67c000
+m67c001
+m67c002
+m67c003
+m67c004
+m67c005
+m67c006
+m67c007
+m67c008
+m67c009
+m66c000
+m66c001
+m66c002
+m66c003
+m66c004
+m66c005
+m66c006
+m74c000
+m74c001
+m74c002
+m74c003
+m74c004
+m74c005
+m74c006
+m75c000
+m75c001
+m75c002
+m75c003
+m75c004
+m75c005
+m69c000
+m69c001
+m69c002
+m69c003
+m72c014
+m72c015
+m72c016
+m72c017
+m72c018
+m72c019
+m72c002
+m72c013
+m72c000
+m72c010
+m72c011
+m72c007
+m72c012
+m72c004
+m72c005
+m72c006
+m72c008
+m72c009
+m72c001
+m72c003
+m73c000
+m73c001
+m73c002
+m73c003
+m73c004
+m73c005
+m73c006
+m78c000
+m78c001
+m78c002
+m78c003
+m78c004
+m78c005
+m78c006
+m78c007
+m78c008
+m78c009
+m78c010
+m78c011
+m78c012
+m78c013
+m78c014
+m78c015
+m78c016
+m78c017
+m78c018
+m78c019
+m78c020
+m79c000
+m79c001
+m79c002
+m79c003
+m79c004
+m71c000
+m71c001
+m71c002
+m71c003
+m71c004
+m71c005
+m71c006
+m71c007
+m77c000
+m77c001
+m77c002
+m76c001
+m76c002
+m76c000
+
+
+} ;
+
+
+
+
+
+print "===============================================================\n";
+print "Start Spliting \n";
+print "===============================================================\n";
+
+######################################################################################
+#################Modify sgscdb_cre_rawviews.sql#######################
+
+
+
+
+my @diffadtone = qw {
+
+} ;
+
+my @diffnetoad = qw {
+
+} ;
+
+
+for ( my $i = 0; $i < scalar( @dnsm ); $i++ )
+{
+open INPUT, "dnsm.txt" or die "ERROR: cant open file mmmt.txt\n";
+my @data = ();
+my $p = 0;
+while(<INPUT>){
+
+       if(m/$dnsm[$i]/i)
+	   {
+	   $p =1
+	   }
+
+}
+ if ($p != 1)
+ {
+ push(@diffadtone,"$dnsm[$i]");
+ }
+
+}
+close INPUT;
+
+print "The missing counter in ne is:" ;
+print ("@diffadtone\n");
+
+
+for ( my $i = 0; $i < scalar( @ne ); $i++ )
+{
+open INPUT, "ad.txt" or die "ERROR: cant open file ad.txt\n";
+my @data = ();
+my $p = 0;
+while(<INPUT>){
+
+       if(m/$ne[$i]/i)
+	   {
+	   $p =1
+	   }
+
+}
+ if ($p != 1)
+ {
+ push(@diffnetoad,"$ne[$i]");
+ }
+
+}
+close INPUT;
+
+print "The missing counter in ad is:" ;
+print ("@diffnetoad\n");
+
+
+
