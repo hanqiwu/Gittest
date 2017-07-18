@@ -1,0 +1,26 @@
+if ( null == node_ip )
+				   { 
+				            commentString = "ERROR: could not get IP address from hosts file, exiting\n" _comment
+							commanddebug = "sh " apj_execute_file " apj_note " commentString
+							system(commanddebug)
+							
+							exit 1
+				   }
+			   dot_position = 0
+			   dot_position = index(node_ip,".")
+			   last_three_digits_of_ip = substr(node_ip,dot_position+1)
+          multicast_address = "224." last_three_digits_of_ip
+        }
+        if ( null == multicast_address )
+        {
+          printf "ERROR: failed to generate multicast address, exiting\n"
+          #printf "ERROR: failed to generate multicast address, exiting\n" > debug_file
+          exit 129
+        }
+        else
+        {
+	     #printf "INFO: Successfully generated multicast address to be used in jgroups.xml and replsync.xml \n" > debug_file	
+             printf "\n INFO: Successfully generated multicast address to be used in jgroups.xml and replsync.xml\n" multicast_address
+             printf "\n"
+	}
+    #####################end of preparing multicast address

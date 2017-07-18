@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cat test321.txt
+
+cp -p test321.txt ./tst.txt
+cp
+cp tst 123
